@@ -20,6 +20,12 @@
 		995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037FD1F3F16E800502D9E /* ConversationTest.swift */; };
 		995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037FD1F3F16E800502D9E /* ConversationTest.swift */; };
 		995038001F3F172300502D9E /* ConversationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037FD1F3F16E800502D9E /* ConversationTest.swift */; };
+		995038021F3F2B2600502D9E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038011F3F2B2600502D9E /* ErrorResponse.swift */; };
+		995038041F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */; };
+		995038051F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */; };
+		995038061F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */; };
+		995038071F3F2C3400502D9E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038011F3F2B2600502D9E /* ErrorResponse.swift */; };
+		995038081F3F2C3500502D9E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038011F3F2B2600502D9E /* ErrorResponse.swift */; };
 		DD7502881C68FEDE006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* DirectLine.framework */; };
 		DD7502921C690C7A006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* DirectLine.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +63,8 @@
 		8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLineTests.swift; sourceTree = "<group>"; };
 		995037F91F3F15A000502D9E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
+		995038011F3F2B2600502D9E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseTest.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* DirectLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLine.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* DirectLineTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLineTests.plist; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* DirectLine-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirectLine-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +157,7 @@
 			children = (
 				8933C7841EB5B820000D00A4 /* DirectLine.swift */,
 				995037F91F3F15A000502D9E /* Conversation.swift */,
+				995038011F3F2B2600502D9E /* ErrorResponse.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -158,6 +167,7 @@
 			children = (
 				8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */,
 				995037FD1F3F16E800502D9E /* ConversationTest.swift */,
+				995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */,
 			);
 			name = Tests;
 			path = Tests/DirectLineTests;
@@ -422,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995038021F3F2B2600502D9E /* ErrorResponse.swift in Sources */,
 				995037FA1F3F15A000502D9E /* Conversation.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* DirectLine.swift in Sources */,
 			);
@@ -431,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995038041F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* DirectLineTests.swift in Sources */,
 			);
@@ -440,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995038081F3F2C3500502D9E /* ErrorResponse.swift in Sources */,
 				995037FC1F3F15C000502D9E /* Conversation.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* DirectLine.swift in Sources */,
 			);
@@ -449,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995038071F3F2C3400502D9E /* ErrorResponse.swift in Sources */,
 				995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* DirectLine.swift in Sources */,
 			);
@@ -458,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995038051F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */,
 				8933C78F1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */,
 			);
@@ -467,6 +482,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995038061F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				995038001F3F172300502D9E /* ConversationTest.swift in Sources */,
 				8933C78E1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */,
 			);
