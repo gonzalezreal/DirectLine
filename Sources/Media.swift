@@ -62,6 +62,11 @@ public struct Media: Codable {
 	/// URL for the content of the attachment.
 	public let contentURL: URL
 
+	public init(contentType: MediaType, contentURL: URL) {
+		self.contentType = contentType
+		self.contentURL = contentURL
+	}
+
 	private enum CodingKeys: String, CodingKey {
 		case contentType
 		case contentURL = "contentUrl"
@@ -69,7 +74,7 @@ public struct Media: Codable {
 }
 
 public extension Media {
-	public init(from decoder: Decoder) throws {
+	init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		let contentType = try container.decode(String.self, forKey: .contentType)
 		let contentURL = try container.decode(URL.self, forKey: .contentURL)

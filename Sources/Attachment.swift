@@ -19,6 +19,12 @@ public struct Attachment: Codable {
 	/// URL to a thumbnail image representing an alternative, smaller form of content.
 	public let thumbnailURL: URL?
 
+	public init(content: Content, name: String, thumbnailURL: URL? = nil) {
+		self.content = content
+		self.name = name
+		self.thumbnailURL = thumbnailURL
+	}
+
 	private enum CodingKeys: String, CodingKey {
 		case contentType
 		case content
@@ -28,7 +34,7 @@ public struct Attachment: Codable {
 }
 
 public extension Attachment {
-	public init(from decoder: Decoder) throws {
+	init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		let contentType = try container.decode(String.self, forKey: .contentType)
 		let content: Content
@@ -45,6 +51,14 @@ public extension Attachment {
 	}
 
 	func encode(to encoder: Encoder) throws {
-		fatalError()
+		var container = encoder.container(keyedBy: CodingKeys.self)
+
+		switch content {
+		case .media(let value):
+			try value.encode(to: encoder)
+		}
+
+		try container.encode(name, forKey: .name)
+		try container.encodeIfPresent(thumbnailURL, forKey: .thumbnailURL)
 	}
 }
