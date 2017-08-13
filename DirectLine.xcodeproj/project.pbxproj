@@ -43,6 +43,15 @@
 		996A82651F40449000C36B75 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A82641F40449000C36B75 /* Starscream.framework */; };
 		996A82661F4044E000C36B75 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A82641F40449000C36B75 /* Starscream.framework */; };
 		996A82681F4044F900C36B75 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 996A82641F40449000C36B75 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		996A826A1F404A6700C36B75 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82691F404A6700C36B75 /* Activity.swift */; };
+		996A826B1F404A6700C36B75 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82691F404A6700C36B75 /* Activity.swift */; };
+		996A826C1F404A6700C36B75 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82691F404A6700C36B75 /* Activity.swift */; };
+		996A826E1F40565500C36B75 /* ActivitySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A826D1F40565500C36B75 /* ActivitySet.swift */; };
+		996A826F1F40565500C36B75 /* ActivitySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A826D1F40565500C36B75 /* ActivitySet.swift */; };
+		996A82701F40565500C36B75 /* ActivitySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A826D1F40565500C36B75 /* ActivitySet.swift */; };
+		996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82711F405BD100C36B75 /* ActivitySetTest.swift */; };
+		996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82711F405BD100C36B75 /* ActivitySetTest.swift */; };
+		996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82711F405BD100C36B75 /* ActivitySetTest.swift */; };
 		DD7502881C68FEDE006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* DirectLine.framework */; };
 		DD7502921C690C7A006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* DirectLine.framework */; };
 /* End PBXBuildFile section */
@@ -124,6 +133,9 @@
 		996A82591F40401100C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		996A825D1F40438E00C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/Mac/Starscream.framework; sourceTree = "<group>"; };
 		996A82641F40449000C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/tvOS/Starscream.framework; sourceTree = "<group>"; };
+		996A82691F404A6700C36B75 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		996A826D1F40565500C36B75 /* ActivitySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySet.swift; sourceTree = "<group>"; };
+		996A82711F405BD100C36B75 /* ActivitySetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySetTest.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* DirectLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLine.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* DirectLineTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLineTests.plist; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* DirectLine-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirectLine-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +241,8 @@
 				8933C7841EB5B820000D00A4 /* DirectLine.swift */,
 				995037F91F3F15A000502D9E /* Conversation.swift */,
 				995038011F3F2B2600502D9E /* ErrorResponse.swift */,
+				996A82691F404A6700C36B75 /* Activity.swift */,
+				996A826D1F40565500C36B75 /* ActivitySet.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -239,6 +253,7 @@
 				8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */,
 				995037FD1F3F16E800502D9E /* ConversationTest.swift */,
 				995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */,
+				996A82711F405BD100C36B75 /* ActivitySetTest.swift */,
 			);
 			name = Tests;
 			path = Tests/DirectLineTests;
@@ -560,7 +575,9 @@
 			files = (
 				995038021F3F2B2600502D9E /* ErrorResponse.swift in Sources */,
 				995037FA1F3F15A000502D9E /* Conversation.swift in Sources */,
+				996A826A1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* DirectLine.swift in Sources */,
+				996A826E1F40565500C36B75 /* ActivitySet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				995038041F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
+				996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* DirectLineTests.swift in Sources */,
 			);
@@ -580,7 +598,9 @@
 			files = (
 				995038081F3F2C3500502D9E /* ErrorResponse.swift in Sources */,
 				995037FC1F3F15C000502D9E /* Conversation.swift in Sources */,
+				996A826C1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* DirectLine.swift in Sources */,
+				996A82701F40565500C36B75 /* ActivitySet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +610,9 @@
 			files = (
 				995038071F3F2C3400502D9E /* ErrorResponse.swift in Sources */,
 				995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */,
+				996A826B1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* DirectLine.swift in Sources */,
+				996A826F1F40565500C36B75 /* ActivitySet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +621,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				995038051F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
+				996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */,
 				8933C78F1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */,
 			);
@@ -609,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				995038061F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
+				996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995038001F3F172300502D9E /* ConversationTest.swift in Sources */,
 				8933C78E1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */,
 			);
