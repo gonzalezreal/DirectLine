@@ -42,12 +42,38 @@ class AttachmentTest: XCTestCase {
 		// then
 		XCTAssertEqual(expected, result)
 	}
+
+	func testDecodeAdaptiveCardAttachment() {
+		// given
+		let json = """
+		{
+			"contentType": "application/vnd.microsoft.card.adaptive",
+			"content": {}
+		}
+		""".data(using: .utf8)!
+		let decoder = JSONDecoder()
+
+		// when
+		let attachment = try? decoder.decode(Attachment.self, from: json)
+
+		// then
+		XCTAssertTrue(attachment?.isAdaptiveCard ?? false)
+	}
 }
 
 private extension Attachment {
 	var isMedia: Bool {
 		switch content {
 		case .media:
+			return true
+		default:
+			return false
+		}
+	}
+
+	var isAdaptiveCard: Bool {
+		switch content {
+		case .adaptiveCard:
 			return true
 		default:
 			return false

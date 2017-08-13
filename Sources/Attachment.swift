@@ -7,6 +7,7 @@ import Foundation
 */
 public struct Attachment: Codable {
 	public enum Content {
+		case adaptiveCard(AdaptiveCard)
 		case media(Media)
 	}
 
@@ -14,12 +15,12 @@ public struct Attachment: Codable {
 	public let content: Content
 
 	/// Name of the attachment.
-	public let name: String
+	public let name: String?
 
 	/// URL to a thumbnail image representing an alternative, smaller form of content.
 	public let thumbnailURL: URL?
 
-	public init(content: Content, name: String, thumbnailURL: URL? = nil) {
+	public init(content: Content, name: String? = nil, thumbnailURL: URL? = nil) {
 		self.content = content
 		self.name = name
 		self.thumbnailURL = thumbnailURL
@@ -40,11 +41,13 @@ public extension Attachment {
 		let content: Content
 
 		switch contentType {
+		case AdaptiveCard.contentType:
+			content = .adaptiveCard(try container.decode(AdaptiveCard.self, forKey: .content))
 		default:
 			content = .media(try Media(from: decoder))
 		}
 
-		let name = try container.decode(String.self, forKey: .name)
+		let name = try container.decodeIfPresent(String.self, forKey: .name)
 		let thumbnailURL = try container.decodeIfPresent(URL.self, forKey: .thumbnailURL)
 
 		self.init(content: content, name: name, thumbnailURL: thumbnailURL)
@@ -56,9 +59,13 @@ public extension Attachment {
 		switch content {
 		case .media(let value):
 			try value.encode(to: encoder)
+		default:
+			let context = EncodingError.Context(codingPath: [CodingKeys.content],
+			                                    debugDescription: "Encoding for this content is not supported.")
+			throw EncodingError.invalidValue(content, context)
 		}
 
-		try container.encode(name, forKey: .name)
+		try container.encodeIfPresent(name, forKey: .name)
 		try container.encodeIfPresent(thumbnailURL, forKey: .thumbnailURL)
 	}
 }
