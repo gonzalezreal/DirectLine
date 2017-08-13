@@ -33,9 +33,16 @@
 		9958C5491F3F9AC700CA5F97 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9958C5461F3F9A2E00CA5F97 /* RxSwift.framework */; };
 		9958C54B1F3F9AFD00CA5F97 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9958C5461F3F9A2E00CA5F97 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9958C54D1F3F9B7C00CA5F97 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9958C54C1F3F9B7C00CA5F97 /* RxSwift.framework */; };
-		9958C5501F3F9BC300CA5F97 /* RxSwift.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9958C54F1F3F9BC300CA5F97 /* RxSwift.framework.dSYM */; };
 		9958C5521F3F9BEF00CA5F97 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9958C54C1F3F9B7C00CA5F97 /* RxSwift.framework */; };
 		9958C5541F3F9C0300CA5F97 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9958C54C1F3F9B7C00CA5F97 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		996A825A1F40401100C36B75 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A82591F40401100C36B75 /* Starscream.framework */; };
+		996A825B1F40407900C36B75 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A82591F40401100C36B75 /* Starscream.framework */; };
+		996A825C1F40408700C36B75 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 996A82591F40401100C36B75 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		996A825E1F40438E00C36B75 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A825D1F40438E00C36B75 /* Starscream.framework */; };
+		996A82601F4043BE00C36B75 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 996A825D1F40438E00C36B75 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		996A82651F40449000C36B75 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A82641F40449000C36B75 /* Starscream.framework */; };
+		996A82661F4044E000C36B75 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A82641F40449000C36B75 /* Starscream.framework */; };
+		996A82681F4044F900C36B75 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 996A82641F40449000C36B75 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DD7502881C68FEDE006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* DirectLine.framework */; };
 		DD7502921C690C7A006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* DirectLine.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +78,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				996A825C1F40408700C36B75 /* Starscream.framework in CopyFiles */,
 				9958C5451F3F99E100CA5F97 /* RxSwift.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,17 +89,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				996A82681F4044F900C36B75 /* Starscream.framework in CopyFiles */,
 				9958C54B1F3F9AFD00CA5F97 /* RxSwift.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9958C54E1F3F9B9B00CA5F97 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				9958C5501F3F9BC300CA5F97 /* RxSwift.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +100,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				996A82601F4043BE00C36B75 /* Starscream.framework in CopyFiles */,
 				9958C5541F3F9C0300CA5F97 /* RxSwift.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,8 +121,9 @@
 		9958C5401F3F981E00CA5F97 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		9958C5461F3F9A2E00CA5F97 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
 		9958C54C1F3F9B7C00CA5F97 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
-		9958C54F1F3F9BC300CA5F97 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/Mac/RxSwift.framework.dSYM; sourceTree = "<group>"; };
-		9958C5511F3F9BC600CA5F97 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/Mac/RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		996A82591F40401100C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
+		996A825D1F40438E00C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/Mac/Starscream.framework; sourceTree = "<group>"; };
+		996A82641F40449000C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/tvOS/Starscream.framework; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* DirectLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLine.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* DirectLineTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLineTests.plist; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* DirectLine-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirectLine-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996A825A1F40401100C36B75 /* Starscream.framework in Frameworks */,
 				9958C5411F3F981E00CA5F97 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996A825B1F40407900C36B75 /* Starscream.framework in Frameworks */,
 				9958C5431F3F995E00CA5F97 /* RxSwift.framework in Frameworks */,
 				52D6D9871BEFF229002C0205 /* DirectLine.framework in Frameworks */,
 			);
@@ -151,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996A82651F40449000C36B75 /* Starscream.framework in Frameworks */,
 				9958C5471F3F9A2E00CA5F97 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996A825E1F40438E00C36B75 /* Starscream.framework in Frameworks */,
 				9958C54D1F3F9B7C00CA5F97 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996A82661F4044E000C36B75 /* Starscream.framework in Frameworks */,
 				9958C5491F3F9AC700CA5F97 /* RxSwift.framework in Frameworks */,
 				DD7502921C690C7A006590AF /* DirectLine.framework in Frameworks */,
 			);
@@ -187,7 +193,6 @@
 		52D6D9721BEFF229002C0205 = {
 			isa = PBXGroup;
 			children = (
-				9958C54F1F3F9BC300CA5F97 /* RxSwift.framework.dSYM */,
 				8933C7811EB5B7E0000D00A4 /* Sources */,
 				8933C7831EB5B7EB000D00A4 /* Tests */,
 				52D6D99C1BEFF38C002C0205 /* Configs */,
@@ -242,7 +247,9 @@
 		9958C53F1F3F981D00CA5F97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9958C5511F3F9BC600CA5F97 /* RxSwift.framework.dSYM */,
+				996A82591F40401100C36B75 /* Starscream.framework */,
+				996A825D1F40438E00C36B75 /* Starscream.framework */,
+				996A82641F40449000C36B75 /* Starscream.framework */,
 				9958C54C1F3F9B7C00CA5F97 /* RxSwift.framework */,
 				9958C5461F3F9A2E00CA5F97 /* RxSwift.framework */,
 				9958C5401F3F981E00CA5F97 /* RxSwift.framework */,
@@ -358,7 +365,6 @@
 				52D6DA0B1BF000BD002C0205 /* Frameworks */,
 				52D6DA0C1BF000BD002C0205 /* Headers */,
 				52D6DA0D1BF000BD002C0205 /* Resources */,
-				9958C54E1F3F9B9B00CA5F97 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -518,9 +524,11 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Starscream.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -533,9 +541,11 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/tvOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/tvOS/Starscream.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
