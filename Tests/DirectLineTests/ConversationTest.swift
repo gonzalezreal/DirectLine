@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class ConversationTest: XCTestCase {
-	func testValidJSONProducesAConversation() {
+	func testDecodeJSONConversation() {
 		// given
 		let json = """
 		{

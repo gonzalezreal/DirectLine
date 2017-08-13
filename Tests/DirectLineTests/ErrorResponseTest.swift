@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class ErrorResponseTest: XCTestCase {
-	func testValidJSONProducesErrorResponse() {
+	func testDecodeJSONErrorResponse() {
 		// given
 		let json = """
 		{

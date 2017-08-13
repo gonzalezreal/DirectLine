@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class AttachmentTest: XCTestCase {
-	func testJSONProducesAttachmentWithMedia() {
+	func testDecodeJSONMediaAttachment() {
 		// given
 		let json = """
 		{
