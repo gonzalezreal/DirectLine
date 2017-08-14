@@ -8,6 +8,7 @@ public struct Attachment {
 		case adaptiveCard(AdaptiveCard)
 		case animationCard(AnimationCard)
 		case audioCard(AudioCard)
+		case videoCard(VideoCard)
 		case media(Media)
 		case unknown
 	}
@@ -48,6 +49,8 @@ extension Attachment: Codable {
 			content = .animationCard(try container.decode(AnimationCard.self, forKey: .content))
 		case AudioCard.contentType:
 			content = .audioCard(try container.decode(AudioCard.self, forKey: .content))
+		case VideoCard.contentType:
+			content = .videoCard(try container.decode(VideoCard.self, forKey: .content))
 		default:
 			if container.contains(.content) {
 				content = .unknown

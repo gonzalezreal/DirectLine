@@ -88,6 +88,12 @@
 		99DB54E01F42458100C97DB9 /* AudioCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54DF1F42458100C97DB9 /* AudioCardTest.swift */; };
 		99DB54E11F42458100C97DB9 /* AudioCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54DF1F42458100C97DB9 /* AudioCardTest.swift */; };
 		99DB54E21F42458100C97DB9 /* AudioCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54DF1F42458100C97DB9 /* AudioCardTest.swift */; };
+		99DB54E41F42497200C97DB9 /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54E31F42497200C97DB9 /* VideoCard.swift */; };
+		99DB54E51F42497200C97DB9 /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54E31F42497200C97DB9 /* VideoCard.swift */; };
+		99DB54E61F42497200C97DB9 /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54E31F42497200C97DB9 /* VideoCard.swift */; };
+		99DB54E81F424A9D00C97DB9 /* VideoCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54E71F424A9D00C97DB9 /* VideoCardTest.swift */; };
+		99DB54E91F424A9D00C97DB9 /* VideoCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54E71F424A9D00C97DB9 /* VideoCardTest.swift */; };
+		99DB54EA1F424A9D00C97DB9 /* VideoCardTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54E71F424A9D00C97DB9 /* VideoCardTest.swift */; };
 		DD7502881C68FEDE006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* DirectLine.framework */; };
 		DD7502921C690C7A006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* DirectLine.framework */; };
 /* End PBXBuildFile section */
@@ -184,6 +190,8 @@
 		99DB54D71F423BCE00C97DB9 /* AnimationCardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCardTest.swift; sourceTree = "<group>"; };
 		99DB54DB1F4242EA00C97DB9 /* AudioCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCard.swift; sourceTree = "<group>"; };
 		99DB54DF1F42458100C97DB9 /* AudioCardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCardTest.swift; sourceTree = "<group>"; };
+		99DB54E31F42497200C97DB9 /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
+		99DB54E71F424A9D00C97DB9 /* VideoCardTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCardTest.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* DirectLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLine.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* DirectLineTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLineTests.plist; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* DirectLine-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirectLine-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,6 +307,7 @@
 				99DB54CF1F41B2F100C97DB9 /* MediaURL.swift */,
 				99DB54D31F41B3EF00C97DB9 /* AnimationCard.swift */,
 				99DB54DB1F4242EA00C97DB9 /* AudioCard.swift */,
+				99DB54E31F42497200C97DB9 /* VideoCard.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -314,6 +323,7 @@
 				99DB54C71F41A56200C97DB9 /* CardActionTest.swift */,
 				99DB54D71F423BCE00C97DB9 /* AnimationCardTest.swift */,
 				99DB54DF1F42458100C97DB9 /* AudioCardTest.swift */,
+				99DB54E71F424A9D00C97DB9 /* VideoCardTest.swift */,
 			);
 			name = Tests;
 			path = Tests/DirectLineTests;
@@ -642,6 +652,7 @@
 				991831661F408CE8005619A6 /* Media.swift in Sources */,
 				996A826A1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* DirectLine.swift in Sources */,
+				99DB54E41F42497200C97DB9 /* VideoCard.swift in Sources */,
 				99DB54C01F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82761F4061C500C36B75 /* Attachment.swift in Sources */,
 				996A826E1F40565500C36B75 /* ActivitySet.swift in Sources */,
@@ -653,6 +664,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DB54E81F424A9D00C97DB9 /* VideoCardTest.swift in Sources */,
 				9918316E1F4092F3005619A6 /* AttachmentTest.swift in Sources */,
 				99DB54C81F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				99DB54E01F42458100C97DB9 /* AudioCardTest.swift in Sources */,
@@ -677,6 +689,7 @@
 				991831681F408CE8005619A6 /* Media.swift in Sources */,
 				996A826C1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* DirectLine.swift in Sources */,
+				99DB54E61F42497200C97DB9 /* VideoCard.swift in Sources */,
 				99DB54C21F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82781F4061C500C36B75 /* Attachment.swift in Sources */,
 				996A82701F40565500C36B75 /* ActivitySet.swift in Sources */,
@@ -697,6 +710,7 @@
 				991831671F408CE8005619A6 /* Media.swift in Sources */,
 				996A826B1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* DirectLine.swift in Sources */,
+				99DB54E51F42497200C97DB9 /* VideoCard.swift in Sources */,
 				99DB54C11F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82771F4061C500C36B75 /* Attachment.swift in Sources */,
 				996A826F1F40565500C36B75 /* ActivitySet.swift in Sources */,
@@ -708,6 +722,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DB54E91F424A9D00C97DB9 /* VideoCardTest.swift in Sources */,
 				9918316F1F4092F3005619A6 /* AttachmentTest.swift in Sources */,
 				99DB54C91F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				99DB54E11F42458100C97DB9 /* AudioCardTest.swift in Sources */,
@@ -723,6 +738,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DB54EA1F424A9D00C97DB9 /* VideoCardTest.swift in Sources */,
 				991831701F4092F3005619A6 /* AttachmentTest.swift in Sources */,
 				99DB54CA1F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				99DB54E21F42458100C97DB9 /* AudioCardTest.swift in Sources */,

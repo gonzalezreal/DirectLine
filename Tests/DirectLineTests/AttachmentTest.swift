@@ -118,6 +118,41 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isAudioCard ?? false)
 	}
 
+	func testDecodeVideoCardAttachment() {
+		// given
+		let json = """
+		{
+			"contentType": "application/vnd.microsoft.card.video",
+			"content": {
+				"title": "Big Buck Bunny",
+				"subtitle": "by the Blender Institute",
+				"image": {
+					"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Big_buck_bunny_poster_big.jpg/220px-Big_buck_bunny_poster_big.jpg"
+				},
+				"media": [
+					{
+						"url": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+					}
+				],
+				"buttons": [
+					{
+						"title": "Learn More",
+						"type": "openUrl",
+						"value": "https://peach.blender.org/"
+					}
+				]
+			}
+		}
+		""".data(using: .utf8)!
+		let decoder = JSONDecoder()
+
+		// when
+		let attachment = try? decoder.decode(Attachment.self, from: json)
+
+		// then
+		XCTAssertTrue(attachment?.isVideoCard ?? false)
+	}
+
 	func testDecodeUnknownAttachment() {
 		// given
 		let json = """
@@ -169,6 +204,15 @@ private extension Attachment {
 	var isAudioCard: Bool {
 		switch content {
 		case .audioCard:
+			return true
+		default:
+			return false
+		}
+	}
+
+	var isVideoCard: Bool {
+		switch content {
+		case .videoCard:
 			return true
 		default:
 			return false
