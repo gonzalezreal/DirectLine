@@ -54,7 +54,7 @@ public enum MediaType: CustomStringConvertible {
 }
 
 /// A media file.
-public struct Media: Codable {
+public struct Media {
 
 	/// The media type of the content.
 	public let contentType: MediaType
@@ -73,8 +73,8 @@ public struct Media: Codable {
 	}
 }
 
-public extension Media {
-	init(from decoder: Decoder) throws {
+extension Media: Codable {
+	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		let contentType = try container.decode(String.self, forKey: .contentType)
 		let contentURL = try container.decode(URL.self, forKey: .contentURL)
@@ -83,7 +83,7 @@ public extension Media {
 		          contentURL: contentURL)
 	}
 
-	func encode(to encoder: Encoder) throws {
+	public func encode(to encoder: Encoder) throws {
 		var container = encoder.container(keyedBy: CodingKeys.self)
 
 		try container.encode(contentType.description, forKey: .contentType)

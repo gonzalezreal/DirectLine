@@ -64,6 +64,12 @@
 		99DB54C01F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */; };
 		99DB54C11F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */; };
 		99DB54C21F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */; };
+		99DB54C41F40BA7000C97DB9 /* CardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54C31F40BA7000C97DB9 /* CardAction.swift */; };
+		99DB54C51F40BA7000C97DB9 /* CardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54C31F40BA7000C97DB9 /* CardAction.swift */; };
+		99DB54C61F40BA7000C97DB9 /* CardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54C31F40BA7000C97DB9 /* CardAction.swift */; };
+		99DB54C81F41A56200C97DB9 /* CardActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54C71F41A56200C97DB9 /* CardActionTest.swift */; };
+		99DB54C91F41A56200C97DB9 /* CardActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54C71F41A56200C97DB9 /* CardActionTest.swift */; };
+		99DB54CA1F41A56200C97DB9 /* CardActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54C71F41A56200C97DB9 /* CardActionTest.swift */; };
 		DD7502881C68FEDE006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* DirectLine.framework */; };
 		DD7502921C690C7A006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* DirectLine.framework */; };
 /* End PBXBuildFile section */
@@ -152,6 +158,8 @@
 		996A82711F405BD100C36B75 /* ActivitySetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySetTest.swift; sourceTree = "<group>"; };
 		996A82751F4061C500C36B75 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveCard.swift; sourceTree = "<group>"; };
+		99DB54C31F40BA7000C97DB9 /* CardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAction.swift; sourceTree = "<group>"; };
+		99DB54C71F41A56200C97DB9 /* CardActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActionTest.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* DirectLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLine.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* DirectLineTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLineTests.plist; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* DirectLine-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirectLine-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +270,7 @@
 				996A82751F4061C500C36B75 /* Attachment.swift */,
 				991831651F408CE8005619A6 /* Media.swift */,
 				99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */,
+				99DB54C31F40BA7000C97DB9 /* CardAction.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -274,6 +283,7 @@
 				995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */,
 				996A82711F405BD100C36B75 /* ActivitySetTest.swift */,
 				9918316D1F4092F3005619A6 /* AttachmentTest.swift */,
+				99DB54C71F41A56200C97DB9 /* CardActionTest.swift */,
 			);
 			name = Tests;
 			path = Tests/DirectLineTests;
@@ -601,6 +611,7 @@
 				99DB54C01F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82761F4061C500C36B75 /* Attachment.swift in Sources */,
 				996A826E1F40565500C36B75 /* ActivitySet.swift in Sources */,
+				99DB54C41F40BA7000C97DB9 /* CardAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9918316E1F4092F3005619A6 /* AttachmentTest.swift in Sources */,
+				99DB54C81F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				995038041F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */,
@@ -628,6 +640,7 @@
 				99DB54C21F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82781F4061C500C36B75 /* Attachment.swift in Sources */,
 				996A82701F40565500C36B75 /* ActivitySet.swift in Sources */,
+				99DB54C61F40BA7000C97DB9 /* CardAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +656,7 @@
 				99DB54C11F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82771F4061C500C36B75 /* Attachment.swift in Sources */,
 				996A826F1F40565500C36B75 /* ActivitySet.swift in Sources */,
+				99DB54C51F40BA7000C97DB9 /* CardAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9918316F1F4092F3005619A6 /* AttachmentTest.swift in Sources */,
+				99DB54C91F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				995038051F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */,
@@ -663,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				991831701F4092F3005619A6 /* AttachmentTest.swift in Sources */,
+				99DB54CA1F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				995038061F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995038001F3F172300502D9E /* ConversationTest.swift in Sources */,

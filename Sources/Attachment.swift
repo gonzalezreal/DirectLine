@@ -1,11 +1,9 @@
 import Foundation
 
-/**
-	Defines additional information to include in the message.
-
-	An attachment may be a media file (e.g., audio, video, image, file) or a rich card.
-*/
-public struct Attachment: Codable {
+/// Defines additional information to include in the message.
+///
+/// An attachment may be a media file (e.g., audio, video, image, file) or a rich card.
+public struct Attachment {
 	public enum Content {
 		case adaptiveCard(AdaptiveCard)
 		case media(Media)
@@ -25,17 +23,17 @@ public struct Attachment: Codable {
 		self.name = name
 		self.thumbnailURL = thumbnailURL
 	}
+}
 
+extension Attachment: Codable {
 	private enum CodingKeys: String, CodingKey {
 		case contentType
 		case content
 		case name
 		case thumbnailURL = "thumbnailUrl"
 	}
-}
 
-public extension Attachment {
-	init(from decoder: Decoder) throws {
+	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		let contentType = try container.decode(String.self, forKey: .contentType)
 		let content: Content
@@ -53,7 +51,7 @@ public extension Attachment {
 		self.init(content: content, name: name, thumbnailURL: thumbnailURL)
 	}
 
-	func encode(to encoder: Encoder) throws {
+	public func encode(to encoder: Encoder) throws {
 		var container = encoder.container(keyedBy: CodingKeys.self)
 
 		switch content {
