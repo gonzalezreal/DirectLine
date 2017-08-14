@@ -82,6 +82,25 @@ class AttachmentTest: XCTestCase {
 		// then
 		XCTAssertTrue(attachment?.isAnimationCard ?? false)
 	}
+
+	func testDecodeUnknownAttachment() {
+		// given
+		let json = """
+		{
+			"contentType": "application/unknown",
+			"content": {
+				"foo": "bar"
+			}
+		}
+		""".data(using: .utf8)!
+		let decoder = JSONDecoder()
+
+		// when
+		let attachment = try? decoder.decode(Attachment.self, from: json)
+
+		// then
+		XCTAssertTrue(attachment?.isUnknown ?? false)
+	}
 }
 
 private extension Attachment {
@@ -106,6 +125,15 @@ private extension Attachment {
 	var isAnimationCard: Bool {
 		switch content {
 		case .animationCard:
+			return true
+		default:
+			return false
+		}
+	}
+
+	var isUnknown: Bool {
+		switch content {
+		case .unknown:
 			return true
 		default:
 			return false

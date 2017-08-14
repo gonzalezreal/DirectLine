@@ -8,6 +8,7 @@ public struct Attachment {
 		case adaptiveCard(AdaptiveCard)
 		case animationCard(AnimationCard)
 		case media(Media)
+		case unknown
 	}
 
 	/// The content of the attachment.
@@ -45,7 +46,11 @@ extension Attachment: Codable {
 		case AnimationCard.contentType:
 			content = .animationCard(try container.decode(AnimationCard.self, forKey: .content))
 		default:
-			content = .media(try Media(from: decoder))
+			if container.contains(.content) {
+				content = .unknown
+			} else {
+				content = .media(try Media(from: decoder))
+			}
 		}
 
 		let name = try container.decodeIfPresent(String.self, forKey: .name)
