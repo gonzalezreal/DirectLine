@@ -6,6 +6,7 @@ import Foundation
 public struct Attachment {
 	public enum Content {
 		case adaptiveCard(AdaptiveCard)
+		case animationCard(AnimationCard)
 		case media(Media)
 	}
 
@@ -41,6 +42,8 @@ extension Attachment: Codable {
 		switch contentType {
 		case AdaptiveCard.contentType:
 			content = .adaptiveCard(try container.decode(AdaptiveCard.self, forKey: .content))
+		case AnimationCard.contentType:
+			content = .animationCard(try container.decode(AnimationCard.self, forKey: .content))
 		default:
 			content = .media(try Media(from: decoder))
 		}

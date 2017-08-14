@@ -59,6 +59,29 @@ class AttachmentTest: XCTestCase {
 		// then
 		XCTAssertTrue(attachment?.isAdaptiveCard ?? false)
 	}
+
+	func testDecodeAnimationCardAttachment() {
+		// given
+		let json = """
+		{
+			"contentType": "application/vnd.microsoft.card.animation",
+			"content": {
+				"media": [
+					{
+						"url": "http://i.giphy.com/Ki55RUbOV5njy.gif"
+					}
+				]
+			}
+		}
+		""".data(using: .utf8)!
+		let decoder = JSONDecoder()
+
+		// when
+		let attachment = try? decoder.decode(Attachment.self, from: json)
+
+		// then
+		XCTAssertTrue(attachment?.isAnimationCard ?? false)
+	}
 }
 
 private extension Attachment {
@@ -74,6 +97,15 @@ private extension Attachment {
 	var isAdaptiveCard: Bool {
 		switch content {
 		case .adaptiveCard:
+			return true
+		default:
+			return false
+		}
+	}
+
+	var isAnimationCard: Bool {
+		switch content {
+		case .animationCard:
 			return true
 		default:
 			return false
