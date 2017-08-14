@@ -7,6 +7,7 @@ public struct Attachment {
 	public enum Content {
 		case adaptiveCard(AdaptiveCard)
 		case animationCard(AnimationCard)
+		case audioCard(AudioCard)
 		case media(Media)
 		case unknown
 	}
@@ -45,6 +46,8 @@ extension Attachment: Codable {
 			content = .adaptiveCard(try container.decode(AdaptiveCard.self, forKey: .content))
 		case AnimationCard.contentType:
 			content = .animationCard(try container.decode(AnimationCard.self, forKey: .content))
+		case AudioCard.contentType:
+			content = .audioCard(try container.decode(AudioCard.self, forKey: .content))
 		default:
 			if container.contains(.content) {
 				content = .unknown

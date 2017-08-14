@@ -83,6 +83,41 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isAnimationCard ?? false)
 	}
 
+	func testDecodeAudioCardAttachment() {
+		// given
+		let json = """
+		{
+			"contentType": "application/vnd.microsoft.card.audio",
+			"content": {
+				"title": "I am your father",
+				"subtitle": "Star Wars: Episode V - The Empire Strikes Back",
+				"image": {
+					"url": "https://upload.wikimedia.org/wikipedia/en/3/3c/SW_-_Empire_Strikes_Back.jpg"
+				},
+				"media": [
+					{
+						"url": "http://i.giphy.com/Ki55RUbOV5njy.gif"
+					}
+				],
+				"buttons": [
+					{
+						"title": "Read More",
+						"type": "openUrl",
+						"value": "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back"
+					}
+				]
+			}
+		}
+		""".data(using: .utf8)!
+		let decoder = JSONDecoder()
+
+		// when
+		let attachment = try? decoder.decode(Attachment.self, from: json)
+
+		// then
+		XCTAssertTrue(attachment?.isAudioCard ?? false)
+	}
+
 	func testDecodeUnknownAttachment() {
 		// given
 		let json = """
@@ -125,6 +160,15 @@ private extension Attachment {
 	var isAnimationCard: Bool {
 		switch content {
 		case .animationCard:
+			return true
+		default:
+			return false
+		}
+	}
+
+	var isAudioCard: Bool {
+		switch content {
+		case .audioCard:
 			return true
 		default:
 			return false
