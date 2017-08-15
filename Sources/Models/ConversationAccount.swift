@@ -1,7 +1,7 @@
 import Foundation
 
 /// Defines a conversation in a channel.
-public struct ConversationAccount: Codable {
+public struct ConversationAccount {
 
 	/// The ID that identifies the conversation.
 	public let id: String
@@ -13,7 +13,11 @@ public struct ConversationAccount: Codable {
 	public let name: String?
 }
 
-extension ConversationAccount {
+extension ConversationAccount: Decodable {
+	private enum CodingKeys: CodingKey {
+		case id, isGroup, name
+	}
+
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 

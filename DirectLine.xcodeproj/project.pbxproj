@@ -32,6 +32,9 @@
 		991939341F4398D300842C92 /* ChannelAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991939331F4398D300842C92 /* ChannelAccount.swift */; };
 		991939351F4398D300842C92 /* ChannelAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991939331F4398D300842C92 /* ChannelAccount.swift */; };
 		991939361F4398D300842C92 /* ChannelAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991939331F4398D300842C92 /* ChannelAccount.swift */; };
+		991939381F439B5400842C92 /* SuggestedActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991939371F439B5400842C92 /* SuggestedActions.swift */; };
+		991939391F439B5400842C92 /* SuggestedActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991939371F439B5400842C92 /* SuggestedActions.swift */; };
+		9919393A1F439B5400842C92 /* SuggestedActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991939371F439B5400842C92 /* SuggestedActions.swift */; };
 		995037FA1F3F15A000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FC1F3F15C000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
@@ -201,6 +204,7 @@
 		9919392B1F43956400842C92 /* ConversationAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationAccount.swift; sourceTree = "<group>"; };
 		9919392F1F4397AC00842C92 /* ConversationAccountTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationAccountTest.swift; sourceTree = "<group>"; };
 		991939331F4398D300842C92 /* ChannelAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelAccount.swift; sourceTree = "<group>"; };
+		991939371F439B5400842C92 /* SuggestedActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedActions.swift; sourceTree = "<group>"; };
 		995037F91F3F15A000502D9E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
 		995038011F3F2B2600502D9E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 				991939251F4390DC00842C92 /* SignInCard.swift */,
 				9919392B1F43956400842C92 /* ConversationAccount.swift */,
 				991939331F4398D300842C92 /* ChannelAccount.swift */,
+				991939371F439B5400842C92 /* SuggestedActions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -714,6 +719,7 @@
 				9919392C1F43956400842C92 /* ConversationAccount.swift in Sources */,
 				99DB54D01F41B2F100C97DB9 /* MediaURL.swift in Sources */,
 				991939341F4398D300842C92 /* ChannelAccount.swift in Sources */,
+				991939381F439B5400842C92 /* SuggestedActions.swift in Sources */,
 				995525A01F4389B200E6CF1E /* ReceiptItem.swift in Sources */,
 				99DB54DC1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
 				995038021F3F2B2600502D9E /* ErrorResponse.swift in Sources */,
@@ -761,6 +767,7 @@
 				9919392E1F43956400842C92 /* ConversationAccount.swift in Sources */,
 				99DB54D21F41B2F100C97DB9 /* MediaURL.swift in Sources */,
 				991939361F4398D300842C92 /* ChannelAccount.swift in Sources */,
+				9919393A1F439B5400842C92 /* SuggestedActions.swift in Sources */,
 				995525A21F4389B200E6CF1E /* ReceiptItem.swift in Sources */,
 				99DB54DE1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
 				995038081F3F2C3500502D9E /* ErrorResponse.swift in Sources */,
@@ -791,6 +798,7 @@
 				9919392D1F43956400842C92 /* ConversationAccount.swift in Sources */,
 				99DB54D11F41B2F100C97DB9 /* MediaURL.swift in Sources */,
 				991939351F4398D300842C92 /* ChannelAccount.swift in Sources */,
+				991939391F439B5400842C92 /* SuggestedActions.swift in Sources */,
 				995525A11F4389B200E6CF1E /* ReceiptItem.swift in Sources */,
 				99DB54DD1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
 				995038071F3F2C3400502D9E /* ErrorResponse.swift in Sources */,
