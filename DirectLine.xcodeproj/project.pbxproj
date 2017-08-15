@@ -32,6 +32,12 @@
 		995038061F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */; };
 		995038071F3F2C3400502D9E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038011F3F2B2600502D9E /* ErrorResponse.swift */; };
 		995038081F3F2C3500502D9E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038011F3F2B2600502D9E /* ErrorResponse.swift */; };
+		995525881F42C53800E6CF1E /* HeroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995525871F42C53800E6CF1E /* HeroCard.swift */; };
+		995525891F42C53800E6CF1E /* HeroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995525871F42C53800E6CF1E /* HeroCard.swift */; };
+		9955258A1F42C53800E6CF1E /* HeroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995525871F42C53800E6CF1E /* HeroCard.swift */; };
+		995525901F42C9CC00E6CF1E /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955258F1F42C9CC00E6CF1E /* CardImage.swift */; };
+		995525911F42C9CC00E6CF1E /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955258F1F42C9CC00E6CF1E /* CardImage.swift */; };
+		995525921F42C9CC00E6CF1E /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955258F1F42C9CC00E6CF1E /* CardImage.swift */; };
 		9958C5411F3F981E00CA5F97 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9958C5401F3F981E00CA5F97 /* RxSwift.framework */; };
 		9958C5431F3F995E00CA5F97 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9958C5401F3F981E00CA5F97 /* RxSwift.framework */; };
 		9958C5451F3F99E100CA5F97 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9958C5401F3F981E00CA5F97 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -171,6 +177,8 @@
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
 		995038011F3F2B2600502D9E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseTest.swift; sourceTree = "<group>"; };
+		995525871F42C53800E6CF1E /* HeroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCard.swift; sourceTree = "<group>"; };
+		9955258F1F42C9CC00E6CF1E /* CardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImage.swift; sourceTree = "<group>"; };
 		9958C5401F3F981E00CA5F97 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		9958C5461F3F9A2E00CA5F97 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
 		9958C54C1F3F9B7C00CA5F97 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
@@ -308,6 +316,8 @@
 				99DB54D31F41B3EF00C97DB9 /* AnimationCard.swift */,
 				99DB54DB1F4242EA00C97DB9 /* AudioCard.swift */,
 				99DB54E31F42497200C97DB9 /* VideoCard.swift */,
+				9955258F1F42C9CC00E6CF1E /* CardImage.swift */,
+				995525871F42C53800E6CF1E /* HeroCard.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -648,7 +658,9 @@
 				99DB54DC1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
 				995038021F3F2B2600502D9E /* ErrorResponse.swift in Sources */,
 				995037FA1F3F15A000502D9E /* Conversation.swift in Sources */,
+				995525881F42C53800E6CF1E /* HeroCard.swift in Sources */,
 				99DB54D41F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
+				995525901F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				991831661F408CE8005619A6 /* Media.swift in Sources */,
 				996A826A1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* DirectLine.swift in Sources */,
@@ -685,7 +697,9 @@
 				99DB54DE1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
 				995038081F3F2C3500502D9E /* ErrorResponse.swift in Sources */,
 				995037FC1F3F15C000502D9E /* Conversation.swift in Sources */,
+				9955258A1F42C53800E6CF1E /* HeroCard.swift in Sources */,
 				99DB54D61F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
+				995525921F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				991831681F408CE8005619A6 /* Media.swift in Sources */,
 				996A826C1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* DirectLine.swift in Sources */,
@@ -706,7 +720,9 @@
 				99DB54DD1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
 				995038071F3F2C3400502D9E /* ErrorResponse.swift in Sources */,
 				995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */,
+				995525891F42C53800E6CF1E /* HeroCard.swift in Sources */,
 				99DB54D51F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
+				995525911F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				991831671F408CE8005619A6 /* Media.swift in Sources */,
 				996A826B1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* DirectLine.swift in Sources */,
