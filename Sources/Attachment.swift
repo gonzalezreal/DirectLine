@@ -10,6 +10,7 @@ public struct Attachment {
 		case audioCard(AudioCard)
 		case videoCard(VideoCard)
 		case heroCard(HeroCard)
+		case thumbnailCard(ThumbnailCard)
 		case media(Media)
 		case unknown
 	}
@@ -54,6 +55,8 @@ extension Attachment: Codable {
 			content = .videoCard(try container.decode(VideoCard.self, forKey: .content))
 		case HeroCard.contentType:
 			content = .heroCard(try container.decode(HeroCard.self, forKey: .content))
+		case ThumbnailCard.contentType:
+			content = .thumbnailCard(try container.decode(ThumbnailCard.self, forKey: .content))
 		default:
 			if container.contains(.content) {
 				content = .unknown
@@ -76,7 +79,7 @@ extension Attachment: Codable {
 			try value.encode(to: encoder)
 		default:
 			let context = EncodingError.Context(codingPath: [CodingKeys.content],
-			                                    debugDescription: "Encoding for this content is not supported.")
+			                                    debugDescription: "This content cannot be encoded.")
 			throw EncodingError.invalidValue(content, context)
 		}
 

@@ -38,6 +38,9 @@
 		995525901F42C9CC00E6CF1E /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955258F1F42C9CC00E6CF1E /* CardImage.swift */; };
 		995525911F42C9CC00E6CF1E /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955258F1F42C9CC00E6CF1E /* CardImage.swift */; };
 		995525921F42C9CC00E6CF1E /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955258F1F42C9CC00E6CF1E /* CardImage.swift */; };
+		995525941F43649600E6CF1E /* ThumbnailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995525931F43649600E6CF1E /* ThumbnailCard.swift */; };
+		995525951F43649600E6CF1E /* ThumbnailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995525931F43649600E6CF1E /* ThumbnailCard.swift */; };
+		995525961F43649600E6CF1E /* ThumbnailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995525931F43649600E6CF1E /* ThumbnailCard.swift */; };
 		9958C5411F3F981E00CA5F97 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9958C5401F3F981E00CA5F97 /* RxSwift.framework */; };
 		9958C5431F3F995E00CA5F97 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9958C5401F3F981E00CA5F97 /* RxSwift.framework */; };
 		9958C5451F3F99E100CA5F97 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9958C5401F3F981E00CA5F97 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -179,6 +182,7 @@
 		995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseTest.swift; sourceTree = "<group>"; };
 		995525871F42C53800E6CF1E /* HeroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCard.swift; sourceTree = "<group>"; };
 		9955258F1F42C9CC00E6CF1E /* CardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImage.swift; sourceTree = "<group>"; };
+		995525931F43649600E6CF1E /* ThumbnailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCard.swift; sourceTree = "<group>"; };
 		9958C5401F3F981E00CA5F97 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		9958C5461F3F9A2E00CA5F97 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/tvOS/RxSwift.framework; sourceTree = "<group>"; };
 		9958C54C1F3F9B7C00CA5F97 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
@@ -318,6 +322,7 @@
 				99DB54E31F42497200C97DB9 /* VideoCard.swift */,
 				9955258F1F42C9CC00E6CF1E /* CardImage.swift */,
 				995525871F42C53800E6CF1E /* HeroCard.swift */,
+				995525931F43649600E6CF1E /* ThumbnailCard.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -664,6 +669,7 @@
 				991831661F408CE8005619A6 /* Media.swift in Sources */,
 				996A826A1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* DirectLine.swift in Sources */,
+				995525941F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
 				99DB54E41F42497200C97DB9 /* VideoCard.swift in Sources */,
 				99DB54C01F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82761F4061C500C36B75 /* Attachment.swift in Sources */,
@@ -703,6 +709,7 @@
 				991831681F408CE8005619A6 /* Media.swift in Sources */,
 				996A826C1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* DirectLine.swift in Sources */,
+				995525961F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
 				99DB54E61F42497200C97DB9 /* VideoCard.swift in Sources */,
 				99DB54C21F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82781F4061C500C36B75 /* Attachment.swift in Sources */,
@@ -726,6 +733,7 @@
 				991831671F408CE8005619A6 /* Media.swift in Sources */,
 				996A826B1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* DirectLine.swift in Sources */,
+				995525951F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
 				99DB54E51F42497200C97DB9 /* VideoCard.swift in Sources */,
 				99DB54C11F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82771F4061C500C36B75 /* Attachment.swift in Sources */,

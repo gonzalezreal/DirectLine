@@ -189,6 +189,39 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isHeroCard ?? false)
 	}
 
+	func testDecodeThumbnailCardAttachment() {
+		// given
+		let json = """
+		{
+			"contentType": "application/vnd.microsoft.card.thumbnail",
+			"content": {
+				"title": "BotFramework Thumbnail Card",
+				"subtitle": "Your bots — wherever your users are talking",
+				"text": "Build and connect intelligent bots to interact with your users naturally wherever they are, from text/sms to Skype, Slack, Office 365 mail and other popular services.",
+				"images": [
+					{
+						"url": "https://sec.ch9.ms/ch9/7ff5/e07cfef0-aa3b-40bb-9baa-7c9ef8ff7ff5/buildreactionbotframework_960.jpg"
+					}
+				],
+				"buttons": [
+					{
+						"title": "Get Started",
+						"type": "openUrl",
+						"value": "https://docs.microsoft.com/bot-framework"
+					}
+				]
+			}
+		}
+		""".data(using: .utf8)!
+		let decoder = JSONDecoder()
+
+		// when
+		let attachment = try? decoder.decode(Attachment.self, from: json)
+
+		// then
+		XCTAssertTrue(attachment?.isThumbnailCard ?? false)
+	}
+
 	func testDecodeUnknownAttachment() {
 		// given
 		let json = """
@@ -258,6 +291,15 @@ private extension Attachment {
 	var isHeroCard: Bool {
 		switch content {
 		case .heroCard:
+			return true
+		default:
+			return false
+		}
+	}
+
+	var isThumbnailCard: Bool {
+		switch content {
+		case .thumbnailCard:
 			return true
 		default:
 			return false
