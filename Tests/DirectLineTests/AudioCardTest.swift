@@ -6,6 +6,7 @@ class AudioCardTest: XCTestCase {
 		// given
 		let json = """
 		{
+			"buttons": [],
 			"media": [
 				{
 					"url": "http://www.wavlist.com/movies/004/father.wav"
@@ -26,6 +27,7 @@ class AudioCardTest: XCTestCase {
 		// given
 		let json = """
 		{
+			"buttons": [],
 			"media": [
 				{
 					"url": "http://www.wavlist.com/movies/004/father.wav"
@@ -46,6 +48,7 @@ class AudioCardTest: XCTestCase {
 		// given
 		let json = """
 		{
+			"buttons": [],
 			"media": [
 				{
 					"url": "http://www.wavlist.com/movies/004/father.wav"

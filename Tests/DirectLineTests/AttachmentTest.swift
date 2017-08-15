@@ -66,6 +66,9 @@ class AttachmentTest: XCTestCase {
 		{
 			"contentType": "application/vnd.microsoft.card.animation",
 			"content": {
+				"title": "Microsoft Bot Framework",
+				"subtitle": "Animation Card",
+				"buttons": [],
 				"media": [
 					{
 						"url": "http://i.giphy.com/Ki55RUbOV5njy.gif"

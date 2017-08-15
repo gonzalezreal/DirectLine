@@ -57,7 +57,7 @@ extension AudioCard: Decodable {
 		let aspect = try container.decodeIfPresent(String.self, forKey: .aspect)
 		let autoloop = try container.decodeIfPresent(Bool.self, forKey: .autoloop) ?? true
 		let autostart = try container.decodeIfPresent(Bool.self, forKey: .autostart) ?? true
-		let buttons = try container.decodeIfPresent([CardAction].self, forKey: .buttons) ?? []
+		let buttons = try container.decode([CardAction].self, forKey: .buttons)
 		let image = try container.decodeIfPresent(ThumbnailURL.self, forKey: .image)
 		let media = try container.decode([MediaURL].self, forKey: .media)
 		let shareable = try container.decodeIfPresent(Bool.self, forKey: .shareable) ?? true

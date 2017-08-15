@@ -6,6 +6,7 @@ class AnimationCardTest: XCTestCase {
 		// given
 		let json = """
 		{
+			"buttons": [],
 			"media": [
 				{
 					"url": "http://i.giphy.com/Ki55RUbOV5njy.gif"
@@ -26,6 +27,7 @@ class AnimationCardTest: XCTestCase {
 		// given
 		let json = """
 		{
+			"buttons": [],
 			"media": [
 				{
 					"url": "http://i.giphy.com/Ki55RUbOV5njy.gif"
@@ -46,6 +48,7 @@ class AnimationCardTest: XCTestCase {
 		// given
 		let json = """
 		{
+			"buttons": [],
 			"media": [
 				{
 					"url": "http://i.giphy.com/Ki55RUbOV5njy.gif"

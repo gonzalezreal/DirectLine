@@ -6,6 +6,7 @@ class VideoCardTest: XCTestCase {
 		// given
 		let json = """
 		{
+			"buttons": [],
 			"media": [
 				{
 					"url": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
@@ -26,6 +27,7 @@ class VideoCardTest: XCTestCase {
 		// given
 		let json = """
 		{
+			"buttons": [],
 			"media": [
 				{
 					"url": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
@@ -46,6 +48,7 @@ class VideoCardTest: XCTestCase {
 		// given
 		let json = """
 		{
+			"buttons": [],
 			"media": [
 				{
 					"url": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
