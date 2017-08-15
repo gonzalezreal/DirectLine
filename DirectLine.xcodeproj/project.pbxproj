@@ -322,7 +322,25 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				991939291F43947A00842C92 /* Models */,
 				8933C7841EB5B820000D00A4 /* DirectLine.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8933C7831EB5B7EB000D00A4 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9919392A1F4394C700842C92 /* Models */,
+				8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */,
+			);
+			name = Tests;
+			path = Tests/DirectLineTests;
+			sourceTree = "<group>";
+		};
+		991939291F43947A00842C92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				995037F91F3F15A000502D9E /* Conversation.swift */,
 				995038011F3F2B2600502D9E /* ErrorResponse.swift */,
 				996A82691F404A6700C36B75 /* Activity.swift */,
@@ -344,13 +362,12 @@
 				995525971F43680F00E6CF1E /* ReceiptCard.swift */,
 				991939251F4390DC00842C92 /* SignInCard.swift */,
 			);
-			path = Sources;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		8933C7831EB5B7EB000D00A4 /* Tests */ = {
+		9919392A1F4394C700842C92 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */,
 				995037FD1F3F16E800502D9E /* ConversationTest.swift */,
 				995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */,
 				996A82711F405BD100C36B75 /* ActivitySetTest.swift */,
@@ -360,8 +377,7 @@
 				99DB54DF1F42458100C97DB9 /* AudioCardTest.swift */,
 				99DB54E71F424A9D00C97DB9 /* VideoCardTest.swift */,
 			);
-			name = Tests;
-			path = Tests/DirectLineTests;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9958C53F1F3F981D00CA5F97 /* Frameworks */ = {
