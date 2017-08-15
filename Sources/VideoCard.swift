@@ -1,5 +1,6 @@
 import Foundation
 
+/// Defines a card that can play videos.
 public struct VideoCard {
 	internal static let contentType = "application/vnd.microsoft.card.video"
 
