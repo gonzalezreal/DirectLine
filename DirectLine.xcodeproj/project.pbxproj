@@ -20,6 +20,9 @@
 		9918316E1F4092F3005619A6 /* AttachmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918316D1F4092F3005619A6 /* AttachmentTest.swift */; };
 		9918316F1F4092F3005619A6 /* AttachmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918316D1F4092F3005619A6 /* AttachmentTest.swift */; };
 		991831701F4092F3005619A6 /* AttachmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9918316D1F4092F3005619A6 /* AttachmentTest.swift */; };
+		991939261F4390DC00842C92 /* SignInCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991939251F4390DC00842C92 /* SignInCard.swift */; };
+		991939271F4390DC00842C92 /* SignInCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991939251F4390DC00842C92 /* SignInCard.swift */; };
+		991939281F4390DC00842C92 /* SignInCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991939251F4390DC00842C92 /* SignInCard.swift */; };
 		995037FA1F3F15A000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FC1F3F15C000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
@@ -185,6 +188,7 @@
 		8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLineTests.swift; sourceTree = "<group>"; };
 		991831651F408CE8005619A6 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		9918316D1F4092F3005619A6 /* AttachmentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentTest.swift; sourceTree = "<group>"; };
+		991939251F4390DC00842C92 /* SignInCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCard.swift; sourceTree = "<group>"; };
 		995037F91F3F15A000502D9E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
 		995038011F3F2B2600502D9E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -338,6 +342,7 @@
 				9955259B1F43688000E6CF1E /* Fact.swift */,
 				9955259F1F4389B200E6CF1E /* ReceiptItem.swift */,
 				995525971F43680F00E6CF1E /* ReceiptCard.swift */,
+				991939251F4390DC00842C92 /* SignInCard.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -684,6 +689,7 @@
 				995525881F42C53800E6CF1E /* HeroCard.swift in Sources */,
 				99DB54D41F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
 				995525901F42C9CC00E6CF1E /* CardImage.swift in Sources */,
+				991939261F4390DC00842C92 /* SignInCard.swift in Sources */,
 				991831661F408CE8005619A6 /* Media.swift in Sources */,
 				996A826A1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7851EB5B820000D00A4 /* DirectLine.swift in Sources */,
@@ -727,6 +733,7 @@
 				9955258A1F42C53800E6CF1E /* HeroCard.swift in Sources */,
 				99DB54D61F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
 				995525921F42C9CC00E6CF1E /* CardImage.swift in Sources */,
+				991939281F4390DC00842C92 /* SignInCard.swift in Sources */,
 				991831681F408CE8005619A6 /* Media.swift in Sources */,
 				996A826C1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7881EB5B820000D00A4 /* DirectLine.swift in Sources */,
@@ -754,6 +761,7 @@
 				995525891F42C53800E6CF1E /* HeroCard.swift in Sources */,
 				99DB54D51F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
 				995525911F42C9CC00E6CF1E /* CardImage.swift in Sources */,
+				991939271F4390DC00842C92 /* SignInCard.swift in Sources */,
 				991831671F408CE8005619A6 /* Media.swift in Sources */,
 				996A826B1F404A6700C36B75 /* Activity.swift in Sources */,
 				8933C7861EB5B820000D00A4 /* DirectLine.swift in Sources */,

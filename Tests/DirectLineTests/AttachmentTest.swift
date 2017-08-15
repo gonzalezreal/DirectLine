@@ -278,6 +278,31 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isReceiptCard ?? false)
 	}
 
+	func testDecodeSignInCardAttachment() {
+		// given
+		let json = """
+		{
+			"contentType": "application/vnd.microsoft.com.card.signin",
+			"content": {
+				"text": "BotFramework Sign-in Card",
+				"buttons": [
+					{
+						"type": "signin",
+						"value": "https://login.microsoftonline.com/"
+					}
+				]
+			}
+		}
+		""".data(using: .utf8)!
+		let decoder = JSONDecoder()
+
+		// when
+		let attachment = try? decoder.decode(Attachment.self, from: json)
+
+		// then
+		XCTAssertTrue(attachment?.isSignInCard ?? false)
+	}
+
 	func testDecodeUnknownAttachment() {
 		// given
 		let json = """
@@ -365,6 +390,15 @@ private extension Attachment {
 	var isReceiptCard: Bool {
 		switch content {
 		case .receiptCard:
+			return true
+		default:
+			return false
+		}
+	}
+
+	var isSignInCard: Bool {
+		switch content {
+		case .signInCard:
 			return true
 		default:
 			return false
