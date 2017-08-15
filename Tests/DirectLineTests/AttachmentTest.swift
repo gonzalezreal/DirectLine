@@ -222,6 +222,62 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isThumbnailCard ?? false)
 	}
 
+	func testDecodeReceiptCardAttachment() {
+		// given
+		let json = """
+		{
+			"contentType": "application/vnd.microsoft.com.card.receipt",
+			"content": {
+				"title": "John Doe",
+				"facts": [
+					{
+						"key": "Order Number",
+						"value": "1234"
+					},
+					{
+						"key": "Payment Method",
+						"value": "VISA 5555-****"
+					}
+				],
+				"items": [
+					{
+						"title": "Data Transfer",
+						"price": "$ 38.45",
+						"quantity": "368",
+						"image": {
+							"url": "https://github.com/amido/azure-vector-icons/raw/master/renders/traffic-manager.png",
+						}
+					},
+					{
+						"title": "App Service",
+						"price": "$ 45.00",
+						"quantity": "720",
+						"image": {
+							"url": "https://github.com/amido/azure-vector-icons/raw/master/renders/cloud-service.png",
+						}
+					},
+				],
+				"tax": "$ 7.50",
+				"tax": "$ 90.95",
+				"buttons": [
+					{
+						"title": "More information",
+						"type": "openUrl",
+						"value": "https://azure.microsoft.com/en-us/pricing/"
+					}
+				]
+			}
+		}
+		""".data(using: .utf8)!
+		let decoder = JSONDecoder()
+
+		// when
+		let attachment = try? decoder.decode(Attachment.self, from: json)
+
+		// then
+		XCTAssertTrue(attachment?.isReceiptCard ?? false)
+	}
+
 	func testDecodeUnknownAttachment() {
 		// given
 		let json = """
@@ -300,6 +356,15 @@ private extension Attachment {
 	var isThumbnailCard: Bool {
 		switch content {
 		case .thumbnailCard:
+			return true
+		default:
+			return false
+		}
+	}
+
+	var isReceiptCard: Bool {
+		switch content {
+		case .receiptCard:
 			return true
 		default:
 			return false

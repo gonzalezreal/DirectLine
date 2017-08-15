@@ -11,6 +11,7 @@ public struct Attachment {
 		case videoCard(VideoCard)
 		case heroCard(HeroCard)
 		case thumbnailCard(ThumbnailCard)
+		case receiptCard(ReceiptCard)
 		case media(Media)
 		case unknown
 	}
@@ -57,6 +58,8 @@ extension Attachment: Codable {
 			content = .heroCard(try container.decode(HeroCard.self, forKey: .content))
 		case ThumbnailCard.contentType:
 			content = .thumbnailCard(try container.decode(ThumbnailCard.self, forKey: .content))
+		case ReceiptCard.contentType:
+			content = .receiptCard(try container.decode(ReceiptCard.self, forKey: .content))
 		default:
 			if container.contains(.content) {
 				content = .unknown
