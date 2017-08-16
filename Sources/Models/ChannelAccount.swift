@@ -8,4 +8,9 @@ public struct ChannelAccount: Codable {
 
 	/// Name of the bot or user.
 	public let name: String?
+
+	public init(id: String, name: String? = nil) {
+		self.id = id
+		self.name = name
+	}
 }

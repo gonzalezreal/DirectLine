@@ -94,6 +94,12 @@
 		996A82761F4061C500C36B75 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82751F4061C500C36B75 /* Attachment.swift */; };
 		996A82771F4061C500C36B75 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82751F4061C500C36B75 /* Attachment.swift */; };
 		996A82781F4061C500C36B75 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82751F4061C500C36B75 /* Attachment.swift */; };
+		997F8DFC1F44756C009F82A2 /* DateFormatter+iso8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F8DFB1F44756C009F82A2 /* DateFormatter+iso8601.swift */; };
+		997F8DFD1F44756C009F82A2 /* DateFormatter+iso8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F8DFB1F44756C009F82A2 /* DateFormatter+iso8601.swift */; };
+		997F8DFE1F44756C009F82A2 /* DateFormatter+iso8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F8DFB1F44756C009F82A2 /* DateFormatter+iso8601.swift */; };
+		997F8E001F4477AA009F82A2 /* ActivityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F8DFF1F4477AA009F82A2 /* ActivityTest.swift */; };
+		997F8E011F4477AA009F82A2 /* ActivityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F8DFF1F4477AA009F82A2 /* ActivityTest.swift */; };
+		997F8E021F4477AA009F82A2 /* ActivityTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997F8DFF1F4477AA009F82A2 /* ActivityTest.swift */; };
 		99DB54C01F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */; };
 		99DB54C11F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */; };
 		99DB54C21F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */; };
@@ -225,6 +231,8 @@
 		996A826D1F40565500C36B75 /* ActivitySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySet.swift; sourceTree = "<group>"; };
 		996A82711F405BD100C36B75 /* ActivitySetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySetTest.swift; sourceTree = "<group>"; };
 		996A82751F4061C500C36B75 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		997F8DFB1F44756C009F82A2 /* DateFormatter+iso8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+iso8601.swift"; sourceTree = "<group>"; };
+		997F8DFF1F4477AA009F82A2 /* ActivityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTest.swift; sourceTree = "<group>"; };
 		99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveCard.swift; sourceTree = "<group>"; };
 		99DB54C31F40BA7000C97DB9 /* CardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAction.swift; sourceTree = "<group>"; };
 		99DB54C71F41A56200C97DB9 /* CardActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActionTest.swift; sourceTree = "<group>"; };
@@ -338,6 +346,7 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				997F8DFA1F44753E009F82A2 /* Utilities */,
 				991939291F43947A00842C92 /* Models */,
 				8933C7841EB5B820000D00A4 /* DirectLine.swift */,
 			);
@@ -359,8 +368,6 @@
 			children = (
 				995037F91F3F15A000502D9E /* Conversation.swift */,
 				995038011F3F2B2600502D9E /* ErrorResponse.swift */,
-				996A82691F404A6700C36B75 /* Activity.swift */,
-				996A826D1F40565500C36B75 /* ActivitySet.swift */,
 				996A82751F4061C500C36B75 /* Attachment.swift */,
 				991831651F408CE8005619A6 /* Media.swift */,
 				99DB54BF1F40B40C00C97DB9 /* AdaptiveCard.swift */,
@@ -380,6 +387,8 @@
 				9919392B1F43956400842C92 /* ConversationAccount.swift */,
 				991939331F4398D300842C92 /* ChannelAccount.swift */,
 				991939371F439B5400842C92 /* SuggestedActions.swift */,
+				996A82691F404A6700C36B75 /* Activity.swift */,
+				996A826D1F40565500C36B75 /* ActivitySet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -389,13 +398,14 @@
 			children = (
 				995037FD1F3F16E800502D9E /* ConversationTest.swift */,
 				995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */,
-				996A82711F405BD100C36B75 /* ActivitySetTest.swift */,
 				9918316D1F4092F3005619A6 /* AttachmentTest.swift */,
 				99DB54C71F41A56200C97DB9 /* CardActionTest.swift */,
 				99DB54D71F423BCE00C97DB9 /* AnimationCardTest.swift */,
 				99DB54DF1F42458100C97DB9 /* AudioCardTest.swift */,
 				99DB54E71F424A9D00C97DB9 /* VideoCardTest.swift */,
 				9919392F1F4397AC00842C92 /* ConversationAccountTest.swift */,
+				997F8DFF1F4477AA009F82A2 /* ActivityTest.swift */,
+				996A82711F405BD100C36B75 /* ActivitySetTest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -411,6 +421,14 @@
 				9958C5401F3F981E00CA5F97 /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		997F8DFA1F44753E009F82A2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				997F8DFB1F44756C009F82A2 /* DateFormatter+iso8601.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		DD7502721C68FC1B006590AF /* Frameworks */ = {
@@ -726,6 +744,7 @@
 				995525981F43680F00E6CF1E /* ReceiptCard.swift in Sources */,
 				995037FA1F3F15A000502D9E /* Conversation.swift in Sources */,
 				995525881F42C53800E6CF1E /* HeroCard.swift in Sources */,
+				997F8DFC1F44756C009F82A2 /* DateFormatter+iso8601.swift in Sources */,
 				99DB54D41F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
 				995525901F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				991939261F4390DC00842C92 /* SignInCard.swift in Sources */,
@@ -754,6 +773,7 @@
 				995038041F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */,
+				997F8E001F4477AA009F82A2 /* ActivityTest.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* DirectLineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -774,6 +794,7 @@
 				9955259A1F43680F00E6CF1E /* ReceiptCard.swift in Sources */,
 				995037FC1F3F15C000502D9E /* Conversation.swift in Sources */,
 				9955258A1F42C53800E6CF1E /* HeroCard.swift in Sources */,
+				997F8DFE1F44756C009F82A2 /* DateFormatter+iso8601.swift in Sources */,
 				99DB54D61F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
 				995525921F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				991939281F4390DC00842C92 /* SignInCard.swift in Sources */,
@@ -805,6 +826,7 @@
 				995525991F43680F00E6CF1E /* ReceiptCard.swift in Sources */,
 				995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */,
 				995525891F42C53800E6CF1E /* HeroCard.swift in Sources */,
+				997F8DFD1F44756C009F82A2 /* DateFormatter+iso8601.swift in Sources */,
 				99DB54D51F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
 				995525911F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				991939271F4390DC00842C92 /* SignInCard.swift in Sources */,
@@ -833,6 +855,7 @@
 				995038051F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */,
+				997F8E011F4477AA009F82A2 /* ActivityTest.swift in Sources */,
 				8933C78F1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -850,6 +873,7 @@
 				995038061F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995038001F3F172300502D9E /* ConversationTest.swift in Sources */,
+				997F8E021F4477AA009F82A2 /* ActivityTest.swift in Sources */,
 				8933C78E1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

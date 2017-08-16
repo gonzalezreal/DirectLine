@@ -1,5 +1,5 @@
 import XCTest
-import DirectLine
+@testable import DirectLine
 
 class ActivitySetTest: XCTestCase {
 	func testDecodeActivitySet() {
@@ -25,6 +25,7 @@ class ActivitySetTest: XCTestCase {
 		}
 		""".data(using: .utf8)!
 		let decoder = JSONDecoder()
+		decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601)
 
 		// then
 		XCTAssertNoThrow(try decoder.decode(ActivitySet.self, from: json))
@@ -52,6 +53,7 @@ class ActivitySetTest: XCTestCase {
 		}
 		""".data(using: .utf8)!
 		let decoder = JSONDecoder()
+		decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601)
 
 		// then
 		XCTAssertNoThrow(try decoder.decode(ActivitySet.self, from: json))
