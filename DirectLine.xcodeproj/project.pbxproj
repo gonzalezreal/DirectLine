@@ -48,6 +48,18 @@
 		994735421F4771DB00DD6F7F /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		994735441F47720400DD6F7F /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994735431F47720400DD6F7F /* OHHTTPStubs.framework */; };
 		994735451F47720F00DD6F7F /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 994735431F47720400DD6F7F /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		994735471F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */; };
+		994735481F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */; };
+		994735491F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */; };
+		9947354B1F477B0900DD6F7F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9947354A1F477B0900DD6F7F /* RxBlocking.framework */; };
+		9947354C1F477B1300DD6F7F /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9947354A1F477B0900DD6F7F /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9947354E1F477B3200DD6F7F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9947354D1F477B3200DD6F7F /* RxBlocking.framework */; };
+		9947354F1F477B3D00DD6F7F /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9947354D1F477B3200DD6F7F /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		994735511F477B6600DD6F7F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994735501F477B6600DD6F7F /* RxBlocking.framework */; };
+		994735521F477B7100DD6F7F /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 994735501F477B6600DD6F7F /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		994735541F47856800DD6F7F /* Equatables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735531F47856800DD6F7F /* Equatables.swift */; };
+		994735551F47856800DD6F7F /* Equatables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735531F47856800DD6F7F /* Equatables.swift */; };
+		994735561F47856800DD6F7F /* Equatables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735531F47856800DD6F7F /* Equatables.swift */; };
 		995037FA1F3F15A000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FC1F3F15C000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
@@ -181,6 +193,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9947354C1F477B1300DD6F7F /* RxBlocking.framework in CopyFiles */,
 				9947353D1F47712C00DD6F7F /* OHHTTPStubs.framework in CopyFiles */,
 				996A825C1F40408700C36B75 /* Starscream.framework in CopyFiles */,
 				9958C5451F3F99E100CA5F97 /* RxSwift.framework in CopyFiles */,
@@ -193,6 +206,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				994735521F477B7100DD6F7F /* RxBlocking.framework in CopyFiles */,
 				994735451F47720F00DD6F7F /* OHHTTPStubs.framework in CopyFiles */,
 				996A82681F4044F900C36B75 /* Starscream.framework in CopyFiles */,
 				9958C54B1F3F9AFD00CA5F97 /* RxSwift.framework in CopyFiles */,
@@ -205,6 +219,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9947354F1F477B3D00DD6F7F /* RxBlocking.framework in CopyFiles */,
 				994735421F4771DB00DD6F7F /* OHHTTPStubs.framework in CopyFiles */,
 				996A82601F4043BE00C36B75 /* Starscream.framework in CopyFiles */,
 				9958C5541F3F9C0300CA5F97 /* RxSwift.framework in CopyFiles */,
@@ -232,6 +247,11 @@
 		9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/Mac/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		994735431F47720400DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/tvOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLineClientTest.swift; sourceTree = "<group>"; };
+		9947354A1F477B0900DD6F7F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		9947354D1F477B3200DD6F7F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
+		994735501F477B6600DD6F7F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/tvOS/RxBlocking.framework; sourceTree = "<group>"; };
+		994735531F47856800DD6F7F /* Equatables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatables.swift; sourceTree = "<group>"; };
 		995037F91F3F15A000502D9E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
 		995038011F3F2B2600502D9E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -285,6 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9947354B1F477B0900DD6F7F /* RxBlocking.framework in Frameworks */,
 				9947353C1F4770DD00DD6F7F /* OHHTTPStubs.framework in Frameworks */,
 				996A825B1F40407900C36B75 /* Starscream.framework in Frameworks */,
 				9958C5431F3F995E00CA5F97 /* RxSwift.framework in Frameworks */,
@@ -314,6 +335,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9947354E1F477B3200DD6F7F /* RxBlocking.framework in Frameworks */,
 				994735401F4771B100DD6F7F /* OHHTTPStubs.framework in Frameworks */,
 				9947353E1F4771B100DD6F7F /* Starscream.framework in Frameworks */,
 				9958C5521F3F9BEF00CA5F97 /* RxSwift.framework in Frameworks */,
@@ -325,6 +347,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994735511F477B6600DD6F7F /* RxBlocking.framework in Frameworks */,
 				994735441F47720400DD6F7F /* OHHTTPStubs.framework in Frameworks */,
 				996A82661F4044E000C36B75 /* Starscream.framework in Frameworks */,
 				9958C5491F3F9AC700CA5F97 /* RxSwift.framework in Frameworks */,
@@ -384,6 +407,8 @@
 			children = (
 				9919392A1F4394C700842C92 /* Models */,
 				8933C7891EB5B82A000D00A4 /* EndpointTest.swift */,
+				994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */,
+				994735531F47856800DD6F7F /* Equatables.swift */,
 			);
 			name = Tests;
 			path = Tests/DirectLineTests;
@@ -440,6 +465,9 @@
 		9958C53F1F3F981D00CA5F97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9947354A1F477B0900DD6F7F /* RxBlocking.framework */,
+				9947354D1F477B3200DD6F7F /* RxBlocking.framework */,
+				994735501F477B6600DD6F7F /* RxBlocking.framework */,
 				9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */,
 				9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */,
 				994735431F47720400DD6F7F /* OHHTTPStubs.framework */,
@@ -803,8 +831,10 @@
 				99DB54E01F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54D81F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
 				995038041F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
+				994735471F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */,
 				996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */,
+				994735541F47856800DD6F7F /* Equatables.swift in Sources */,
 				997F8E001F4477AA009F82A2 /* ActivityTest.swift in Sources */,
 				8933C7901EB5B82D000D00A4 /* EndpointTest.swift in Sources */,
 			);
@@ -889,8 +919,10 @@
 				99DB54E11F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54D91F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
 				995038051F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
+				994735481F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */,
 				996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */,
+				994735551F47856800DD6F7F /* Equatables.swift in Sources */,
 				997F8E011F4477AA009F82A2 /* ActivityTest.swift in Sources */,
 				8933C78F1EB5B82C000D00A4 /* EndpointTest.swift in Sources */,
 			);
@@ -907,8 +939,10 @@
 				99DB54E21F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54DA1F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
 				995038061F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
+				994735491F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */,
 				996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995038001F3F172300502D9E /* ConversationTest.swift in Sources */,
+				994735561F47856800DD6F7F /* Equatables.swift in Sources */,
 				997F8E021F4477AA009F82A2 /* ActivityTest.swift in Sources */,
 				8933C78E1EB5B82C000D00A4 /* EndpointTest.swift in Sources */,
 			);
