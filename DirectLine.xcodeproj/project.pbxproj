@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		52D6D9871BEFF229002C0205 /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D97C1BEFF229002C0205 /* DirectLine.framework */; };
-		8933C7851EB5B820000D00A4 /* DirectLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* DirectLine.swift */; };
-		8933C7861EB5B820000D00A4 /* DirectLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* DirectLine.swift */; };
-		8933C7881EB5B820000D00A4 /* DirectLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7841EB5B820000D00A4 /* DirectLine.swift */; };
-		8933C78E1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */; };
-		8933C78F1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */; };
-		8933C7901EB5B82D000D00A4 /* DirectLineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */; };
+		8933C78E1EB5B82C000D00A4 /* EndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* EndpointTest.swift */; };
+		8933C78F1EB5B82C000D00A4 /* EndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* EndpointTest.swift */; };
+		8933C7901EB5B82D000D00A4 /* EndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8933C7891EB5B82A000D00A4 /* EndpointTest.swift */; };
 		991831661F408CE8005619A6 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991831651F408CE8005619A6 /* Media.swift */; };
 		991831671F408CE8005619A6 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991831651F408CE8005619A6 /* Media.swift */; };
 		991831681F408CE8005619A6 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991831651F408CE8005619A6 /* Media.swift */; };
@@ -38,6 +35,9 @@
 		994735231F456E6600DD6F7F /* ResourceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735221F456E6600DD6F7F /* ResourceResponse.swift */; };
 		994735241F456E6600DD6F7F /* ResourceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735221F456E6600DD6F7F /* ResourceResponse.swift */; };
 		994735251F456E6600DD6F7F /* ResourceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735221F456E6600DD6F7F /* ResourceResponse.swift */; };
+		994735301F46C2EE00DD6F7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947352F1F46C2EE00DD6F7F /* Endpoint.swift */; };
+		994735311F46C2EE00DD6F7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947352F1F46C2EE00DD6F7F /* Endpoint.swift */; };
+		994735321F46C2EE00DD6F7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947352F1F46C2EE00DD6F7F /* Endpoint.swift */; };
 		995037FA1F3F15A000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FC1F3F15C000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
@@ -205,8 +205,7 @@
 		52D6D9861BEFF229002C0205 /* DirectLine-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirectLine-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6D9F01BEFFFBE002C0205 /* DirectLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DirectLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D6DA0F1BF000BD002C0205 /* DirectLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DirectLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8933C7841EB5B820000D00A4 /* DirectLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLine.swift; sourceTree = "<group>"; };
-		8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectLineTests.swift; sourceTree = "<group>"; };
+		8933C7891EB5B82A000D00A4 /* EndpointTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTest.swift; sourceTree = "<group>"; };
 		991831651F408CE8005619A6 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		9918316D1F4092F3005619A6 /* AttachmentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentTest.swift; sourceTree = "<group>"; };
 		991939251F4390DC00842C92 /* SignInCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCard.swift; sourceTree = "<group>"; };
@@ -215,6 +214,7 @@
 		991939331F4398D300842C92 /* ChannelAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelAccount.swift; sourceTree = "<group>"; };
 		991939371F439B5400842C92 /* SuggestedActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedActions.swift; sourceTree = "<group>"; };
 		994735221F456E6600DD6F7F /* ResourceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceResponse.swift; sourceTree = "<group>"; };
+		9947352F1F46C2EE00DD6F7F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		995037F91F3F15A000502D9E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
 		995038011F3F2B2600502D9E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -352,7 +352,7 @@
 			children = (
 				997F8DFA1F44753E009F82A2 /* Utilities */,
 				991939291F43947A00842C92 /* Models */,
-				8933C7841EB5B820000D00A4 /* DirectLine.swift */,
+				9947352F1F46C2EE00DD6F7F /* Endpoint.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				9919392A1F4394C700842C92 /* Models */,
-				8933C7891EB5B82A000D00A4 /* DirectLineTests.swift */,
+				8933C7891EB5B82A000D00A4 /* EndpointTest.swift */,
 			);
 			name = Tests;
 			path = Tests/DirectLineTests;
@@ -753,10 +753,10 @@
 				997F8DFC1F44756C009F82A2 /* DateFormatter+iso8601.swift in Sources */,
 				99DB54D41F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
 				995525901F42C9CC00E6CF1E /* CardImage.swift in Sources */,
+				994735301F46C2EE00DD6F7F /* Endpoint.swift in Sources */,
 				991939261F4390DC00842C92 /* SignInCard.swift in Sources */,
 				991831661F408CE8005619A6 /* Media.swift in Sources */,
 				996A826A1F404A6700C36B75 /* Activity.swift in Sources */,
-				8933C7851EB5B820000D00A4 /* DirectLine.swift in Sources */,
 				995525941F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
 				99DB54E41F42497200C97DB9 /* VideoCard.swift in Sources */,
 				99DB54C01F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
@@ -780,7 +780,7 @@
 				996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */,
 				997F8E001F4477AA009F82A2 /* ActivityTest.swift in Sources */,
-				8933C7901EB5B82D000D00A4 /* DirectLineTests.swift in Sources */,
+				8933C7901EB5B82D000D00A4 /* EndpointTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,10 +804,10 @@
 				997F8DFE1F44756C009F82A2 /* DateFormatter+iso8601.swift in Sources */,
 				99DB54D61F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
 				995525921F42C9CC00E6CF1E /* CardImage.swift in Sources */,
+				994735321F46C2EE00DD6F7F /* Endpoint.swift in Sources */,
 				991939281F4390DC00842C92 /* SignInCard.swift in Sources */,
 				991831681F408CE8005619A6 /* Media.swift in Sources */,
 				996A826C1F404A6700C36B75 /* Activity.swift in Sources */,
-				8933C7881EB5B820000D00A4 /* DirectLine.swift in Sources */,
 				995525961F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
 				99DB54E61F42497200C97DB9 /* VideoCard.swift in Sources */,
 				99DB54C21F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
@@ -837,10 +837,10 @@
 				997F8DFD1F44756C009F82A2 /* DateFormatter+iso8601.swift in Sources */,
 				99DB54D51F41B3EF00C97DB9 /* AnimationCard.swift in Sources */,
 				995525911F42C9CC00E6CF1E /* CardImage.swift in Sources */,
+				994735311F46C2EE00DD6F7F /* Endpoint.swift in Sources */,
 				991939271F4390DC00842C92 /* SignInCard.swift in Sources */,
 				991831671F408CE8005619A6 /* Media.swift in Sources */,
 				996A826B1F404A6700C36B75 /* Activity.swift in Sources */,
-				8933C7861EB5B820000D00A4 /* DirectLine.swift in Sources */,
 				995525951F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
 				99DB54E51F42497200C97DB9 /* VideoCard.swift in Sources */,
 				99DB54C11F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
@@ -864,7 +864,7 @@
 				996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */,
 				997F8E011F4477AA009F82A2 /* ActivityTest.swift in Sources */,
-				8933C78F1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */,
+				8933C78F1EB5B82C000D00A4 /* EndpointTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,7 +882,7 @@
 				996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995038001F3F172300502D9E /* ConversationTest.swift in Sources */,
 				997F8E021F4477AA009F82A2 /* ActivityTest.swift in Sources */,
-				8933C78E1EB5B82C000D00A4 /* DirectLineTests.swift in Sources */,
+				8933C78E1EB5B82C000D00A4 /* EndpointTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
