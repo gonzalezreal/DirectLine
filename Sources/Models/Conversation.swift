@@ -13,7 +13,7 @@ public struct Conversation: Decodable {
 	public let expiresIn: TimeInterval
 
 	/// URL for the conversation's message stream.
-	public let streamURL: URL
+	public let streamURL: URL?
 
 	private enum CodingKeys: String, CodingKey {
 		case conversationId
