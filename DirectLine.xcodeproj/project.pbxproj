@@ -41,6 +41,13 @@
 		994735381F4749C800DD6F7F /* DirectLineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* DirectLineClient.swift */; };
 		994735391F4749C800DD6F7F /* DirectLineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* DirectLineClient.swift */; };
 		9947353A1F4749C800DD6F7F /* DirectLineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* DirectLineClient.swift */; };
+		9947353C1F4770DD00DD6F7F /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */; };
+		9947353D1F47712C00DD6F7F /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9947353E1F4771B100DD6F7F /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A825D1F40438E00C36B75 /* Starscream.framework */; };
+		994735401F4771B100DD6F7F /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */; };
+		994735421F4771DB00DD6F7F /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		994735441F47720400DD6F7F /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994735431F47720400DD6F7F /* OHHTTPStubs.framework */; };
+		994735451F47720F00DD6F7F /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 994735431F47720400DD6F7F /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		995037FA1F3F15A000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FC1F3F15C000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
@@ -174,6 +181,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9947353D1F47712C00DD6F7F /* OHHTTPStubs.framework in CopyFiles */,
 				996A825C1F40408700C36B75 /* Starscream.framework in CopyFiles */,
 				9958C5451F3F99E100CA5F97 /* RxSwift.framework in CopyFiles */,
 			);
@@ -185,6 +193,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				994735451F47720F00DD6F7F /* OHHTTPStubs.framework in CopyFiles */,
 				996A82681F4044F900C36B75 /* Starscream.framework in CopyFiles */,
 				9958C54B1F3F9AFD00CA5F97 /* RxSwift.framework in CopyFiles */,
 			);
@@ -196,6 +205,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				994735421F4771DB00DD6F7F /* OHHTTPStubs.framework in CopyFiles */,
 				996A82601F4043BE00C36B75 /* Starscream.framework in CopyFiles */,
 				9958C5541F3F9C0300CA5F97 /* RxSwift.framework in CopyFiles */,
 			);
@@ -219,6 +229,9 @@
 		994735221F456E6600DD6F7F /* ResourceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceResponse.swift; sourceTree = "<group>"; };
 		9947352F1F46C2EE00DD6F7F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		994735371F4749C800DD6F7F /* DirectLineClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLineClient.swift; sourceTree = "<group>"; };
+		9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/Mac/OHHTTPStubs.framework; sourceTree = "<group>"; };
+		994735431F47720400DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/tvOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		995037F91F3F15A000502D9E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
 		995038011F3F2B2600502D9E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -272,6 +285,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9947353C1F4770DD00DD6F7F /* OHHTTPStubs.framework in Frameworks */,
 				996A825B1F40407900C36B75 /* Starscream.framework in Frameworks */,
 				9958C5431F3F995E00CA5F97 /* RxSwift.framework in Frameworks */,
 				52D6D9871BEFF229002C0205 /* DirectLine.framework in Frameworks */,
@@ -300,6 +314,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994735401F4771B100DD6F7F /* OHHTTPStubs.framework in Frameworks */,
+				9947353E1F4771B100DD6F7F /* Starscream.framework in Frameworks */,
 				9958C5521F3F9BEF00CA5F97 /* RxSwift.framework in Frameworks */,
 				DD7502881C68FEDE006590AF /* DirectLine.framework in Frameworks */,
 			);
@@ -309,6 +325,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				994735441F47720400DD6F7F /* OHHTTPStubs.framework in Frameworks */,
 				996A82661F4044E000C36B75 /* Starscream.framework in Frameworks */,
 				9958C5491F3F9AC700CA5F97 /* RxSwift.framework in Frameworks */,
 				DD7502921C690C7A006590AF /* DirectLine.framework in Frameworks */,
@@ -423,6 +440,9 @@
 		9958C53F1F3F981D00CA5F97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */,
+				9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */,
+				994735431F47720400DD6F7F /* OHHTTPStubs.framework */,
 				996A82591F40401100C36B75 /* Starscream.framework */,
 				996A825D1F40438E00C36B75 /* Starscream.framework */,
 				996A82641F40449000C36B75 /* Starscream.framework */,
