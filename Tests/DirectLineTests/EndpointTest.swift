@@ -2,7 +2,6 @@ import XCTest
 @testable import DirectLine
 
 class EndpointTest: XCTestCase {
-	private let baseURL = URL(string: "https://directline.botframework.com/v3/directline")!
 	private let conversation = Conversation(conversationId: "1234", token: "3xpo", expiresIn: 1800, streamURL: nil)
 
 	func testStartEndpoint() {
@@ -10,10 +9,10 @@ class EndpointTest: XCTestCase {
 		let endpoint: Endpoint = .start(secret: "secret")
 
 		// when
-		let request = endpoint.request(with: baseURL)
+		let request = endpoint.request(with: .directLineBaseURL)
 
 		// then
-		XCTAssertEqual(request.url, baseURL.appendingPathComponent("conversations"))
+		XCTAssertEqual(request.url, URL.directLineBaseURL.appendingPathComponent("conversations"))
 		XCTAssertEqual(request.httpMethod, "POST")
 		XCTAssertEqual(request.allHTTPHeaderFields!, ["Authorization": "Bearer secret"])
 		XCTAssertNil(request.httpBody)
@@ -24,10 +23,10 @@ class EndpointTest: XCTestCase {
 		let endpoint: Endpoint = .refresh(token: "token")
 
 		// when
-		let request = endpoint.request(with: baseURL)
+		let request = endpoint.request(with: .directLineBaseURL)
 
 		// then
-		XCTAssertEqual(request.url, baseURL.appendingPathComponent("tokens/refresh"))
+		XCTAssertEqual(request.url, URL.directLineBaseURL.appendingPathComponent("tokens/refresh"))
 		XCTAssertEqual(request.httpMethod, "POST")
 		XCTAssertEqual(request.allHTTPHeaderFields!, ["Authorization": "Bearer token"])
 		XCTAssertNil(request.httpBody)
@@ -38,10 +37,10 @@ class EndpointTest: XCTestCase {
 		let endpoint: Endpoint = .reconnect(conversation: conversation)
 
 		// when
-		let request = endpoint.request(with: baseURL)
+		let request = endpoint.request(with: .directLineBaseURL)
 
 		// then
-		XCTAssertEqual(request.url, baseURL.appendingPathComponent("conversations/1234"))
+		XCTAssertEqual(request.url, URL.directLineBaseURL.appendingPathComponent("conversations/1234"))
 		XCTAssertEqual(request.httpMethod, "GET")
 		XCTAssertEqual(request.allHTTPHeaderFields!, ["Authorization": "Bearer 3xpo"])
 		XCTAssertNil(request.httpBody)
@@ -59,10 +58,10 @@ class EndpointTest: XCTestCase {
 		let endpoint: Endpoint = .post(activity: activity, conversation: conversation)
 
 		// when
-		let request = endpoint.request(with: baseURL)
+		let request = endpoint.request(with: .directLineBaseURL)
 
 		// then
-		XCTAssertEqual(request.url, baseURL.appendingPathComponent("conversations/1234/activities"))
+		XCTAssertEqual(request.url, URL.directLineBaseURL.appendingPathComponent("conversations/1234/activities"))
 		XCTAssertEqual(request.httpMethod, "POST")
 		XCTAssertEqual(request.allHTTPHeaderFields!, headers)
 		XCTAssertEqual(request.httpBody, encodedActivity)
@@ -73,10 +72,10 @@ class EndpointTest: XCTestCase {
 		let endpoint: Endpoint = .activities(conversation: conversation, watermark: nil)
 
 		// when
-		let request = endpoint.request(with: baseURL)
+		let request = endpoint.request(with: .directLineBaseURL)
 
 		// then
-		XCTAssertEqual(request.url, baseURL.appendingPathComponent("conversations/1234/activities"))
+		XCTAssertEqual(request.url, URL.directLineBaseURL.appendingPathComponent("conversations/1234/activities"))
 		XCTAssertEqual(request.httpMethod, "GET")
 		XCTAssertEqual(request.allHTTPHeaderFields!, ["Authorization": "Bearer 3xpo"])
 		XCTAssertNil(request.httpBody)
@@ -85,11 +84,11 @@ class EndpointTest: XCTestCase {
 	func testActivitiesWithWatermarkEndpoint() {
 		// given
 		let endpoint: Endpoint = .activities(conversation: conversation, watermark: "3")
-		var components = URLComponents(url: baseURL.appendingPathComponent("conversations/1234/activities"), resolvingAgainstBaseURL: false)!
+		var components = URLComponents(url: URL.directLineBaseURL.appendingPathComponent("conversations/1234/activities"), resolvingAgainstBaseURL: false)!
 		components.queryItems = [URLQueryItem(name: "watermark", value: "3")]
 
 		// when
-		let request = endpoint.request(with: baseURL)
+		let request = endpoint.request(with: .directLineBaseURL)
 
 		// then
 		XCTAssertEqual(request.url, components.url)

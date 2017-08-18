@@ -38,6 +38,9 @@
 		994735301F46C2EE00DD6F7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947352F1F46C2EE00DD6F7F /* Endpoint.swift */; };
 		994735311F46C2EE00DD6F7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947352F1F46C2EE00DD6F7F /* Endpoint.swift */; };
 		994735321F46C2EE00DD6F7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947352F1F46C2EE00DD6F7F /* Endpoint.swift */; };
+		994735381F4749C800DD6F7F /* DirectLineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* DirectLineClient.swift */; };
+		994735391F4749C800DD6F7F /* DirectLineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* DirectLineClient.swift */; };
+		9947353A1F4749C800DD6F7F /* DirectLineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* DirectLineClient.swift */; };
 		995037FA1F3F15A000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FC1F3F15C000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
@@ -215,6 +218,7 @@
 		991939371F439B5400842C92 /* SuggestedActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedActions.swift; sourceTree = "<group>"; };
 		994735221F456E6600DD6F7F /* ResourceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceResponse.swift; sourceTree = "<group>"; };
 		9947352F1F46C2EE00DD6F7F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		994735371F4749C800DD6F7F /* DirectLineClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLineClient.swift; sourceTree = "<group>"; };
 		995037F91F3F15A000502D9E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
 		995038011F3F2B2600502D9E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
@@ -353,6 +357,7 @@
 				997F8DFA1F44753E009F82A2 /* Utilities */,
 				991939291F43947A00842C92 /* Models */,
 				9947352F1F46C2EE00DD6F7F /* Endpoint.swift */,
+				994735371F4749C800DD6F7F /* DirectLineClient.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -755,6 +760,7 @@
 				995525901F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				994735301F46C2EE00DD6F7F /* Endpoint.swift in Sources */,
 				991939261F4390DC00842C92 /* SignInCard.swift in Sources */,
+				994735381F4749C800DD6F7F /* DirectLineClient.swift in Sources */,
 				991831661F408CE8005619A6 /* Media.swift in Sources */,
 				996A826A1F404A6700C36B75 /* Activity.swift in Sources */,
 				995525941F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
@@ -806,6 +812,7 @@
 				995525921F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				994735321F46C2EE00DD6F7F /* Endpoint.swift in Sources */,
 				991939281F4390DC00842C92 /* SignInCard.swift in Sources */,
+				9947353A1F4749C800DD6F7F /* DirectLineClient.swift in Sources */,
 				991831681F408CE8005619A6 /* Media.swift in Sources */,
 				996A826C1F404A6700C36B75 /* Activity.swift in Sources */,
 				995525961F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
@@ -839,6 +846,7 @@
 				995525911F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				994735311F46C2EE00DD6F7F /* Endpoint.swift in Sources */,
 				991939271F4390DC00842C92 /* SignInCard.swift in Sources */,
+				994735391F4749C800DD6F7F /* DirectLineClient.swift in Sources */,
 				991831671F408CE8005619A6 /* Media.swift in Sources */,
 				996A826B1F404A6700C36B75 /* Activity.swift in Sources */,
 				995525951F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
