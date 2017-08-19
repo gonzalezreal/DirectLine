@@ -44,29 +44,17 @@ class DirectLineClientTest: XCTestCase {
 		XCTAssertEqual(result, expected)
 	}
 
-	func testRequestAPIError() {
+	func testRequestBadStatus() {
 		// given
-		let json = """
-		{
-		  "error": {
-			"code": "TokenExpired",
-			"message": "Token has expired"
-		  }
-		}
-		""".data(using: .utf8)!
-		let expectedError = DirectLineClientError.api(
-			403,
-			ErrorResponse(error: ErrorResponse.Error(code: "TokenExpired", message: "Token has expired"))
-		)
-		stubResponse(withData: json, statusCode: 403)
+		stubResponse(withData: Data(), statusCode: 403)
 
 		// when
 		let observable = sut.request(Conversation.self, from: .start(secret: "secret"))
 
 		// then
 		XCTAssertThrowsError(try observable.toBlocking().single(), "error expected") { error in
-			if let error = error as? DirectLineClientError {
-				XCTAssertEqual(error, expectedError)
+			if case let .badStatus(status, _) = error as! DirectLineURLError {
+				XCTAssertEqual(status, 403)
 			} else {
 				XCTFail()
 			}
@@ -83,11 +71,7 @@ class DirectLineClientTest: XCTestCase {
 
 		// then
 		XCTAssertThrowsError(try observable.toBlocking().single(), "error expected") { error in
-			if let error = error as? DirectLineClientError {
-				XCTAssertEqual(error, DirectLineClientError.other(otherError))
-			} else {
-				XCTFail()
-			}
+			XCTAssertEqual(error as NSError, otherError)
 		}
 	}
 }

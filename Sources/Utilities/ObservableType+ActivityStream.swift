@@ -2,7 +2,18 @@ import Foundation
 import Starscream
 import RxSwift
 
-internal extension Observable where E == Data {
+public extension ObservableType where E == Activity {
+	static func activityStream(url: URL) -> Observable<E> {
+		let decoder = JSONDecoder()
+		decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601)
+
+		return Observable.from(streamURL: url)
+			.map(ActivitySet.self, using: decoder)
+			.flatMap { return Observable.from($0.activities) }
+	}
+}
+
+internal extension ObservableType where E == Data {
 	static func from(streamURL: URL) -> Observable<E> {
 		return Observable.create { observer in
 			let socket = WebSocket(url: streamURL)

@@ -9,12 +9,6 @@ private func equalDump<T>(_ lhs: T, _ rhs: T) -> Bool {
 	return ldump == rdump
 }
 
-extension DirectLineClientError: Equatable {
-	public static func ==(lhs: DirectLineClientError, rhs: DirectLineClientError) -> Bool {
-		return equalDump(lhs, rhs)
-	}
-}
-
 extension Conversation: Equatable {
 	public static func ==(lhs: Conversation, rhs: Conversation) -> Bool {
 		return equalDump(lhs, rhs)

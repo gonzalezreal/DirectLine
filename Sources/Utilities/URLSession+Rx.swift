@@ -1,15 +1,21 @@
 import Foundation
 import RxSwift
 
+public enum DirectLineURLError: Error {
+	case nonHTTPResponse
+	case badStatus(Int, Data)
+}
+
 internal extension Reactive where Base: URLSession {
 	func data(request: URLRequest) -> Observable<Data> {
 		return Observable.create { observer in
 			let task = self.base.dataTask(with: request) { data, response, error in
 				if let error = error {
-					observer.onError(DirectLineClientError.other(error))
+					observer.onError(error)
 				} else {
 					guard let httpResponse = response as? HTTPURLResponse else {
-						fatalError("Unsupported protocol")
+						observer.onError(DirectLineURLError.nonHTTPResponse)
+						return
 					}
 
 					if 200 ..< 300 ~= httpResponse.statusCode {
@@ -18,7 +24,7 @@ internal extension Reactive where Base: URLSession {
 						}
 						observer.onCompleted()
 					} else {
-						observer.onError(DirectLineClientError.badStatus(httpResponse.statusCode, data ?? Data()))
+						observer.onError(DirectLineURLError.badStatus(httpResponse.statusCode, data ?? Data()))
 					}
 				}
 			}

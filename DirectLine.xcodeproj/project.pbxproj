@@ -66,21 +66,15 @@
 		994735601F479B8500DD6F7F /* ObservableType+JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */; };
 		994735611F479B8500DD6F7F /* ObservableType+JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */; };
 		994735621F479B8500DD6F7F /* ObservableType+JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */; };
-		994735651F480C0A00DD6F7F /* Observable+WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* Observable+WebSocket.swift */; };
-		994735661F480C0A00DD6F7F /* Observable+WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* Observable+WebSocket.swift */; };
-		994735671F480C0A00DD6F7F /* Observable+WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* Observable+WebSocket.swift */; };
+		994735651F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */; };
+		994735661F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */; };
+		994735671F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */; };
 		995037FA1F3F15A000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FC1F3F15C000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037FD1F3F16E800502D9E /* ConversationTest.swift */; };
 		995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037FD1F3F16E800502D9E /* ConversationTest.swift */; };
 		995038001F3F172300502D9E /* ConversationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037FD1F3F16E800502D9E /* ConversationTest.swift */; };
-		995038021F3F2B2600502D9E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038011F3F2B2600502D9E /* ErrorResponse.swift */; };
-		995038041F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */; };
-		995038051F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */; };
-		995038061F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */; };
-		995038071F3F2C3400502D9E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038011F3F2B2600502D9E /* ErrorResponse.swift */; };
-		995038081F3F2C3500502D9E /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995038011F3F2B2600502D9E /* ErrorResponse.swift */; };
 		995525881F42C53800E6CF1E /* HeroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995525871F42C53800E6CF1E /* HeroCard.swift */; };
 		995525891F42C53800E6CF1E /* HeroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995525871F42C53800E6CF1E /* HeroCard.swift */; };
 		9955258A1F42C53800E6CF1E /* HeroCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995525871F42C53800E6CF1E /* HeroCard.swift */; };
@@ -263,11 +257,9 @@
 		994735531F47856800DD6F7F /* Equatables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatables.swift; sourceTree = "<group>"; };
 		9947355B1F479B2500DD6F7F /* URLSession+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Rx.swift"; sourceTree = "<group>"; };
 		9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+JSONDecoder.swift"; sourceTree = "<group>"; };
-		994735641F480C0A00DD6F7F /* Observable+WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+WebSocket.swift"; sourceTree = "<group>"; };
+		994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+ActivityStream.swift"; sourceTree = "<group>"; };
 		995037F91F3F15A000502D9E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
-		995038011F3F2B2600502D9E /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
-		995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseTest.swift; sourceTree = "<group>"; };
 		995525871F42C53800E6CF1E /* HeroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCard.swift; sourceTree = "<group>"; };
 		9955258F1F42C9CC00E6CF1E /* CardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImage.swift; sourceTree = "<group>"; };
 		995525931F43649600E6CF1E /* ThumbnailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCard.swift; sourceTree = "<group>"; };
@@ -430,7 +422,6 @@
 			isa = PBXGroup;
 			children = (
 				995037F91F3F15A000502D9E /* Conversation.swift */,
-				995038011F3F2B2600502D9E /* ErrorResponse.swift */,
 				994735221F456E6600DD6F7F /* ResourceResponse.swift */,
 				996A82751F4061C500C36B75 /* Attachment.swift */,
 				991831651F408CE8005619A6 /* Media.swift */,
@@ -461,7 +452,6 @@
 			isa = PBXGroup;
 			children = (
 				995037FD1F3F16E800502D9E /* ConversationTest.swift */,
-				995038031F3F2C2B00502D9E /* ErrorResponseTest.swift */,
 				9918316D1F4092F3005619A6 /* AttachmentTest.swift */,
 				99DB54C71F41A56200C97DB9 /* CardActionTest.swift */,
 				99DB54D71F423BCE00C97DB9 /* AnimationCardTest.swift */,
@@ -499,7 +489,7 @@
 				997F8DFB1F44756C009F82A2 /* DateFormatter+ISO8601.swift */,
 				9947355B1F479B2500DD6F7F /* URLSession+Rx.swift */,
 				9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */,
-				994735641F480C0A00DD6F7F /* Observable+WebSocket.swift */,
+				994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -814,8 +804,7 @@
 				991939381F439B5400842C92 /* SuggestedActions.swift in Sources */,
 				995525A01F4389B200E6CF1E /* ReceiptItem.swift in Sources */,
 				99DB54DC1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
-				994735651F480C0A00DD6F7F /* Observable+WebSocket.swift in Sources */,
-				995038021F3F2B2600502D9E /* ErrorResponse.swift in Sources */,
+				994735651F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */,
 				995525981F43680F00E6CF1E /* ReceiptCard.swift in Sources */,
 				995037FA1F3F15A000502D9E /* Conversation.swift in Sources */,
 				995525881F42C53800E6CF1E /* HeroCard.swift in Sources */,
@@ -848,7 +837,6 @@
 				99DB54C81F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				99DB54E01F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54D81F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
-				995038041F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				994735471F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */,
 				996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */,
@@ -871,8 +859,7 @@
 				9919393A1F439B5400842C92 /* SuggestedActions.swift in Sources */,
 				995525A21F4389B200E6CF1E /* ReceiptItem.swift in Sources */,
 				99DB54DE1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
-				994735671F480C0A00DD6F7F /* Observable+WebSocket.swift in Sources */,
-				995038081F3F2C3500502D9E /* ErrorResponse.swift in Sources */,
+				994735671F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */,
 				9955259A1F43680F00E6CF1E /* ReceiptCard.swift in Sources */,
 				995037FC1F3F15C000502D9E /* Conversation.swift in Sources */,
 				9955258A1F42C53800E6CF1E /* HeroCard.swift in Sources */,
@@ -908,8 +895,7 @@
 				991939391F439B5400842C92 /* SuggestedActions.swift in Sources */,
 				995525A11F4389B200E6CF1E /* ReceiptItem.swift in Sources */,
 				99DB54DD1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
-				994735661F480C0A00DD6F7F /* Observable+WebSocket.swift in Sources */,
-				995038071F3F2C3400502D9E /* ErrorResponse.swift in Sources */,
+				994735661F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */,
 				995525991F43680F00E6CF1E /* ReceiptCard.swift in Sources */,
 				995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */,
 				995525891F42C53800E6CF1E /* HeroCard.swift in Sources */,
@@ -942,7 +928,6 @@
 				99DB54C91F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				99DB54E11F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54D91F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
-				995038051F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				994735481F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */,
 				996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */,
@@ -962,7 +947,6 @@
 				99DB54CA1F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				99DB54E21F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54DA1F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
-				995038061F3F2C2B00502D9E /* ErrorResponseTest.swift in Sources */,
 				994735491F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */,
 				996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995038001F3F172300502D9E /* ConversationTest.swift in Sources */,
