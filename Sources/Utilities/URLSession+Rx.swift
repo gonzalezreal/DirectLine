@@ -6,7 +6,7 @@ internal extension Reactive where Base: URLSession {
 		return Observable.create { observer in
 			let task = self.base.dataTask(with: request) { data, response, error in
 				if let error = error {
-					observer.onError(DirectLineError.other(error))
+					observer.onError(DirectLineClientError.other(error))
 				} else {
 					guard let httpResponse = response as? HTTPURLResponse else {
 						fatalError("Unsupported protocol")
@@ -18,7 +18,7 @@ internal extension Reactive where Base: URLSession {
 						}
 						observer.onCompleted()
 					} else {
-						observer.onError(DirectLineError.badStatus(httpResponse.statusCode, data ?? Data()))
+						observer.onError(DirectLineClientError.badStatus(httpResponse.statusCode, data ?? Data()))
 					}
 				}
 			}

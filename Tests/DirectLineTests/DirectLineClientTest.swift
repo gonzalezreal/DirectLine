@@ -54,7 +54,7 @@ class DirectLineClientTest: XCTestCase {
 		  }
 		}
 		""".data(using: .utf8)!
-		let expectedError = DirectLineError.api(
+		let expectedError = DirectLineClientError.api(
 			403,
 			ErrorResponse(error: ErrorResponse.Error(code: "TokenExpired", message: "Token has expired"))
 		)
@@ -65,7 +65,7 @@ class DirectLineClientTest: XCTestCase {
 
 		// then
 		XCTAssertThrowsError(try observable.toBlocking().single(), "error expected") { error in
-			if let error = error as? DirectLineError {
+			if let error = error as? DirectLineClientError {
 				XCTAssertEqual(error, expectedError)
 			} else {
 				XCTFail()
@@ -83,8 +83,8 @@ class DirectLineClientTest: XCTestCase {
 
 		// then
 		XCTAssertThrowsError(try observable.toBlocking().single(), "error expected") { error in
-			if let error = error as? DirectLineError {
-				XCTAssertEqual(error, DirectLineError.other(otherError))
+			if let error = error as? DirectLineClientError {
+				XCTAssertEqual(error, DirectLineClientError.other(otherError))
 			} else {
 				XCTFail()
 			}

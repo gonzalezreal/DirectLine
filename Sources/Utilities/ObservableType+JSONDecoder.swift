@@ -4,7 +4,7 @@ import RxSwift
 internal extension ObservableType where E == Data {
 	func mapError(using decoder: JSONDecoder) -> Observable<E> {
 		return catchError { error in
-			guard let directLineError = error as? DirectLineError else {
+			guard let directLineError = error as? DirectLineClientError else {
 				throw error
 			}
 
@@ -16,7 +16,7 @@ internal extension ObservableType where E == Data {
 				throw error
 			}
 
-			throw DirectLineError.api(status, errorResponse)
+			throw DirectLineClientError.api(status, errorResponse)
 		}
 	}
 

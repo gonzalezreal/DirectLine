@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-public enum DirectLineError: Error {
+public enum DirectLineClientError: Error {
 	case api(Int, ErrorResponse)
 	case badStatus(Int, Data)
 	case other(Error)
