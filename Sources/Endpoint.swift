@@ -9,6 +9,8 @@ public enum Endpoint {
 }
 
 internal extension Endpoint {
+	static let timeout: TimeInterval = 20
+
 	func request(with baseURL: URL) -> URLRequest {
 		let url = baseURL.appendingPathComponent(path)
 
@@ -19,6 +21,7 @@ internal extension Endpoint {
 		request.httpMethod = method.rawValue
 		request.allHTTPHeaderFields = headers
 		request.httpBody = body
+		request.timeoutInterval = Endpoint.timeout
 
 		return request
 	}
