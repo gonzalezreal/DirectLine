@@ -1,11 +1,11 @@
 import Foundation
 
 public enum Endpoint {
-	case start(secret: String)
+	case startConversation(token: String)
 	case refresh(token: String)
-	case reconnect(conversation: Conversation)
-	case post(activity: Activity, conversation: Conversation)
-	case activities(conversation: Conversation, watermark: String?)
+	case reconnect(conversationId: String, token: String)
+	case post(activity: Activity, conversationId: String, token: String)
+	case activities(conversationId: String, token: String, watermark: String?)
 }
 
 internal extension Endpoint {
@@ -35,7 +35,7 @@ private enum Method: String {
 private extension Endpoint {
 	var method: Method {
 		switch self {
-		case .start, .refresh, .post:
+		case .startConversation, .refresh, .post:
 			return .post
 		case .reconnect, .activities:
 			return .get
@@ -44,40 +44,40 @@ private extension Endpoint {
 
 	var path: String {
 		switch self {
-		case .start:
+		case .startConversation:
 			return "conversations"
 		case .refresh:
 			return "tokens/refresh"
-		case let .reconnect(conversation):
-			return "conversations/\(conversation.conversationId)"
-		case let .post(_, conversation):
-			return "conversations/\(conversation.conversationId)/activities"
-		case let .activities(conversation, _):
-			return "conversations/\(conversation.conversationId)/activities"
+		case let .reconnect(conversationId, _):
+			return "conversations/\(conversationId)"
+		case let .post(_, conversationId, _):
+			return "conversations/\(conversationId)/activities"
+		case let .activities(conversationId, _, _):
+			return "conversations/\(conversationId)/activities"
 		}
 	}
 
 	var headers: [String : String] {
 		switch self {
-		case let .start(secret):
-			return ["Authorization": "Bearer \(secret)"]
+		case let .startConversation(token):
+			return ["Authorization": "Bearer \(token)"]
 		case let .refresh(token):
 			return ["Authorization": "Bearer \(token)"]
-		case let .reconnect(conversation):
-			return ["Authorization": "Bearer \(conversation.token)"]
-		case let .post(_, conversation):
+		case let .reconnect(_, token):
+			return ["Authorization": "Bearer \(token)"]
+		case let .post(_, _, token):
 			return [
-				"Authorization": "Bearer \(conversation.token)",
+				"Authorization": "Bearer \(token)",
 				"Content-Type": "application/json; charset=utf-8"
 			]
-		case let .activities(conversation, _):
-			return ["Authorization": "Bearer \(conversation.token)"]
+		case let .activities(_, token, _):
+			return ["Authorization": "Bearer \(token)"]
 		}
 	}
 
 	var parameters: [String: String]? {
 		switch self {
-		case let .activities(_, watermark):
+		case let .activities(_, _, watermark):
 			if let watermark = watermark {
 				return ["watermark": watermark]
 			} else {
@@ -90,7 +90,7 @@ private extension Endpoint {
 
 	var body: Data? {
 		switch self {
-		case let .post(activity, _):
+		case let .post(activity, _, _):
 			let encoder = JSONEncoder()
 			return try? encoder.encode(activity)
 		default:

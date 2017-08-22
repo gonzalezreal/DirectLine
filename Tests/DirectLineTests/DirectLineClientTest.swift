@@ -36,7 +36,7 @@ class DirectLineClientTest: XCTestCase {
 		stubResponse(withData: json, statusCode: 201)
 
 		// when
-		let result = try! sut.request(Conversation.self, from: .start(secret: "secret"))
+		let result = try! sut.request(Conversation.self, from: .startConversation(token: "secret"))
 			.toBlocking()
 			.single()
 
@@ -49,7 +49,7 @@ class DirectLineClientTest: XCTestCase {
 		stubResponse(withData: Data(), statusCode: 403)
 
 		// when
-		let observable = sut.request(Conversation.self, from: .start(secret: "secret"))
+		let observable = sut.request(Conversation.self, from: .startConversation(token: "secret"))
 
 		// then
 		XCTAssertThrowsError(try observable.toBlocking().single(), "error expected") { error in
@@ -67,7 +67,7 @@ class DirectLineClientTest: XCTestCase {
 		stubResponse(withError: otherError)
 
 		// when
-		let observable = sut.request(Conversation.self, from: .start(secret: "secret"))
+		let observable = sut.request(Conversation.self, from: .startConversation(token: "secret"))
 
 		// then
 		XCTAssertThrowsError(try observable.toBlocking().single(), "error expected") { error in
