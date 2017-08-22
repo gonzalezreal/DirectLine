@@ -3,7 +3,7 @@ import Foundation
 public enum Endpoint {
 	case startConversation(token: String)
 	case refresh(token: String)
-	case reconnect(conversationId: String, token: String)
+	case reconnect(conversationId: String, token: String, watermark: String?)
 	case post(activity: Activity, conversationId: String, token: String)
 	case activities(conversationId: String, token: String, watermark: String?)
 }
@@ -48,7 +48,7 @@ private extension Endpoint {
 			return "conversations"
 		case .refresh:
 			return "tokens/refresh"
-		case let .reconnect(conversationId, _):
+		case let .reconnect(conversationId, _, _):
 			return "conversations/\(conversationId)"
 		case let .post(_, conversationId, _):
 			return "conversations/\(conversationId)/activities"
@@ -63,7 +63,7 @@ private extension Endpoint {
 			return ["Authorization": "Bearer \(token)"]
 		case let .refresh(token):
 			return ["Authorization": "Bearer \(token)"]
-		case let .reconnect(_, token):
+		case let .reconnect(_, token, _):
 			return ["Authorization": "Bearer \(token)"]
 		case let .post(_, _, token):
 			return [
@@ -77,7 +77,7 @@ private extension Endpoint {
 
 	var parameters: [String: String]? {
 		switch self {
-		case let .activities(_, _, watermark):
+		case .reconnect(_, _, let watermark), .activities(_, _, let watermark):
 			if let watermark = watermark {
 				return ["watermark": watermark]
 			} else {

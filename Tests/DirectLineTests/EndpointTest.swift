@@ -32,7 +32,7 @@ class EndpointTest: XCTestCase {
 
 	func testReconnectEndpoint() {
 		// given
-		let endpoint: Endpoint = .reconnect(conversationId: "1234", token: "3xpo")
+		let endpoint: Endpoint = .reconnect(conversationId: "1234", token: "3xpo", watermark: nil)
 
 		// when
 		let request = endpoint.request(with: .directLineBaseURL)
@@ -42,6 +42,19 @@ class EndpointTest: XCTestCase {
 		XCTAssertEqual(request.httpMethod, "GET")
 		XCTAssertEqual(request.allHTTPHeaderFields!, ["Authorization": "Bearer 3xpo"])
 		XCTAssertNil(request.httpBody)
+	}
+
+	func testReconnectWithWatermarkEndpoint() {
+		// given
+		let endpoint: Endpoint = .reconnect(conversationId: "1234", token: "3xpo", watermark: "3")
+
+		// when
+		let request = endpoint.request(with: .directLineBaseURL)
+		var components = URLComponents(url: URL.directLineBaseURL.appendingPathComponent("conversations/1234"), resolvingAgainstBaseURL: false)!
+		components.queryItems = [URLQueryItem(name: "watermark", value: "3")]
+
+		// then
+		XCTAssertEqual(request.url, components.url)
 	}
 
 	func testPostEndpoint() {
