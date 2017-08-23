@@ -2,14 +2,13 @@ import Foundation
 import Starscream
 import RxSwift
 
-public extension ObservableType where E == Activity {
+public extension ObservableType where E == ActivitySet {
 	static func activityStream(url: URL) -> Observable<E> {
 		let decoder = JSONDecoder()
 		decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601)
 
 		return Observable.from(streamURL: url)
 			.map(ActivitySet.self, using: decoder)
-			.flatMap { return Observable.from($0.activities) }
 	}
 }
 
