@@ -1,6 +1,6 @@
 import Foundation
 
-public enum Endpoint {
+internal enum Endpoint {
 	case startConversation(token: String)
 	case refresh(token: String)
 	case reconnect(conversationId: String, token: String, watermark: String?)

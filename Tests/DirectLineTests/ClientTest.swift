@@ -5,12 +5,12 @@ import RxBlocking
 
 @testable import DirectLine
 
-class DirectLineClientTest: XCTestCase {
-	var sut: DirectLineClient!
+class ClientTest: XCTestCase {
+	var sut: Client!
     
     override func setUp() {
         super.setUp()
-        sut = DirectLineClient()
+		sut = Client(baseURL: .directLineBaseURL)
     }
 
 	override func tearDown() {
@@ -76,7 +76,7 @@ class DirectLineClientTest: XCTestCase {
 	}
 }
 
-private extension DirectLineClientTest {
+private extension ClientTest {
 	func stubResponse(withData data: Data, statusCode: Int32) {
 		stub(condition: isHost("directline.botframework.com")) { request in
 			return OHHTTPStubsResponse(data: data, statusCode: statusCode, headers: nil)

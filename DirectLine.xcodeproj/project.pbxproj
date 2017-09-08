@@ -38,9 +38,9 @@
 		994735301F46C2EE00DD6F7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947352F1F46C2EE00DD6F7F /* Endpoint.swift */; };
 		994735311F46C2EE00DD6F7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947352F1F46C2EE00DD6F7F /* Endpoint.swift */; };
 		994735321F46C2EE00DD6F7F /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947352F1F46C2EE00DD6F7F /* Endpoint.swift */; };
-		994735381F4749C800DD6F7F /* DirectLineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* DirectLineClient.swift */; };
-		994735391F4749C800DD6F7F /* DirectLineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* DirectLineClient.swift */; };
-		9947353A1F4749C800DD6F7F /* DirectLineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* DirectLineClient.swift */; };
+		994735381F4749C800DD6F7F /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* Client.swift */; };
+		994735391F4749C800DD6F7F /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* Client.swift */; };
+		9947353A1F4749C800DD6F7F /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735371F4749C800DD6F7F /* Client.swift */; };
 		9947353C1F4770DD00DD6F7F /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */; };
 		9947353D1F47712C00DD6F7F /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9947353E1F4771B100DD6F7F /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A825D1F40438E00C36B75 /* Starscream.framework */; };
@@ -48,9 +48,9 @@
 		994735421F4771DB00DD6F7F /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		994735441F47720400DD6F7F /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 994735431F47720400DD6F7F /* OHHTTPStubs.framework */; };
 		994735451F47720F00DD6F7F /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 994735431F47720400DD6F7F /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		994735471F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */; };
-		994735481F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */; };
-		994735491F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */; };
+		994735471F4773BB00DD6F7F /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735461F4773BB00DD6F7F /* ClientTest.swift */; };
+		994735481F4773BB00DD6F7F /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735461F4773BB00DD6F7F /* ClientTest.swift */; };
+		994735491F4773BB00DD6F7F /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735461F4773BB00DD6F7F /* ClientTest.swift */; };
 		9947354B1F477B0900DD6F7F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9947354A1F477B0900DD6F7F /* RxBlocking.framework */; };
 		9947354C1F477B1300DD6F7F /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9947354A1F477B0900DD6F7F /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9947354E1F477B3200DD6F7F /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9947354D1F477B3200DD6F7F /* RxBlocking.framework */; };
@@ -246,11 +246,11 @@
 		991939371F439B5400842C92 /* SuggestedActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestedActions.swift; sourceTree = "<group>"; };
 		994735221F456E6600DD6F7F /* ResourceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceResponse.swift; sourceTree = "<group>"; };
 		9947352F1F46C2EE00DD6F7F /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		994735371F4749C800DD6F7F /* DirectLineClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLineClient.swift; sourceTree = "<group>"; };
+		994735371F4749C800DD6F7F /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/Mac/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		994735431F47720400DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/tvOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
-		994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLineClientTest.swift; sourceTree = "<group>"; };
+		994735461F4773BB00DD6F7F /* ClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTest.swift; sourceTree = "<group>"; };
 		9947354A1F477B0900DD6F7F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		9947354D1F477B3200DD6F7F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
 		994735501F477B6600DD6F7F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/tvOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -401,7 +401,7 @@
 				997F8DFA1F44753E009F82A2 /* Utilities */,
 				991939291F43947A00842C92 /* Models */,
 				9947352F1F46C2EE00DD6F7F /* Endpoint.swift */,
-				994735371F4749C800DD6F7F /* DirectLineClient.swift */,
+				994735371F4749C800DD6F7F /* Client.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -411,7 +411,7 @@
 			children = (
 				9919392A1F4394C700842C92 /* Models */,
 				8933C7891EB5B82A000D00A4 /* EndpointTest.swift */,
-				994735461F4773BB00DD6F7F /* DirectLineClientTest.swift */,
+				994735461F4773BB00DD6F7F /* ClientTest.swift */,
 				994735531F47856800DD6F7F /* Equatables.swift */,
 			);
 			name = Tests;
@@ -814,7 +814,7 @@
 				995525901F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				994735301F46C2EE00DD6F7F /* Endpoint.swift in Sources */,
 				991939261F4390DC00842C92 /* SignInCard.swift in Sources */,
-				994735381F4749C800DD6F7F /* DirectLineClient.swift in Sources */,
+				994735381F4749C800DD6F7F /* Client.swift in Sources */,
 				991831661F408CE8005619A6 /* Media.swift in Sources */,
 				996A826A1F404A6700C36B75 /* Activity.swift in Sources */,
 				995525941F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
@@ -837,7 +837,7 @@
 				99DB54C81F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				99DB54E01F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54D81F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
-				994735471F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */,
+				994735471F4773BB00DD6F7F /* ClientTest.swift in Sources */,
 				996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */,
 				994735541F47856800DD6F7F /* Equatables.swift in Sources */,
@@ -869,7 +869,7 @@
 				995525921F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				994735321F46C2EE00DD6F7F /* Endpoint.swift in Sources */,
 				991939281F4390DC00842C92 /* SignInCard.swift in Sources */,
-				9947353A1F4749C800DD6F7F /* DirectLineClient.swift in Sources */,
+				9947353A1F4749C800DD6F7F /* Client.swift in Sources */,
 				991831681F408CE8005619A6 /* Media.swift in Sources */,
 				996A826C1F404A6700C36B75 /* Activity.swift in Sources */,
 				995525961F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
@@ -905,7 +905,7 @@
 				995525911F42C9CC00E6CF1E /* CardImage.swift in Sources */,
 				994735311F46C2EE00DD6F7F /* Endpoint.swift in Sources */,
 				991939271F4390DC00842C92 /* SignInCard.swift in Sources */,
-				994735391F4749C800DD6F7F /* DirectLineClient.swift in Sources */,
+				994735391F4749C800DD6F7F /* Client.swift in Sources */,
 				991831671F408CE8005619A6 /* Media.swift in Sources */,
 				996A826B1F404A6700C36B75 /* Activity.swift in Sources */,
 				995525951F43649600E6CF1E /* ThumbnailCard.swift in Sources */,
@@ -928,7 +928,7 @@
 				99DB54C91F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				99DB54E11F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54D91F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
-				994735481F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */,
+				994735481F4773BB00DD6F7F /* ClientTest.swift in Sources */,
 				996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */,
 				994735551F47856800DD6F7F /* Equatables.swift in Sources */,
@@ -947,7 +947,7 @@
 				99DB54CA1F41A56200C97DB9 /* CardActionTest.swift in Sources */,
 				99DB54E21F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54DA1F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
-				994735491F4773BB00DD6F7F /* DirectLineClientTest.swift in Sources */,
+				994735491F4773BB00DD6F7F /* ClientTest.swift in Sources */,
 				996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
 				995038001F3F172300502D9E /* ConversationTest.swift in Sources */,
 				994735561F47856800DD6F7F /* Equatables.swift in Sources */,
