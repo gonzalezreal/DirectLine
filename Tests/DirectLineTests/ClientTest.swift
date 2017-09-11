@@ -30,9 +30,8 @@ class ClientTest: XCTestCase {
 		}
 		""".data(using: .utf8)!
 		let expected = Conversation(conversationId: "the_conversation_id",
-		                            token: "some_token",
-		                            expiresIn: 1800,
-		                            streamURL: URL(string: "wss://example.com/stream"))
+		                            streamURL: URL(string: "wss://example.com/stream")!,
+		                            token: Token(value: "some_token", expiresIn: 1800))
 		stubResponse(withData: json, statusCode: 201)
 
 		// when

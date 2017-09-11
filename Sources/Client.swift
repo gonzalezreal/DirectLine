@@ -1,10 +1,6 @@
 import Foundation
 import RxSwift
 
-public extension URL {
-	static let directLineBaseURL = URL(string: "https://directline.botframework.com/v3/directline")!
-}
-
 internal final class Client {
 	private let baseURL: URL
 	private let session: URLSession
