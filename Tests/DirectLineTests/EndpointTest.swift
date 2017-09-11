@@ -2,11 +2,9 @@ import XCTest
 @testable import DirectLine
 
 class EndpointTest: XCTestCase {
-	private let conversation = Conversation(conversationId: "1234", token: "3xpo", expiresIn: 1800, streamURL: nil)
-
 	func testStartEndpoint() {
 		// given
-		let endpoint: Endpoint = .start(secret: "secret")
+		let endpoint: Endpoint = .startConversation(token: "secret")
 
 		// when
 		let request = endpoint.request(with: .directLineBaseURL)
@@ -34,7 +32,7 @@ class EndpointTest: XCTestCase {
 
 	func testReconnectEndpoint() {
 		// given
-		let endpoint: Endpoint = .reconnect(conversation: conversation)
+		let endpoint: Endpoint = .reconnect(conversationId: "1234", token: "3xpo", watermark: nil)
 
 		// when
 		let request = endpoint.request(with: .directLineBaseURL)
@@ -46,16 +44,29 @@ class EndpointTest: XCTestCase {
 		XCTAssertNil(request.httpBody)
 	}
 
+	func testReconnectWithWatermarkEndpoint() {
+		// given
+		let endpoint: Endpoint = .reconnect(conversationId: "1234", token: "3xpo", watermark: "3")
+
+		// when
+		let request = endpoint.request(with: .directLineBaseURL)
+		var components = URLComponents(url: URL.directLineBaseURL.appendingPathComponent("conversations/1234"), resolvingAgainstBaseURL: false)!
+		components.queryItems = [URLQueryItem(name: "watermark", value: "3")]
+
+		// then
+		XCTAssertEqual(request.url, components.url)
+	}
+
 	func testPostEndpoint() {
 		// given
 		let activity = Activity(from: ChannelAccount(id: "guille"), text: "Hello")
 		let encodedActivity = try! JSONEncoder().encode(activity)
 
 		let headers = [
-			"Authorization": "Bearer \(conversation.token)",
+			"Authorization": "Bearer 3xpo",
 			"Content-Type": "application/json; charset=utf-8"
 		]
-		let endpoint: Endpoint = .post(activity: activity, conversation: conversation)
+		let endpoint: Endpoint = .post(activity: activity, conversationId: "1234", token: "3xpo")
 
 		// when
 		let request = endpoint.request(with: .directLineBaseURL)
@@ -69,7 +80,7 @@ class EndpointTest: XCTestCase {
 
 	func testActivitiesEndpoint() {
 		// given
-		let endpoint: Endpoint = .activities(conversation: conversation, watermark: nil)
+		let endpoint: Endpoint = .activities(conversationId: "1234", token: "3xpo", watermark: nil)
 
 		// when
 		let request = endpoint.request(with: .directLineBaseURL)
@@ -83,7 +94,7 @@ class EndpointTest: XCTestCase {
 
 	func testActivitiesWithWatermarkEndpoint() {
 		// given
-		let endpoint: Endpoint = .activities(conversation: conversation, watermark: "3")
+		let endpoint: Endpoint = .activities(conversationId: "1234", token: "3xpo", watermark: "3")
 		var components = URLComponents(url: URL.directLineBaseURL.appendingPathComponent("conversations/1234/activities"), resolvingAgainstBaseURL: false)!
 		components.queryItems = [URLQueryItem(name: "watermark", value: "3")]
 

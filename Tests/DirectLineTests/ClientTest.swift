@@ -5,12 +5,12 @@ import RxBlocking
 
 @testable import DirectLine
 
-class DirectLineClientTest: XCTestCase {
-	var sut: DirectLineClient!
+class ClientTest: XCTestCase {
+	var sut: Client!
     
     override func setUp() {
         super.setUp()
-        sut = DirectLineClient()
+		sut = Client(baseURL: .directLineBaseURL)
     }
 
 	override func tearDown() {
@@ -30,13 +30,12 @@ class DirectLineClientTest: XCTestCase {
 		}
 		""".data(using: .utf8)!
 		let expected = Conversation(conversationId: "the_conversation_id",
-		                            token: "some_token",
-		                            expiresIn: 1800,
-		                            streamURL: URL(string: "wss://example.com/stream"))
+		                            streamURL: URL(string: "wss://example.com/stream")!,
+		                            token: Token(value: "some_token", expiresIn: 1800))
 		stubResponse(withData: json, statusCode: 201)
 
 		// when
-		let result = try! sut.request(Conversation.self, from: .start(secret: "secret"))
+		let result = try! sut.request(Conversation.self, from: .startConversation(token: "secret"))
 			.toBlocking()
 			.single()
 
@@ -49,7 +48,7 @@ class DirectLineClientTest: XCTestCase {
 		stubResponse(withData: Data(), statusCode: 403)
 
 		// when
-		let observable = sut.request(Conversation.self, from: .start(secret: "secret"))
+		let observable = sut.request(Conversation.self, from: .startConversation(token: "secret"))
 
 		// then
 		XCTAssertThrowsError(try observable.toBlocking().single(), "error expected") { error in
@@ -67,7 +66,7 @@ class DirectLineClientTest: XCTestCase {
 		stubResponse(withError: otherError)
 
 		// when
-		let observable = sut.request(Conversation.self, from: .start(secret: "secret"))
+		let observable = sut.request(Conversation.self, from: .startConversation(token: "secret"))
 
 		// then
 		XCTAssertThrowsError(try observable.toBlocking().single(), "error expected") { error in
@@ -76,7 +75,7 @@ class DirectLineClientTest: XCTestCase {
 	}
 }
 
-private extension DirectLineClientTest {
+private extension ClientTest {
 	func stubResponse(withData data: Data, statusCode: Int32) {
 		stub(condition: isHost("directline.botframework.com")) { request in
 			return OHHTTPStubsResponse(data: data, statusCode: statusCode, headers: nil)
