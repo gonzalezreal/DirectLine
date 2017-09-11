@@ -2,6 +2,7 @@
 [![CocoaPods](https://img.shields.io/cocoapods/v/DirectLine.svg)](https://cocoapods.org/pods/DirectLine)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platforms](https://img.shields.io/cocoapods/p/DirectLine.svg)](https://cocoapods.org/pods/DirectLine)
+[![Twitter: @gonzalezreal](https://img.shields.io/badge/contact-@gonzalezreal-blue.svg?style=flat)](https://twitter.com/gonzalezreal)
 
 **DirectLine** is a client library for the [Microsoft Bot Framework Direct Line](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-direct-line-3-0-concepts) protocol.
 
