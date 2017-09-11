@@ -22,6 +22,7 @@ Post activities to the bot:
 
 ```swift
 let myAccount = ChannelAccount(id: "myUserID", name: "Guille")
+
 directLine
   .post(activity: Activity(from: myAccount, text: "What is my current balance?"))
   .subscribe(
