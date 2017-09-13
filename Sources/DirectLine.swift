@@ -64,7 +64,7 @@ private extension DirectLine {
 			Resource.self,
 			from: .post(
 				activity: activity,
-				conversationId: conversation.conversationId,
+				conversationId: conversation.id,
 				token: conversation.token.value
 			)
 		)

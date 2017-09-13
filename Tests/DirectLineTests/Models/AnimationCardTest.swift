@@ -62,6 +62,6 @@ class AnimationCardTest: XCTestCase {
 		let card = try? decoder.decode(AnimationCard.self, from: json)
 
 		// then
-		XCTAssertEqual(card?.shareable, true)
+		XCTAssertEqual(card?.isShareable, true)
 	}
 }

@@ -4,7 +4,7 @@ import Foundation
 public struct Conversation {
 
 	/// Uniquely identifies the conversation for which the specified token is valid.
-	public let conversationId: String
+	public let id: String
 
 	/// URL for the conversation's activity stream.
 	public let streamURL: URL
@@ -16,15 +16,15 @@ public struct Conversation {
 extension Conversation: Decodable {
 	private enum CodingKeys: String, CodingKey {
 		case conversationId
-		case streamURL = "streamUrl"
+		case streamUrl
 	}
 
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
-		let conversationId = try container.decode(String.self, forKey: .conversationId)
-		let streamURL = try container.decode(URL.self, forKey: .streamURL)
+		let id = try container.decode(String.self, forKey: .conversationId)
+		let streamURL = try container.decode(URL.self, forKey: .streamUrl)
 		let token = try Token(from: decoder)
 
-		self.init(conversationId: conversationId, streamURL: streamURL, token: token)
+		self.init(id: id, streamURL: streamURL, token: token)
 	}
 }

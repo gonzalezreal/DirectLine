@@ -66,9 +66,9 @@
 		994735601F479B8500DD6F7F /* ObservableType+JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */; };
 		994735611F479B8500DD6F7F /* ObservableType+JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */; };
 		994735621F479B8500DD6F7F /* ObservableType+JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */; };
-		994735651F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */; };
-		994735661F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */; };
-		994735671F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */; };
+		994735651F480C0A00DD6F7F /* ObservableType+ActivityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* ObservableType+ActivityList.swift */; };
+		994735661F480C0A00DD6F7F /* ObservableType+ActivityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* ObservableType+ActivityList.swift */; };
+		994735671F480C0A00DD6F7F /* ObservableType+ActivityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994735641F480C0A00DD6F7F /* ObservableType+ActivityList.swift */; };
 		995037FA1F3F15A000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
 		995037FC1F3F15C000502D9E /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995037F91F3F15A000502D9E /* Conversation.swift */; };
@@ -113,12 +113,12 @@
 		996A826A1F404A6700C36B75 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82691F404A6700C36B75 /* Activity.swift */; };
 		996A826B1F404A6700C36B75 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82691F404A6700C36B75 /* Activity.swift */; };
 		996A826C1F404A6700C36B75 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82691F404A6700C36B75 /* Activity.swift */; };
-		996A826E1F40565500C36B75 /* ActivitySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A826D1F40565500C36B75 /* ActivitySet.swift */; };
-		996A826F1F40565500C36B75 /* ActivitySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A826D1F40565500C36B75 /* ActivitySet.swift */; };
-		996A82701F40565500C36B75 /* ActivitySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A826D1F40565500C36B75 /* ActivitySet.swift */; };
-		996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82711F405BD100C36B75 /* ActivitySetTest.swift */; };
-		996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82711F405BD100C36B75 /* ActivitySetTest.swift */; };
-		996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82711F405BD100C36B75 /* ActivitySetTest.swift */; };
+		996A826E1F40565500C36B75 /* ActivityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A826D1F40565500C36B75 /* ActivityList.swift */; };
+		996A826F1F40565500C36B75 /* ActivityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A826D1F40565500C36B75 /* ActivityList.swift */; };
+		996A82701F40565500C36B75 /* ActivityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A826D1F40565500C36B75 /* ActivityList.swift */; };
+		996A82721F405BD100C36B75 /* ActivityListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82711F405BD100C36B75 /* ActivityListTest.swift */; };
+		996A82731F405BD100C36B75 /* ActivityListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82711F405BD100C36B75 /* ActivityListTest.swift */; };
+		996A82741F405BD100C36B75 /* ActivityListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82711F405BD100C36B75 /* ActivityListTest.swift */; };
 		996A82761F4061C500C36B75 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82751F4061C500C36B75 /* Attachment.swift */; };
 		996A82771F4061C500C36B75 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82751F4061C500C36B75 /* Attachment.swift */; };
 		996A82781F4061C500C36B75 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996A82751F4061C500C36B75 /* Attachment.swift */; };
@@ -263,7 +263,7 @@
 		994735531F47856800DD6F7F /* Equatables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatables.swift; sourceTree = "<group>"; };
 		9947355B1F479B2500DD6F7F /* URLSession+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Rx.swift"; sourceTree = "<group>"; };
 		9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+JSONDecoder.swift"; sourceTree = "<group>"; };
-		994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+ActivityStream.swift"; sourceTree = "<group>"; };
+		994735641F480C0A00DD6F7F /* ObservableType+ActivityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+ActivityList.swift"; sourceTree = "<group>"; };
 		995037F91F3F15A000502D9E /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		995037FD1F3F16E800502D9E /* ConversationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTest.swift; sourceTree = "<group>"; };
 		995525871F42C53800E6CF1E /* HeroCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCard.swift; sourceTree = "<group>"; };
@@ -279,8 +279,8 @@
 		996A825D1F40438E00C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/Mac/Starscream.framework; sourceTree = "<group>"; };
 		996A82641F40449000C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/tvOS/Starscream.framework; sourceTree = "<group>"; };
 		996A82691F404A6700C36B75 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		996A826D1F40565500C36B75 /* ActivitySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySet.swift; sourceTree = "<group>"; };
-		996A82711F405BD100C36B75 /* ActivitySetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySetTest.swift; sourceTree = "<group>"; };
+		996A826D1F40565500C36B75 /* ActivityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityList.swift; sourceTree = "<group>"; };
+		996A82711F405BD100C36B75 /* ActivityListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListTest.swift; sourceTree = "<group>"; };
 		996A82751F4061C500C36B75 /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
 		997F8DFB1F44756C009F82A2 /* DateFormatter+ISO8601.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ISO8601.swift"; sourceTree = "<group>"; };
 		997F8DFF1F4477AA009F82A2 /* ActivityTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTest.swift; sourceTree = "<group>"; };
@@ -453,7 +453,7 @@
 				991939331F4398D300842C92 /* ChannelAccount.swift */,
 				991939371F439B5400842C92 /* SuggestedActions.swift */,
 				996A82691F404A6700C36B75 /* Activity.swift */,
-				996A826D1F40565500C36B75 /* ActivitySet.swift */,
+				996A826D1F40565500C36B75 /* ActivityList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -469,7 +469,7 @@
 				99DB54E71F424A9D00C97DB9 /* VideoCardTest.swift */,
 				9919392F1F4397AC00842C92 /* ConversationAccountTest.swift */,
 				997F8DFF1F4477AA009F82A2 /* ActivityTest.swift */,
-				996A82711F405BD100C36B75 /* ActivitySetTest.swift */,
+				996A82711F405BD100C36B75 /* ActivityListTest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -499,7 +499,7 @@
 				997F8DFB1F44756C009F82A2 /* DateFormatter+ISO8601.swift */,
 				9947355B1F479B2500DD6F7F /* URLSession+Rx.swift */,
 				9947355F1F479B8500DD6F7F /* ObservableType+JSONDecoder.swift */,
-				994735641F480C0A00DD6F7F /* ObservableType+ActivityStream.swift */,
+				994735641F480C0A00DD6F7F /* ObservableType+ActivityList.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -815,7 +815,7 @@
 				991939381F439B5400842C92 /* SuggestedActions.swift in Sources */,
 				995525A01F4389B200E6CF1E /* ReceiptItem.swift in Sources */,
 				99DB54DC1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
-				994735651F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */,
+				994735651F480C0A00DD6F7F /* ObservableType+ActivityList.swift in Sources */,
 				995525981F43680F00E6CF1E /* ReceiptCard.swift in Sources */,
 				995037FA1F3F15A000502D9E /* Conversation.swift in Sources */,
 				995525881F42C53800E6CF1E /* HeroCard.swift in Sources */,
@@ -833,7 +833,7 @@
 				99C4DCBF1F62E7EF00F4444A /* Token.swift in Sources */,
 				99DB54C01F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82761F4061C500C36B75 /* Attachment.swift in Sources */,
-				996A826E1F40565500C36B75 /* ActivitySet.swift in Sources */,
+				996A826E1F40565500C36B75 /* ActivityList.swift in Sources */,
 				994735601F479B8500DD6F7F /* ObservableType+JSONDecoder.swift in Sources */,
 				99DB54C41F40BA7000C97DB9 /* CardAction.swift in Sources */,
 			);
@@ -850,7 +850,7 @@
 				99DB54E01F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54D81F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
 				994735471F4773BB00DD6F7F /* ClientTest.swift in Sources */,
-				996A82721F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
+				996A82721F405BD100C36B75 /* ActivityListTest.swift in Sources */,
 				995037FE1F3F16E800502D9E /* ConversationTest.swift in Sources */,
 				994735541F47856800DD6F7F /* Equatables.swift in Sources */,
 				997F8E001F4477AA009F82A2 /* ActivityTest.swift in Sources */,
@@ -872,7 +872,7 @@
 				9919393A1F439B5400842C92 /* SuggestedActions.swift in Sources */,
 				995525A21F4389B200E6CF1E /* ReceiptItem.swift in Sources */,
 				99DB54DE1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
-				994735671F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */,
+				994735671F480C0A00DD6F7F /* ObservableType+ActivityList.swift in Sources */,
 				9955259A1F43680F00E6CF1E /* ReceiptCard.swift in Sources */,
 				995037FC1F3F15C000502D9E /* Conversation.swift in Sources */,
 				9955258A1F42C53800E6CF1E /* HeroCard.swift in Sources */,
@@ -890,7 +890,7 @@
 				99C4DCC11F62E7EF00F4444A /* Token.swift in Sources */,
 				99DB54C21F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82781F4061C500C36B75 /* Attachment.swift in Sources */,
-				996A82701F40565500C36B75 /* ActivitySet.swift in Sources */,
+				996A82701F40565500C36B75 /* ActivityList.swift in Sources */,
 				994735621F479B8500DD6F7F /* ObservableType+JSONDecoder.swift in Sources */,
 				99DB54C61F40BA7000C97DB9 /* CardAction.swift in Sources */,
 			);
@@ -910,7 +910,7 @@
 				991939391F439B5400842C92 /* SuggestedActions.swift in Sources */,
 				995525A11F4389B200E6CF1E /* ReceiptItem.swift in Sources */,
 				99DB54DD1F4242EA00C97DB9 /* AudioCard.swift in Sources */,
-				994735661F480C0A00DD6F7F /* ObservableType+ActivityStream.swift in Sources */,
+				994735661F480C0A00DD6F7F /* ObservableType+ActivityList.swift in Sources */,
 				995525991F43680F00E6CF1E /* ReceiptCard.swift in Sources */,
 				995037FB1F3F15BF00502D9E /* Conversation.swift in Sources */,
 				995525891F42C53800E6CF1E /* HeroCard.swift in Sources */,
@@ -928,7 +928,7 @@
 				99C4DCC01F62E7EF00F4444A /* Token.swift in Sources */,
 				99DB54C11F40B40C00C97DB9 /* AdaptiveCard.swift in Sources */,
 				996A82771F4061C500C36B75 /* Attachment.swift in Sources */,
-				996A826F1F40565500C36B75 /* ActivitySet.swift in Sources */,
+				996A826F1F40565500C36B75 /* ActivityList.swift in Sources */,
 				994735611F479B8500DD6F7F /* ObservableType+JSONDecoder.swift in Sources */,
 				99DB54C51F40BA7000C97DB9 /* CardAction.swift in Sources */,
 			);
@@ -945,7 +945,7 @@
 				99DB54E11F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54D91F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
 				994735481F4773BB00DD6F7F /* ClientTest.swift in Sources */,
-				996A82731F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
+				996A82731F405BD100C36B75 /* ActivityListTest.swift in Sources */,
 				995037FF1F3F172200502D9E /* ConversationTest.swift in Sources */,
 				994735551F47856800DD6F7F /* Equatables.swift in Sources */,
 				997F8E011F4477AA009F82A2 /* ActivityTest.swift in Sources */,
@@ -964,7 +964,7 @@
 				99DB54E21F42458100C97DB9 /* AudioCardTest.swift in Sources */,
 				99DB54DA1F423BCE00C97DB9 /* AnimationCardTest.swift in Sources */,
 				994735491F4773BB00DD6F7F /* ClientTest.swift in Sources */,
-				996A82741F405BD100C36B75 /* ActivitySetTest.swift in Sources */,
+				996A82741F405BD100C36B75 /* ActivityListTest.swift in Sources */,
 				995038001F3F172300502D9E /* ConversationTest.swift in Sources */,
 				994735561F47856800DD6F7F /* Equatables.swift in Sources */,
 				997F8E021F4477AA009F82A2 /* ActivityTest.swift in Sources */,

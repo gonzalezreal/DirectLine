@@ -62,6 +62,6 @@ class VideoCardTest: XCTestCase {
 		let card = try? decoder.decode(VideoCard.self, from: json)
 
 		// then
-		XCTAssertEqual(card?.shareable, true)
+		XCTAssertEqual(card?.isShareable, true)
 	}
 }

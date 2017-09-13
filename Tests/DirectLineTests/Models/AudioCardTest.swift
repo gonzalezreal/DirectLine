@@ -62,6 +62,6 @@ class AudioCardTest: XCTestCase {
 		let card = try? decoder.decode(AudioCard.self, from: json)
 
 		// then
-		XCTAssertEqual(card?.shareable, true)
+		XCTAssertEqual(card?.isShareable, true)
 	}
 }

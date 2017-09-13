@@ -29,7 +29,7 @@ class ClientTest: XCTestCase {
 			"referenceGrammarId": "some_grammar_id",
 		}
 		""".data(using: .utf8)!
-		let expected = Conversation(conversationId: "the_conversation_id",
+		let expected = Conversation(id: "the_conversation_id",
 		                            streamURL: URL(string: "wss://example.com/stream")!,
 		                            token: Token(value: "some_token", expiresIn: 1800))
 		stubResponse(withData: json, statusCode: 201)

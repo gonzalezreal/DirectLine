@@ -1,8 +1,8 @@
 import XCTest
 @testable import DirectLine
 
-class ActivitySetTest: XCTestCase {
-	func testDecodeActivitySet() {
+class ActivityListTest: XCTestCase {
+	func testDecodeActivityList() {
 		// given
 		let json = """
 		{
@@ -28,10 +28,10 @@ class ActivitySetTest: XCTestCase {
 		decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601)
 
 		// then
-		XCTAssertNoThrow(try decoder.decode(ActivitySet.self, from: json))
+		XCTAssertNoThrow(try decoder.decode(ActivityList.self, from: json))
 	}
 
-	func testDecodeActivitySetWithoutWatermark() {
+	func testDecodeActivityListWithoutWatermark() {
 		// given
 		let json = """
 		{
@@ -56,6 +56,6 @@ class ActivitySetTest: XCTestCase {
 		decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601)
 
 		// then
-		XCTAssertNoThrow(try decoder.decode(ActivitySet.self, from: json))
+		XCTAssertNoThrow(try decoder.decode(ActivityList.self, from: json))
 	}
 }
