@@ -11,10 +11,6 @@ public struct Conversation {
 
 	/// Token that is valid for the specified conversation.
 	public var token: Token
-
-	func with(token newToken: Token) -> Conversation {
-		return Conversation(conversationId: conversationId, streamURL: streamURL, token: newToken)
-	}
 }
 
 extension Conversation: Decodable {
