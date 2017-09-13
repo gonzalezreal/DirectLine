@@ -10,7 +10,7 @@ public struct Conversation {
 	public let streamURL: URL
 
 	/// Token that is valid for the specified conversation.
-	public let token: Token
+	public var token: Token
 
 	func with(token newToken: Token) -> Conversation {
 		return Conversation(conversationId: conversationId, streamURL: streamURL, token: newToken)
