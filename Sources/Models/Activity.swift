@@ -51,7 +51,8 @@ public struct Activity {
 	/// A `ChannelAccount` value that specifies the sender of the message.
 	public let from: ChannelAccount
 
-	/// ID that uniquely identifies the activity on the channel.
+	/// ID that uniquely identifies the activity on the channel. Can be `nil` when the activity
+	/// is created by the user.
 	public let id: String?
 
 	/// Value that indicates whether your bot is accepting, expecting, or ignoring
