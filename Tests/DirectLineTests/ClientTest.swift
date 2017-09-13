@@ -8,10 +8,10 @@ import RxBlocking
 class ClientTest: XCTestCase {
 	var sut: Client!
     
-    override func setUp() {
-        super.setUp()
+	override func setUp() {
+		super.setUp()
 		sut = Client(baseURL: .directLineBaseURL)
-    }
+	}
 
 	override func tearDown() {
 		OHHTTPStubs.removeAllStubs()
