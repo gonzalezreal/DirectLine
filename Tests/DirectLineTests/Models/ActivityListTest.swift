@@ -2,7 +2,7 @@ import XCTest
 @testable import DirectLine
 
 class ActivityListTest: XCTestCase {
-	func testDecodeActivityList() {
+	func testActivityListJSON_decode_returnsActivityList() {
 		// given
 		let json = """
 		{
@@ -31,7 +31,7 @@ class ActivityListTest: XCTestCase {
 		XCTAssertNoThrow(try decoder.decode(ActivityList.self, from: json))
 	}
 
-	func testDecodeActivityListWithoutWatermark() {
+	func testActivityListWithoutWatermarkJSON_decode_returnsActivityList() {
 		// given
 		let json = """
 		{

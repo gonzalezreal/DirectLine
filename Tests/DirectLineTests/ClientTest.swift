@@ -18,7 +18,7 @@ class ClientTest: XCTestCase {
 		super.tearDown()
 	}
 
-	func testRequest() {
+	func testConversationResponse_request_returnsConversation() {
 		// given
 		let json = """
 		{
@@ -43,7 +43,7 @@ class ClientTest: XCTestCase {
 		XCTAssertEqual(result, expected)
 	}
 
-	func testRequestBadStatus() {
+	func testBadStatusResponse_request_returnsBadStatusError() {
 		// given
 		stubResponse(withData: Data(), statusCode: 403)
 
@@ -60,7 +60,7 @@ class ClientTest: XCTestCase {
 		}
 	}
 
-	func testRequestOtherError() {
+	func testOtherErrorResponse_request_returnsOtherError() {
 		// given
 		let otherError = NSError(domain: "test", code: 42, userInfo: nil)
 		stubResponse(withError: otherError)

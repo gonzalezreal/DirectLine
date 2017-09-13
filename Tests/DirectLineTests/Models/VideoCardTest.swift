@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class VideoCardTest: XCTestCase {
-	func testAutoloopDefaultsToTrue() {
+	func testVideoCardWithoutAutoloopJSON_decode_autoloopIsTrue() {
 		// given
 		let json = """
 		{
@@ -23,7 +23,7 @@ class VideoCardTest: XCTestCase {
 		XCTAssertEqual(card?.autoloop, true)
 	}
 
-	func testAutostartDefaultsToTrue() {
+	func testVideoCardWithoutAutostartJSON_decode_autostartIsTrue() {
 		// given
 		let json = """
 		{
@@ -44,7 +44,7 @@ class VideoCardTest: XCTestCase {
 		XCTAssertEqual(card?.autostart, true)
 	}
 
-	func testShareableDefaultsToTrue() {
+	func testVideoCardWithoutShareableJSON_decode_shareableIsTrue() {
 		// given
 		let json = """
 		{

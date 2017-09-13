@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class AttachmentTest: XCTestCase {
-	func testDecodeMediaAttachment() {
+	func testMediaJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -20,7 +20,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isMedia ?? false)
 	}
 
-	func testEncodeMediaAttachment() {
+	func testMediaAttachment_encode_returnsJSON() {
 		// given
 		let attachment = Attachment(
 			content: .media(Media(contentType: .imageJPG, contentURL: URL(string: "http://example.com/fistro.jpg")!)),
@@ -43,7 +43,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertEqual(expected, result)
 	}
 
-	func testDecodeAdaptiveCardAttachment() {
+	func testAdaptiveCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -60,7 +60,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isAdaptiveCard ?? false)
 	}
 
-	func testDecodeAnimationCardAttachment() {
+	func testAnimationCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -86,7 +86,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isAnimationCard ?? false)
 	}
 
-	func testDecodeAudioCardAttachment() {
+	func testAudioCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -121,7 +121,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isAudioCard ?? false)
 	}
 
-	func testDecodeVideoCardAttachment() {
+	func testVideoCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -156,7 +156,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isVideoCard ?? false)
 	}
 
-	func testDecodeHeroCardAttachment() {
+	func testHeroCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -189,7 +189,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isHeroCard ?? false)
 	}
 
-	func testDecodeThumbnailCardAttachment() {
+	func testThumbnailCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -222,7 +222,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isThumbnailCard ?? false)
 	}
 
-	func testDecodeReceiptCardAttachment() {
+	func testReceiptCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -278,7 +278,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isReceiptCard ?? false)
 	}
 
-	func testDecodeSignInCardAttachment() {
+	func testSignInCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -303,7 +303,7 @@ class AttachmentTest: XCTestCase {
 		XCTAssertTrue(attachment?.isSignInCard ?? false)
 	}
 
-	func testDecodeUnknownAttachment() {
+	func testUnknownJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{

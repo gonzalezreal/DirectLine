@@ -2,7 +2,7 @@ import XCTest
 @testable import DirectLine
 
 class EndpointTest: XCTestCase {
-	func testStartEndpoint() {
+	func testStartConversationEndpoint_request_returnsValidURLRequest() {
 		// given
 		let endpoint: Endpoint = .startConversation(token: "secret")
 
@@ -16,7 +16,7 @@ class EndpointTest: XCTestCase {
 		XCTAssertNil(request.httpBody)
 	}
 
-	func testRefreshEndpoint() {
+	func testRefreshEndpoint_request_returnsValidURLRequest() {
 		// given
 		let endpoint: Endpoint = .refresh(token: "token")
 
@@ -30,7 +30,7 @@ class EndpointTest: XCTestCase {
 		XCTAssertNil(request.httpBody)
 	}
 
-	func testReconnectEndpoint() {
+	func testReconnectEndpoint_request_returnsValidURLRequest() {
 		// given
 		let endpoint: Endpoint = .reconnect(conversationId: "1234", token: "3xpo", watermark: nil)
 
@@ -44,7 +44,7 @@ class EndpointTest: XCTestCase {
 		XCTAssertNil(request.httpBody)
 	}
 
-	func testReconnectWithWatermarkEndpoint() {
+	func testReconnectWithWatermarkEndpoint_request_returnsValidURLRequest() {
 		// given
 		let endpoint: Endpoint = .reconnect(conversationId: "1234", token: "3xpo", watermark: "3")
 
@@ -57,7 +57,7 @@ class EndpointTest: XCTestCase {
 		XCTAssertEqual(request.url, components.url)
 	}
 
-	func testPostEndpoint() {
+	func testPostEndpoint_request_returnsValidURLRequest() {
 		// given
 		let activity = Activity(from: ChannelAccount(id: "guille"), text: "Hello")
 		let encodedActivity = try! JSONEncoder().encode(activity)
@@ -78,7 +78,7 @@ class EndpointTest: XCTestCase {
 		XCTAssertEqual(request.httpBody, encodedActivity)
 	}
 
-	func testActivitiesEndpoint() {
+	func testActivitiesEndpoint_request_returnsValidURLRequest() {
 		// given
 		let endpoint: Endpoint = .activities(conversationId: "1234", token: "3xpo", watermark: nil)
 
@@ -92,7 +92,7 @@ class EndpointTest: XCTestCase {
 		XCTAssertNil(request.httpBody)
 	}
 
-	func testActivitiesWithWatermarkEndpoint() {
+	func testActivitiesWithWatermarkEndpoint_request_returnsValidURLRequest() {
 		// given
 		let endpoint: Endpoint = .activities(conversationId: "1234", token: "3xpo", watermark: "3")
 		var components = URLComponents(url: URL.directLineBaseURL.appendingPathComponent("conversations/1234/activities"), resolvingAgainstBaseURL: false)!

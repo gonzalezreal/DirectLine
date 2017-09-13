@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class ConversationAccountTest: XCTestCase {
-	func testIsGroupDefaultsToFalse() {
+	func testConversationAccountWithoutIsGroupJSON_decode_isGroupDefaultsToFalse() {
 		// given
 		let json = """
 		{
