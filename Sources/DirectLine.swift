@@ -10,6 +10,7 @@ public final class DirectLine {
 		.conversation
 		.flatMapFirst { Observable.activityStream(url: $0.streamURL) }
 		.flatMap { return Observable.from($0.activities) }
+		.shareReplayLatestWhileConnected()
 
 	private let token: String
 	private let client: Client
