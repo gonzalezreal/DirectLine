@@ -36,52 +36,61 @@ public struct CardAction {
 	public let image: URL?
 }
 
-extension CardAction: Decodable {
+extension CardAction.Action: Decodable {
 	private enum CodingKeys: String, CodingKey {
 		case type
-		case title
-		case image
 		case value
 	}
 
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		let type = try container.decode(String.self, forKey: .type)
-		let action: Action
 
 		switch type {
 		case "openUrl":
 			let value = try container.decode(URL.self, forKey: .value)
-			action = .open(value)
+			self = .open(value)
 		case "imBack":
 			let value = try container.decode(String.self, forKey: .value)
-			action = .imBack(value)
+			self = .imBack(value)
 		case "postBack":
 			let value = try container.decode(String.self, forKey: .value)
-			action = .postBack(value)
+			self = .postBack(value)
 		case "call":
 			let value = try container.decode(URL.self, forKey: .value)
-			action = .call(value)
+			self = .call(value)
 		case "playAudio":
 			let value = try container.decode(URL.self, forKey: .value)
-			action = .playAudio(value)
+			self = .playAudio(value)
 		case "playVideo":
 			let value = try container.decode(URL.self, forKey: .value)
-			action = .playVideo(value)
+			self = .playVideo(value)
 		case "showImage":
 			let value = try container.decode(URL.self, forKey: .value)
-			action = .showImage(value)
+			self = .showImage(value)
 		case "downloadFile":
 			let value = try container.decode(URL.self, forKey: .value)
-			action = .downloadFile(value)
+			self = .downloadFile(value)
 		case "signin":
 			let value = try container.decode(URL.self, forKey: .value)
-			action = .signin(value)
+			self = .signin(value)
 		default:
 			let context = DecodingError.Context(codingPath: [CodingKeys.type], debugDescription: "Unknown action type: \(type)")
 			throw DecodingError.dataCorrupted(context)
 		}
+	}
+}
 
+extension CardAction: Decodable {
+	private enum CodingKeys: String, CodingKey {
+		case title
+		case image
+	}
+
+	public init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+
+		let action = try Action(from: decoder)
 		let title = try container.decodeIfPresent(String.self, forKey: .title)
 		let image = try container.decodeIfPresent(URL.self, forKey: .image)
 

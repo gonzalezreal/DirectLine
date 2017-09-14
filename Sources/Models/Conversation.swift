@@ -15,14 +15,14 @@ public struct Conversation {
 
 extension Conversation: Decodable {
 	private enum CodingKeys: String, CodingKey {
-		case conversationId
-		case streamUrl
+		case id = "conversationId"
+		case streamURL = "streamUrl"
 	}
 
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
-		let id = try container.decode(String.self, forKey: .conversationId)
-		let streamURL = try container.decode(URL.self, forKey: .streamUrl)
+		let id = try container.decode(String.self, forKey: .id)
+		let streamURL = try container.decode(URL.self, forKey: .streamURL)
 		let token = try Token(from: decoder)
 
 		self.init(id: id, streamURL: streamURL, token: token)
