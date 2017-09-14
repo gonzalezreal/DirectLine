@@ -3,12 +3,18 @@ import Foundation
 /// Defines an image to display on a card.
 public struct CardImage: Decodable {
 
-	/// Description of the image.
-	public let alt: String?
+	/// URL to the source of the image.
+	public let url: URL
 
 	/// A `CardAction` value that specifies the action to perform if the user taps or clicks the image.
 	public let tap: CardAction?
 
-	/// URL to the source of the image.
-	public let url: URL
+	/// Description of the image.
+	public let description: String?
+
+	private enum CodingKeys: String, CodingKey {
+		case url
+		case tap
+		case description = "alt"
+	}
 }

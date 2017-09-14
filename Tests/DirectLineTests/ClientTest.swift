@@ -8,17 +8,17 @@ import RxBlocking
 class ClientTest: XCTestCase {
 	var sut: Client!
     
-    override func setUp() {
-        super.setUp()
+	override func setUp() {
+		super.setUp()
 		sut = Client(baseURL: .directLineBaseURL)
-    }
+	}
 
 	override func tearDown() {
 		OHHTTPStubs.removeAllStubs()
 		super.tearDown()
 	}
 
-	func testRequest() {
+	func testConversationResponse_request_returnsConversation() {
 		// given
 		let json = """
 		{
@@ -29,7 +29,7 @@ class ClientTest: XCTestCase {
 			"referenceGrammarId": "some_grammar_id",
 		}
 		""".data(using: .utf8)!
-		let expected = Conversation(conversationId: "the_conversation_id",
+		let expected = Conversation(id: "the_conversation_id",
 		                            streamURL: URL(string: "wss://example.com/stream")!,
 		                            token: Token(value: "some_token", expiresIn: 1800))
 		stubResponse(withData: json, statusCode: 201)
@@ -43,7 +43,7 @@ class ClientTest: XCTestCase {
 		XCTAssertEqual(result, expected)
 	}
 
-	func testRequestBadStatus() {
+	func testBadStatusResponse_request_returnsBadStatusError() {
 		// given
 		stubResponse(withData: Data(), statusCode: 403)
 
@@ -60,7 +60,7 @@ class ClientTest: XCTestCase {
 		}
 	}
 
-	func testRequestOtherError() {
+	func testOtherErrorResponse_request_returnsOtherError() {
 		// given
 		let otherError = NSError(domain: "test", code: 42, userInfo: nil)
 		stubResponse(withError: otherError)

@@ -66,14 +66,14 @@ public struct Media {
 		self.contentType = contentType
 		self.contentURL = contentURL
 	}
+}
 
+extension Media: Codable {
 	private enum CodingKeys: String, CodingKey {
 		case contentType
 		case contentURL = "contentUrl"
 	}
-}
 
-extension Media: Codable {
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		let contentType = try container.decode(String.self, forKey: .contentType)

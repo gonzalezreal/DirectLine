@@ -1,7 +1,7 @@
 import Foundation
 
-/// Defines a set of activities.
-public struct ActivitySet: Decodable {
+/// Defines a list of activities.
+public struct ActivityList: Decodable {
 
 	/// Array of Activity objects.
 	public let activities: [Activity]

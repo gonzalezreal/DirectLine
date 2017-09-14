@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class ActivityTest: XCTestCase {
-	func testEncodeTextMessageActivity() {
+	func testActivityWithTextMessage_encode_returnsActivityJSON() {
 		// given
 		let activity = Activity(
 			from: ChannelAccount(id: "user"),

@@ -51,7 +51,8 @@ public struct Activity {
 	/// A `ChannelAccount` value that specifies the sender of the message.
 	public let from: ChannelAccount
 
-	/// ID that uniquely identifies the activity on the channel.
+	/// ID that uniquely identifies the activity on the channel. Can be `nil` when the activity
+	/// is created by the user.
 	public let id: String?
 
 	/// Value that indicates whether your bot is accepting, expecting, or ignoring
@@ -62,7 +63,7 @@ public struct Activity {
 	public let locale: Locale?
 
 	/// Text to be spoken by your bot on a speech-enabled channel.
-	public let speak: String?
+	public let spokenText: String?
 
 	/// A `SuggestedActions` value that defines the options from which the user can choose.
 	public let suggestedActions: SuggestedActions?
@@ -88,7 +89,7 @@ public struct Activity {
 		self.id = nil
 		self.inputHint = nil
 		self.locale = Locale.current
-		self.speak = nil
+		self.spokenText = nil
 		self.suggestedActions = nil
 		self.text = text
 		self.textFormat = nil
@@ -107,7 +108,7 @@ extension Activity: Codable {
 		case id
 		case inputHint
 		case locale
-		case speak
+		case spokenText = "speak"
 		case suggestedActions
 		case text
 		case textFormat
@@ -126,7 +127,7 @@ extension Activity: Codable {
 		id = try container.decodeIfPresent(String.self, forKey: .id)
 		inputHint = try container.decodeIfPresent(InputHint.self, forKey: .inputHint)
 		locale = try container.decodeIfPresent(Locale.self, forKey: .locale)
-		speak = try container.decodeIfPresent(String.self, forKey: .speak)
+		spokenText = try container.decodeIfPresent(String.self, forKey: .spokenText)
 		suggestedActions = try container.decodeIfPresent(SuggestedActions.self, forKey: .suggestedActions)
 		text = try container.decodeIfPresent(String.self, forKey: .text)
 		textFormat = try container.decodeIfPresent(TextFormat.self, forKey: .textFormat)

@@ -10,6 +10,7 @@ public final class DirectLine {
 		.conversation
 		.flatMapFirst { Observable.activityStream(url: $0.streamURL) }
 		.flatMap { return Observable.from($0.activities) }
+		.shareReplayLatestWhileConnected()
 
 	private let token: String
 	private let client: Client
@@ -48,7 +49,8 @@ private extension DirectLine {
 			.flatMap { [weak self] token -> Observable<Conversation> in
 				guard let `self` = self else { return Observable.empty() }
 
-				let newConversation = conversation.with(token: token)
+				var newConversation = conversation
+				newConversation.token = token
 
 				return Observable.concat([
 					Observable.just(newConversation),
@@ -62,7 +64,7 @@ private extension DirectLine {
 			Resource.self,
 			from: .post(
 				activity: activity,
-				conversationId: conversation.conversationId,
+				conversationId: conversation.id,
 				token: conversation.token.value
 			)
 		)

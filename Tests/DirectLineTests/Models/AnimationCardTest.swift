@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class AnimationCardTest: XCTestCase {
-	func testAutoloopDefaultsToTrue() {
+	func testAnimationCardWithoutAutoloopJSON_decode_autoloopIsTrue() {
 		// given
 		let json = """
 		{
@@ -23,7 +23,7 @@ class AnimationCardTest: XCTestCase {
 		XCTAssertEqual(card?.autoloop, true)
 	}
 
-	func testAutostartDefaultsToTrue() {
+	func testAnimationCardWithoutAutostartJSON_decode_autostartIsTrue() {
 		// given
 		let json = """
 		{
@@ -44,7 +44,7 @@ class AnimationCardTest: XCTestCase {
 		XCTAssertEqual(card?.autostart, true)
 	}
 
-	func testShareableDefaultsToTrue() {
+	func testAnimationCardWithoutShareableJSON_decode_shareableIsTrue() {
 		// given
 		let json = """
 		{
@@ -62,6 +62,6 @@ class AnimationCardTest: XCTestCase {
 		let card = try? decoder.decode(AnimationCard.self, from: json)
 
 		// then
-		XCTAssertEqual(card?.shareable, true)
+		XCTAssertEqual(card?.isShareable, true)
 	}
 }

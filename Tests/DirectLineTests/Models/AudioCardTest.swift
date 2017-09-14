@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class AudioCardTest: XCTestCase {
-	func testAutoloopDefaultsToTrue() {
+	func testAudioCardWithoutAutoloopJSON_decode_autoloopIsTrue() {
 		// given
 		let json = """
 		{
@@ -23,7 +23,7 @@ class AudioCardTest: XCTestCase {
 		XCTAssertEqual(card?.autoloop, true)
 	}
 
-	func testAutostartDefaultsToTrue() {
+	func testAudioCardWithoutAutostartJSON_decode_autostartIsTrue() {
 		// given
 		let json = """
 		{
@@ -44,7 +44,7 @@ class AudioCardTest: XCTestCase {
 		XCTAssertEqual(card?.autostart, true)
 	}
 
-	func testShareableDefaultsToTrue() {
+	func testAudioCardWithoutShareable_decode_shareableIsTrue() {
 		// given
 		let json = """
 		{
@@ -62,6 +62,6 @@ class AudioCardTest: XCTestCase {
 		let card = try? decoder.decode(AudioCard.self, from: json)
 
 		// then
-		XCTAssertEqual(card?.shareable, true)
+		XCTAssertEqual(card?.isShareable, true)
 	}
 }

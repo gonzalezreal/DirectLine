@@ -2,7 +2,7 @@ import XCTest
 import DirectLine
 
 class CardActionTest: XCTestCase {
-	func testDecodeCardActionTitle() {
+	func testCardActionWithTitleJSON_decode_returnsCardActionWithTitle() {
 		// given
 		let json = """
 		{
@@ -20,7 +20,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.title, "Example")
 	}
 
-	func testDecodeCardActionImage() {
+	func testCardActionWithImageJSON_decode_returnsCardActionWithImage() {
 		// given
 		let json = """
 		{
@@ -38,7 +38,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.image, URL(string: "http://example.com/image.jpg"))
 	}
 
-	func testDecodeOpenURLCardAction() {
+	func testCardActionWithOpenURLJSON_decode_returnsOpenURLCardAction() {
 		// given
 		let json = """
 		{
@@ -55,7 +55,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.openURL, URL(string: "http://example.com"))
 	}
 
-	func testDecodeImBackCardAction() {
+	func testCardActionWithImBackJSON_decode_returnsImBackCardAction() {
 		// given
 		let json = """
 		{
@@ -72,7 +72,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.imBack, "Hi there")
 	}
 
-	func testDecodePostBackCardAction() {
+	func testCardActionWithPostBackJSON_decode_returnsPostBackCardAction() {
 		// given
 		let json = """
 		{
@@ -89,7 +89,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.postBack, "Hi there")
 	}
 
-	func testDecodeCallCardAction() {
+	func testCardActionWithCallJSON_decode_returnsCallCardAction() {
 		// given
 		let json = """
 		{
@@ -106,7 +106,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.call, URL(string: "tel:123123123123"))
 	}
 
-	func testDecodePlayAudioCardAction() {
+	func testCardActionWithPlayAudioJSON_decode_returnsPlayAudioCardAction() {
 		// given
 		let json = """
 		{
@@ -123,7 +123,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.playAudio, URL(string: "http://example.com/audio.aac"))
 	}
 
-	func testDecodePlayVideoCardAction() {
+	func testCardActionWithPlayVideoJSON_decode_returnsPlayVideoCardAction() {
 		// given
 		let json = """
 		{
@@ -140,7 +140,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.playVideo, URL(string: "http://example.com/video.mp4"))
 	}
 
-	func testDecodeShowImageCardAction() {
+	func testCardActionWithShowImageJSON_decode_returnsShowImageCardAction() {
 		// given
 		let json = """
 		{
@@ -157,7 +157,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.showImage, URL(string: "http://example.com/image.jpg"))
 	}
 
-	func testDecodeDownloadFileCardAction() {
+	func testCardActionWithDownloadFileJSON_decode_returnsDownloadFileCardAction() {
 		// given
 		let json = """
 		{
@@ -174,7 +174,7 @@ class CardActionTest: XCTestCase {
 		XCTAssertEqual(cardAction?.downloadFile, URL(string: "http://example.com/resume.pdf"))
 	}
 
-	func testDecodeSigninCardAction() {
+	func testCardActionWithSignInJSON_decode_returnsSigninCardAction() {
 		// given
 		let json = """
 		{

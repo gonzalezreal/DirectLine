@@ -14,3 +14,9 @@ extension Conversation: Equatable {
 		return equalDump(lhs, rhs)
 	}
 }
+
+extension Attachment.Content: Equatable {
+	public static func ==(lhs: Attachment.Content, rhs: Attachment.Content) -> Bool {
+		return equalDump(lhs, rhs)
+	}
+}

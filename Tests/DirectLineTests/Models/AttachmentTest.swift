@@ -1,8 +1,8 @@
 import XCTest
-import DirectLine
+@testable import DirectLine
 
 class AttachmentTest: XCTestCase {
-	func testDecodeMediaAttachment() {
+	func testMediaJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -11,16 +11,17 @@ class AttachmentTest: XCTestCase {
 			"name": "fistro.jpg"
 		}
 		""".data(using: .utf8)!
+		let expectedMedia = Media(contentType: .imageJPG, contentURL: URL(string: "http://example.com/fistro.jpg")!)
 		let decoder = JSONDecoder()
 
 		// when
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isMedia ?? false)
+		XCTAssertEqual(attachment!.content, .media(expectedMedia))
 	}
 
-	func testEncodeMediaAttachment() {
+	func testMediaAttachment_encode_returnsJSON() {
 		// given
 		let attachment = Attachment(
 			content: .media(Media(contentType: .imageJPG, contentURL: URL(string: "http://example.com/fistro.jpg")!)),
@@ -43,24 +44,27 @@ class AttachmentTest: XCTestCase {
 		XCTAssertEqual(expected, result)
 	}
 
-	func testDecodeAdaptiveCardAttachment() {
+	func testAdaptiveCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
 			"contentType": "application/vnd.microsoft.card.adaptive",
-			"content": {}
+			"content": {
+				"type": "AdaptiveCard"
+			}
 		}
 		""".data(using: .utf8)!
+		let expectedCard = AdaptiveCard()
 		let decoder = JSONDecoder()
 
 		// when
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isAdaptiveCard ?? false)
+		XCTAssertEqual(attachment!.content, .adaptiveCard(expectedCard))
 	}
 
-	func testDecodeAnimationCardAttachment() {
+	func testAnimationCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -77,16 +81,25 @@ class AttachmentTest: XCTestCase {
 			}
 		}
 		""".data(using: .utf8)!
+		let expectedCard = AnimationCard(autoloop: true,
+		                                 autostart: true,
+		                                 buttons: [],
+		                                 image: nil,
+		                                 media: [MediaURL(url: URL(string: "http://i.giphy.com/Ki55RUbOV5njy.gif")!, profile: nil)],
+		                                 isShareable: true,
+		                                 subtitle: "Animation Card",
+		                                 text: nil,
+		                                 title: "Microsoft Bot Framework")
 		let decoder = JSONDecoder()
 
 		// when
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isAnimationCard ?? false)
+		XCTAssertEqual(attachment!.content, .animationCard(expectedCard))
 	}
 
-	func testDecodeAudioCardAttachment() {
+	func testAudioCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -112,16 +125,28 @@ class AttachmentTest: XCTestCase {
 			}
 		}
 		""".data(using: .utf8)!
+		let expectedCard = AudioCard(aspect: nil,
+		                             autoloop: true,
+		                             autostart: true,
+		                             buttons: [CardAction(action: .open(URL(string: "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back")!),
+		                                                  title: "Read More",
+		                                                  image: nil)],
+		                             image: ThumbnailURL(url: URL(string: "https://upload.wikimedia.org/wikipedia/en/3/3c/SW_-_Empire_Strikes_Back.jpg")!, description: nil),
+		                             media: [MediaURL(url: URL(string: "http://i.giphy.com/Ki55RUbOV5njy.gif")!, profile: nil)],
+		                             isShareable: true,
+		                             subtitle: "Star Wars: Episode V - The Empire Strikes Back",
+		                             text: nil,
+		                             title: "I am your father")
 		let decoder = JSONDecoder()
 
 		// when
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isAudioCard ?? false)
+		XCTAssertEqual(attachment!.content, .audioCard(expectedCard))
 	}
 
-	func testDecodeVideoCardAttachment() {
+	func testVideoCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -130,11 +155,11 @@ class AttachmentTest: XCTestCase {
 				"title": "Big Buck Bunny",
 				"subtitle": "by the Blender Institute",
 				"image": {
-					"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Big_buck_bunny_poster_big.jpg/220px-Big_buck_bunny_poster_big.jpg"
+					"url": "https://upload.wikimedia.org/220px-Big_buck_bunny_poster_big.jpg"
 				},
 				"media": [
 					{
-						"url": "http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"
+						"url": "http://download.blender.org/BigBuckBunny_320x180.mp4"
 					}
 				],
 				"buttons": [
@@ -147,16 +172,27 @@ class AttachmentTest: XCTestCase {
 			}
 		}
 		""".data(using: .utf8)!
+		let expectedCard = VideoCard(autoloop: true,
+		                             autostart: true,
+		                             buttons: [CardAction(action: .open(URL(string: "https://peach.blender.org/")!),
+		                                                  title: "Learn More",
+		                                                  image: nil)],
+		                             image: ThumbnailURL(url: URL(string: "https://upload.wikimedia.org/220px-Big_buck_bunny_poster_big.jpg")!, description: nil),
+		                             media: [MediaURL(url: URL(string: "http://download.blender.org/BigBuckBunny_320x180.mp4")!, profile: nil)],
+		                             isShareable: true,
+		                             subtitle: "by the Blender Institute",
+		                             text: nil,
+		                             title: "Big Buck Bunny")
 		let decoder = JSONDecoder()
 
 		// when
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isVideoCard ?? false)
+		XCTAssertEqual(attachment!.content, .videoCard(expectedCard))
 	}
 
-	func testDecodeHeroCardAttachment() {
+	func testHeroCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -164,10 +200,10 @@ class AttachmentTest: XCTestCase {
 			"content": {
 				"title": "BotFramework Hero Card",
 				"subtitle": "Your bots — wherever your users are talking",
-				"text": "Build and connect intelligent bots to interact with your users naturally wherever they are, from text/sms to Skype, Slack, Office 365 mail and other popular services.",
+				"text": "Build and connect intelligent bots...",
 				"images": [
 					{
-						"url": "https://sec.ch9.ms/ch9/7ff5/e07cfef0-aa3b-40bb-9baa-7c9ef8ff7ff5/buildreactionbotframework_960.jpg"
+						"url": "https://sec.ch9.ms/botframework_960.jpg"
 					}
 				],
 				"buttons": [
@@ -180,16 +216,26 @@ class AttachmentTest: XCTestCase {
 			}
 		}
 		""".data(using: .utf8)!
+		let expectedCard = HeroCard(buttons: [CardAction(action: .open(URL(string: "https://docs.microsoft.com/bot-framework")!),
+		                                                 title: "Get Started",
+		                                                 image: nil)],
+		                            images: [CardImage(url: URL(string: "https://sec.ch9.ms/botframework_960.jpg")!,
+		                                               tap: nil,
+		                                               description: nil)],
+		                            subtitle: "Your bots — wherever your users are talking",
+		                            tap: nil,
+		                            text: "Build and connect intelligent bots...",
+		                            title: "BotFramework Hero Card")
 		let decoder = JSONDecoder()
 
 		// when
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isHeroCard ?? false)
+		XCTAssertEqual(attachment!.content, .heroCard(expectedCard))
 	}
 
-	func testDecodeThumbnailCardAttachment() {
+	func testThumbnailCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -197,10 +243,10 @@ class AttachmentTest: XCTestCase {
 			"content": {
 				"title": "BotFramework Thumbnail Card",
 				"subtitle": "Your bots — wherever your users are talking",
-				"text": "Build and connect intelligent bots to interact with your users naturally wherever they are, from text/sms to Skype, Slack, Office 365 mail and other popular services.",
+				"text": "Build and connect intelligent bots...",
 				"images": [
 					{
-						"url": "https://sec.ch9.ms/ch9/7ff5/e07cfef0-aa3b-40bb-9baa-7c9ef8ff7ff5/buildreactionbotframework_960.jpg"
+						"url": "https://sec.ch9.ms/botframework_960.jpg"
 					}
 				],
 				"buttons": [
@@ -213,16 +259,26 @@ class AttachmentTest: XCTestCase {
 			}
 		}
 		""".data(using: .utf8)!
+		let expectedCard = ThumbnailCard(buttons: [CardAction(action: .open(URL(string: "https://docs.microsoft.com/bot-framework")!),
+		                                                      title: "Get Started",
+		                                                      image: nil)],
+		                                 images: [CardImage(url: URL(string: "https://sec.ch9.ms/botframework_960.jpg")!,
+		                                                    tap: nil,
+		                                                    description: nil)],
+		                                 subtitle: "Your bots — wherever your users are talking",
+		                                 tap: nil,
+		                                 text: "Build and connect intelligent bots...",
+		                                 title: "BotFramework Thumbnail Card")
 		let decoder = JSONDecoder()
 
 		// when
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isThumbnailCard ?? false)
+		XCTAssertEqual(attachment!.content, .thumbnailCard(expectedCard))
 	}
 
-	func testDecodeReceiptCardAttachment() {
+	func testReceiptCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -245,20 +301,11 @@ class AttachmentTest: XCTestCase {
 						"price": "$ 38.45",
 						"quantity": "368",
 						"image": {
-							"url": "https://github.com/amido/azure-vector-icons/raw/master/renders/traffic-manager.png",
+							"url": "https://github.com/traffic-manager.png",
 						}
-					},
-					{
-						"title": "App Service",
-						"price": "$ 45.00",
-						"quantity": "720",
-						"image": {
-							"url": "https://github.com/amido/azure-vector-icons/raw/master/renders/cloud-service.png",
-						}
-					},
+					}
 				],
 				"tax": "$ 7.50",
-				"tax": "$ 90.95",
 				"buttons": [
 					{
 						"title": "More information",
@@ -269,16 +316,35 @@ class AttachmentTest: XCTestCase {
 			}
 		}
 		""".data(using: .utf8)!
+		let expectedCard = ReceiptCard(buttons: [CardAction(action: .open(URL(string: "https://azure.microsoft.com/en-us/pricing/")!),
+		                                                    title: "More information",
+		                                                    image: nil)],
+		                               facts: [Fact(key: "Order Number", value: "1234"),
+		                                       Fact(key: "Payment Method", value: "VISA 5555-****")],
+		                               items: [ReceiptItem(image: CardImage(url: URL(string: "https://github.com/traffic-manager.png")!,
+		                                                                    tap: nil,
+		                                                                    description: nil),
+		                                                   price: "$ 38.45",
+		                                                   quantity: "368",
+		                                                   subtitle: nil,
+		                                                   tap: nil,
+		                                                   text: nil,
+		                                                   title: "Data Transfer")],
+		                               tap: nil,
+		                               tax: "$ 7.50",
+		                               title: "John Doe",
+		                               total: nil,
+		                               vat: nil)
 		let decoder = JSONDecoder()
 
 		// when
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isReceiptCard ?? false)
+		XCTAssertEqual(attachment!.content, .receiptCard(expectedCard))
 	}
 
-	func testDecodeSignInCardAttachment() {
+	func testSignInCardJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -294,16 +360,20 @@ class AttachmentTest: XCTestCase {
 			}
 		}
 		""".data(using: .utf8)!
+		let expectedCard = SignInCard(buttons: [CardAction(action: .signin(URL(string: "https://login.microsoftonline.com/")!),
+		                                                   title: nil,
+		                                                   image: nil)],
+		                              text: "BotFramework Sign-in Card")
 		let decoder = JSONDecoder()
 
 		// when
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isSignInCard ?? false)
+		XCTAssertEqual(attachment!.content, .signInCard(expectedCard))
 	}
 
-	func testDecodeUnknownAttachment() {
+	func testUnknownJSON_decode_returnsAttachment() {
 		// given
 		let json = """
 		{
@@ -319,98 +389,6 @@ class AttachmentTest: XCTestCase {
 		let attachment = try? decoder.decode(Attachment.self, from: json)
 
 		// then
-		XCTAssertTrue(attachment?.isUnknown ?? false)
-	}
-}
-
-private extension Attachment {
-	var isMedia: Bool {
-		switch content {
-		case .media:
-			return true
-		default:
-			return false
-		}
-	}
-
-	var isAdaptiveCard: Bool {
-		switch content {
-		case .adaptiveCard:
-			return true
-		default:
-			return false
-		}
-	}
-
-	var isAnimationCard: Bool {
-		switch content {
-		case .animationCard:
-			return true
-		default:
-			return false
-		}
-	}
-
-	var isAudioCard: Bool {
-		switch content {
-		case .audioCard:
-			return true
-		default:
-			return false
-		}
-	}
-
-	var isVideoCard: Bool {
-		switch content {
-		case .videoCard:
-			return true
-		default:
-			return false
-		}
-	}
-
-	var isHeroCard: Bool {
-		switch content {
-		case .heroCard:
-			return true
-		default:
-			return false
-		}
-	}
-
-	var isThumbnailCard: Bool {
-		switch content {
-		case .thumbnailCard:
-			return true
-		default:
-			return false
-		}
-	}
-
-	var isReceiptCard: Bool {
-		switch content {
-		case .receiptCard:
-			return true
-		default:
-			return false
-		}
-	}
-
-	var isSignInCard: Bool {
-		switch content {
-		case .signInCard:
-			return true
-		default:
-			return false
-		}
-	}
-
-	var isUnknown: Bool {
-		switch content {
-		case .unknown:
-			return true
-		default:
-			return false
-		}
+		XCTAssertEqual(attachment!.content, .unknown)
 	}
 }

@@ -25,7 +25,7 @@ public struct AudioCard {
 	public let media: [MediaURL]
 
 	/// Flag that indicates whether the audio files may be shared with others.
-	public let shareable: Bool
+	public let isShareable: Bool
 
 	/// Subtitle to display under the card's title.
 	public let subtitle: String?
@@ -60,7 +60,7 @@ extension AudioCard: Decodable {
 		let buttons = try container.decode([CardAction].self, forKey: .buttons)
 		let image = try container.decodeIfPresent(ThumbnailURL.self, forKey: .image)
 		let media = try container.decode([MediaURL].self, forKey: .media)
-		let shareable = try container.decodeIfPresent(Bool.self, forKey: .shareable) ?? true
+		let isShareable = try container.decodeIfPresent(Bool.self, forKey: .shareable) ?? true
 		let subtitle = try container.decodeIfPresent(String.self, forKey: .subtitle)
 		let text = try container.decodeIfPresent(String.self, forKey: .text)
 		let title = try container.decodeIfPresent(String.self, forKey: .title)
@@ -71,7 +71,7 @@ extension AudioCard: Decodable {
 		          buttons: buttons,
 		          image: image,
 		          media: media,
-		          shareable: shareable,
+		          isShareable: isShareable,
 		          subtitle: subtitle,
 		          text: text,
 		          title: title)

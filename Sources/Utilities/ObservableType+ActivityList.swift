@@ -6,7 +6,7 @@ internal extension DispatchQueue {
 	static let webSocketQueue = DispatchQueue(label: "com.DirectLine.WebSocket")
 }
 
-internal extension ObservableType where E == ActivitySet {
+internal extension ObservableType where E == ActivityList {
 	static func activityStream(url: URL) -> Observable<E> {
 		let decoder = JSONDecoder()
 		decoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601)
@@ -35,6 +35,6 @@ internal extension ObservableType where E == ActivitySet {
 				}
 			}
 		}
-		.map(ActivitySet.self, using: decoder)
+		.map(to: ActivityList.self, using: decoder)
 	}
 }
