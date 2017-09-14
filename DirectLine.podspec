@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DirectLine"
-  s.version      = "1.0-alpha.1"
+  s.version      = "1.0-alpha.2"
   s.summary      = "Swift client library for Microsoft Bot Framework's Direct Line protocol"
   s.description  = <<-DESC
     Loosely based on the official Javascript DirectLine client, it enables communication
