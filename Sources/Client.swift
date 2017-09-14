@@ -15,6 +15,6 @@ internal final class Client {
 
 	func request<T>(_ type: T.Type, from endpoint: Endpoint) -> Observable<T> where T: Decodable {
 		return session.rx.data(request: endpoint.request(with: baseURL))
-			.map(T.self, using: decoder)
+			.map(to: T.self, using: decoder)
 	}
 }

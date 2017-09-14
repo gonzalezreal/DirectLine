@@ -35,6 +35,6 @@ internal extension ObservableType where E == ActivityList {
 				}
 			}
 		}
-		.map(ActivityList.self, using: decoder)
+		.map(to: ActivityList.self, using: decoder)
 	}
 }
