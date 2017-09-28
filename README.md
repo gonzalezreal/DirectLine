@@ -8,6 +8,8 @@
 
 Loosely based on the official [Javascript DirectLine client](https://github.com/Microsoft/BotFramework-DirectLineJS), it enables communication between your bot and your iOS app using a simple [ReactiveX](https://github.com/ReactiveX/RxSwift) based interface.
 
+**IMPORTANT: This library is still work in progress and not at all production-ready.**
+
 ## Examples
 To create a `DirectLine` object, you must provide either the secret for your bot or a temporary token obtained via the [Generate Token](https://docs.microsoft.com/en-us/bot-framework/rest-api/bot-framework-rest-direct-line-3-0-api-reference#generate-token) API:
 
