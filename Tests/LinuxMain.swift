@@ -1,6 +1,6 @@
-import XCTest
 @testable import DirectLineTests
+import XCTest
 
 XCTMain([
-    testCase(DirectLineTests.allTests),
+	testCase(DirectLineTests.allTests)
 ])
