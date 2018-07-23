@@ -112,9 +112,6 @@
 		52D6DA0F1BF000BD002C0205 /* DirectLine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DirectLine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		991BCFFC210215A9000F08BD /* DirectLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLine.swift; sourceTree = "<group>"; };
 		991BD000210215ED000F08BD /* DirectLineTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectLineTest.swift; sourceTree = "<group>"; };
-		9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
-		9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/Mac/OHHTTPStubs.framework; sourceTree = "<group>"; };
-		994735431F47720400DD6F7F /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/tvOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		9947354A1F477B0900DD6F7F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 		9947354D1F477B3200DD6F7F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
 		994735501F477B6600DD6F7F /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/tvOS/RxBlocking.framework; sourceTree = "<group>"; };
@@ -250,9 +247,6 @@
 				9947354A1F477B0900DD6F7F /* RxBlocking.framework */,
 				9947354D1F477B3200DD6F7F /* RxBlocking.framework */,
 				994735501F477B6600DD6F7F /* RxBlocking.framework */,
-				9947353B1F4770DD00DD6F7F /* OHHTTPStubs.framework */,
-				9947353F1F4771B100DD6F7F /* OHHTTPStubs.framework */,
-				994735431F47720400DD6F7F /* OHHTTPStubs.framework */,
 				996A82591F40401100C36B75 /* Starscream.framework */,
 				996A825D1F40438E00C36B75 /* Starscream.framework */,
 				996A82641F40449000C36B75 /* Starscream.framework */,
