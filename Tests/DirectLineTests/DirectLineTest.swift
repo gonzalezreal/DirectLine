@@ -1,9 +1,8 @@
 //
-//  DirectLineTest.swift
-//  DirectLine
+// DirectLine
 //
-//  Created by Guille Gonzalez on 20/07/2018.
-//  Copyright © 2018 Guille Gonzalez. All rights reserved.
+// Copyright © 2018 Guille Gonzalez. All rights reserved.
+// See LICENSE file for license.
 //
 
 import XCTest
