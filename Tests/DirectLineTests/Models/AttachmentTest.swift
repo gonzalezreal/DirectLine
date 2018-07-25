@@ -43,7 +43,7 @@ extension AttachmentTest {
 		XCTAssertEqual(attachment.thumbnailURL, URL(string: "http://example.com/fistro_thumb.jpg")!)
 	}
 
-	func testMediaAttachment_encode_producesExpectedJSON() throws {
+	func testMediaAttachment_encode_returnsExpectedJSON() throws {
 		// given
 		let attachment = Attachment(contentType: "image/jpg",
 		                            url: URL(string: "http://example.com/fistro.jpg")!,

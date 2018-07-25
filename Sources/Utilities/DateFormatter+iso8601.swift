@@ -7,7 +7,7 @@
 
 import Foundation
 
-internal extension DateFormatter {
+public extension DateFormatter {
 	static let iso8601WithFractionalSeconds: DateFormatter = {
 		let formatter = DateFormatter()
 		formatter.calendar = Calendar(identifier: .iso8601)

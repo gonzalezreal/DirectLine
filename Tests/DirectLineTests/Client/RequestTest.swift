@@ -67,7 +67,7 @@ class RequestTest: XCTestCase {
 
 	func testSendActivity_urlRequest_isValidRequest() throws {
 		// given
-		let activity = Activity(channelData: "test")
+		let activity = Activity.message(from: ChannelAccount(id: "p3c4d0r"), text: "Lorem fistrum")
 		let expectedBody = try JSONEncoder().encode(activity)
 		let expectedHeaders = [
 			"Authorization": "Bearer f15tr0",

@@ -1,0 +1,22 @@
+//
+// DirectLine
+//
+// Copyright © 2018 Guille Gonzalez. All rights reserved.
+// See LICENSE file for license.
+//
+
+import Foundation
+
+/// Defines a bot or user account on the channel.
+public struct ChannelAccount: Codable {
+	/// Uniquely identifies the bot or user on the channel.
+	public let id: String
+
+	/// Name of the bot or user.
+	public let name: String?
+
+	public init(id: String, name: String? = nil) {
+		self.id = id
+		self.name = name
+	}
+}

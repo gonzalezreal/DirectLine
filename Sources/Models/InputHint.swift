@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct Resource: Decodable {
-	public let id: String
+public enum InputHint: String, Decodable {
+	case acceptingInput, expectingInput, ignoringInput
 }

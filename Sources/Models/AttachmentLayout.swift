@@ -7,6 +7,7 @@
 
 import Foundation
 
-public struct Resource: Decodable {
-	public let id: String
+public enum AttachmentLayout: String, Decodable {
+	case carousel
+	case list
 }

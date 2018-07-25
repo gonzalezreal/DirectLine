@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct Resource: Decodable {
-	public let id: String
+public enum TextFormat: String, Codable {
+	case markdown, plain, xml
 }
