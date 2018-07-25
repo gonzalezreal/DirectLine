@@ -83,6 +83,12 @@
 		99C7E49A2105D4AB005315DF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4962105D49C005315DF /* Request.swift */; };
 		99C7E49B2105D4AB005315DF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4962105D49C005315DF /* Request.swift */; };
 		99C7E49D2105DCC3005315DF /* URLRequest+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E49C2105DCC3005315DF /* URLRequest+Request.swift */; };
+		99DA234421076C5A00E06D0C /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA234321076C5A00E06D0C /* Attachment.swift */; };
+		99DA234521076C5A00E06D0C /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA234321076C5A00E06D0C /* Attachment.swift */; };
+		99DA234621076C5A00E06D0C /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA234321076C5A00E06D0C /* Attachment.swift */; };
+		99DA234921077A5F00E06D0C /* AttachmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA234821077A5F00E06D0C /* AttachmentTest.swift */; };
+		99DA234A21077A5F00E06D0C /* AttachmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA234821077A5F00E06D0C /* AttachmentTest.swift */; };
+		99DA234B21077A5F00E06D0C /* AttachmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DA234821077A5F00E06D0C /* AttachmentTest.swift */; };
 		DD7502881C68FEDE006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6DA0F1BF000BD002C0205 /* DirectLine.framework */; };
 		DD7502921C690C7A006590AF /* DirectLine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52D6D9F01BEFFFBE002C0205 /* DirectLine.framework */; };
 /* End PBXBuildFile section */
@@ -181,6 +187,8 @@
 		99C7E4932105D310005315DF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		99C7E4962105D49C005315DF /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		99C7E49C2105DCC3005315DF /* URLRequest+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Request.swift"; sourceTree = "<group>"; };
+		99DA234321076C5A00E06D0C /* Attachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
+		99DA234821077A5F00E06D0C /* AttachmentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentTest.swift; sourceTree = "<group>"; };
 		AD2FAA261CD0B6D800659CF4 /* DirectLine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLine.plist; sourceTree = "<group>"; };
 		AD2FAA281CD0B6E100659CF4 /* DirectLineTests.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DirectLineTests.plist; sourceTree = "<group>"; };
 		DD75027A1C68FCFC006590AF /* DirectLine-macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DirectLine-macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -299,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				99643B11210624D60099996F /* Client */,
+				99DA234721077A4400E06D0C /* Models */,
 				991BD000210215ED000F08BD /* DirectLineTest.swift */,
 				99643B2C210713600099996F /* Equatables.swift */,
 			);
@@ -351,6 +360,7 @@
 				99C7E4932105D310005315DF /* Activity.swift */,
 				991B05562105E7F9004F7006 /* Conversation.swift */,
 				99643B34210729FB0099996F /* Resource.swift */,
+				99DA234321076C5A00E06D0C /* Attachment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -362,6 +372,14 @@
 				99643B05210612C90099996F /* Client.swift */,
 			);
 			path = Client;
+			sourceTree = "<group>";
+		};
+		99DA234721077A4400E06D0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99DA234821077A5F00E06D0C /* AttachmentTest.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DD7502721C68FC1B006590AF /* Frameworks */ = {
@@ -688,6 +706,7 @@
 				991B05572105E7F9004F7006 /* Conversation.swift in Sources */,
 				99C7E4942105D310005315DF /* Activity.swift in Sources */,
 				99643B19210626760099996F /* URLSessionMock.swift in Sources */,
+				99DA234421076C5A00E06D0C /* Attachment.swift in Sources */,
 				99643B0A21061CB20099996F /* ObservableType+JSONDecoder.swift in Sources */,
 				99643B1D21062D970099996F /* URL+DirectLine.swift in Sources */,
 				99C7E4972105D49C005315DF /* Request.swift in Sources */,
@@ -704,6 +723,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DA234921077A5F00E06D0C /* AttachmentTest.swift in Sources */,
 				99643B2521062EE70099996F /* ClientTest.swift in Sources */,
 				99643B3921075F9D0099996F /* RequestTest.swift in Sources */,
 				99643B2D210713600099996F /* Equatables.swift in Sources */,
@@ -719,6 +739,7 @@
 				99C7E4992105D4A7005315DF /* Activity.swift in Sources */,
 				991B05512105E3B5004F7006 /* DateFormatter+iso8601.swift in Sources */,
 				99643B1B210626760099996F /* URLSessionMock.swift in Sources */,
+				99DA234621076C5A00E06D0C /* Attachment.swift in Sources */,
 				99643B0C21061CB20099996F /* ObservableType+JSONDecoder.swift in Sources */,
 				99643B1F21062D970099996F /* URL+DirectLine.swift in Sources */,
 				99C7E49B2105D4AB005315DF /* Request.swift in Sources */,
@@ -739,6 +760,7 @@
 				99C7E4982105D4A7005315DF /* Activity.swift in Sources */,
 				991B05502105E3B5004F7006 /* DateFormatter+iso8601.swift in Sources */,
 				99643B1A210626760099996F /* URLSessionMock.swift in Sources */,
+				99DA234521076C5A00E06D0C /* Attachment.swift in Sources */,
 				99643B0B21061CB20099996F /* ObservableType+JSONDecoder.swift in Sources */,
 				99643B1E21062D970099996F /* URL+DirectLine.swift in Sources */,
 				99C7E49A2105D4AB005315DF /* Request.swift in Sources */,
@@ -755,6 +777,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DA234A21077A5F00E06D0C /* AttachmentTest.swift in Sources */,
 				99643B2621062EE70099996F /* ClientTest.swift in Sources */,
 				99643B3A21075F9D0099996F /* RequestTest.swift in Sources */,
 				99643B2E210713600099996F /* Equatables.swift in Sources */,
@@ -766,6 +789,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DA234B21077A5F00E06D0C /* AttachmentTest.swift in Sources */,
 				99643B2721062EE70099996F /* ClientTest.swift in Sources */,
 				99643B3B21075F9D0099996F /* RequestTest.swift in Sources */,
 				99643B2F210713600099996F /* Equatables.swift in Sources */,
@@ -966,7 +990,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Configs/DirectLineTests.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DirectLine.DirectLine-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -984,7 +1008,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Configs/DirectLineTests.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DirectLine.DirectLine-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1108,7 +1132,7 @@
 				);
 				INFOPLIST_FILE = Configs/DirectLineTests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DirectLine.DirectLine-macOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1127,7 +1151,7 @@
 				);
 				INFOPLIST_FILE = Configs/DirectLineTests.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DirectLine.DirectLine-macOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1148,7 +1172,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DirectLine.DirectLine-tvOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TVOS_DEPLOYMENT_TARGET = 10.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -1166,7 +1190,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TVOS_DEPLOYMENT_TARGET = 10.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};

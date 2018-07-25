@@ -15,6 +15,7 @@ class ClientTest: XCTestCase {
 	private let sessionMock = URLSessionMock()
 
 	override func setUp() {
+		super.setUp()
 		sut = Client(session: sessionMock, baseURL: .directLine)
 	}
 }
