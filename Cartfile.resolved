@@ -1,2 +1,2 @@
 github "ReactiveX/RxSwift" "4.2.0"
-github "daltoniam/Starscream" "3.0.5"
+github "facebook/SocketRocket" "0a023409b138039d1ab5ac5431fe61c5f334e86b"
