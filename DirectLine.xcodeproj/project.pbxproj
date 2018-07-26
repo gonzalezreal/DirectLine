@@ -79,6 +79,9 @@
 		996A82651F40449000C36B75 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A82641F40449000C36B75 /* Starscream.framework */; };
 		996A82661F4044E000C36B75 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996A82641F40449000C36B75 /* Starscream.framework */; };
 		996A82681F4044F900C36B75 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 996A82641F40449000C36B75 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		997DCDB32109CA5E002E05FA /* ActivityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DCDB22109CA5E002E05FA /* ActivityList.swift */; };
+		997DCDB42109CA5E002E05FA /* ActivityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DCDB22109CA5E002E05FA /* ActivityList.swift */; };
+		997DCDB52109CA5E002E05FA /* ActivityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997DCDB22109CA5E002E05FA /* ActivityList.swift */; };
 		99C7E4942105D310005315DF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4932105D310005315DF /* Activity.swift */; };
 		99C7E4972105D49C005315DF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4962105D49C005315DF /* Request.swift */; };
 		99C7E4982105D4A7005315DF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C7E4932105D310005315DF /* Activity.swift */; };
@@ -212,6 +215,7 @@
 		996A82591F40401100C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		996A825D1F40438E00C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/Mac/Starscream.framework; sourceTree = "<group>"; };
 		996A82641F40449000C36B75 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/tvOS/Starscream.framework; sourceTree = "<group>"; };
+		997DCDB22109CA5E002E05FA /* ActivityList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityList.swift; sourceTree = "<group>"; };
 		99C7E4932105D310005315DF /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		99C7E4962105D49C005315DF /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		99C7E49C2105DCC3005315DF /* URLRequest+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Request.swift"; sourceTree = "<group>"; };
@@ -405,6 +409,7 @@
 				99DDDADA21087AF5002334C3 /* CardAction.swift */,
 				99DDDAE221088061002334C3 /* SuggestedActions.swift */,
 				99C7E4932105D310005315DF /* Activity.swift */,
+				997DCDB22109CA5E002E05FA /* ActivityList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -759,6 +764,7 @@
 				99DDDADB21087AF5002334C3 /* CardAction.swift in Sources */,
 				99C7E4972105D49C005315DF /* Request.swift in Sources */,
 				99DDDACF210863B4002334C3 /* EmptyRepresentable.swift in Sources */,
+				997DCDB32109CA5E002E05FA /* ActivityList.swift in Sources */,
 				99DDDAC321085F95002334C3 /* TextFormat.swift in Sources */,
 				99DDDAE321088061002334C3 /* SuggestedActions.swift in Sources */,
 				991B054F2105E3B5004F7006 /* DateFormatter+iso8601.swift in Sources */,
@@ -801,6 +807,7 @@
 				99DDDADD21087AF5002334C3 /* CardAction.swift in Sources */,
 				99C7E49B2105D4AB005315DF /* Request.swift in Sources */,
 				99DDDAD1210863B4002334C3 /* EmptyRepresentable.swift in Sources */,
+				997DCDB52109CA5E002E05FA /* ActivityList.swift in Sources */,
 				99DDDAC521085F95002334C3 /* TextFormat.swift in Sources */,
 				99DDDAE521088061002334C3 /* SuggestedActions.swift in Sources */,
 				991B05592105E7F9004F7006 /* Conversation.swift in Sources */,
@@ -830,6 +837,7 @@
 				99DDDADC21087AF5002334C3 /* CardAction.swift in Sources */,
 				99C7E49A2105D4AB005315DF /* Request.swift in Sources */,
 				99DDDAD0210863B4002334C3 /* EmptyRepresentable.swift in Sources */,
+				997DCDB42109CA5E002E05FA /* ActivityList.swift in Sources */,
 				99DDDAC421085F95002334C3 /* TextFormat.swift in Sources */,
 				99DDDAE421088061002334C3 /* SuggestedActions.swift in Sources */,
 				991B05582105E7F9004F7006 /* Conversation.swift in Sources */,
