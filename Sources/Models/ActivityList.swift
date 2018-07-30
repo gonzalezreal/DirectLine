@@ -8,7 +8,7 @@
 import Foundation
 
 /// Defines a list of activities.
-struct ActivityList<ChannelData: Codable>: Decodable {
+internal struct ActivityList<ChannelData: Codable>: Decodable {
 	/// Array of `Activity` values.
 	let activities: [Activity<ChannelData>]
 
