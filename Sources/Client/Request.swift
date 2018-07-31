@@ -13,14 +13,40 @@ internal enum RequestMethod: String {
 }
 
 /// A DirectLine request.
-internal struct Request<Body: Encodable, Response: Decodable> {
+internal struct Request<Body: Encodable> {
 	let token: String
 	let method: RequestMethod
 	let path: String
 	let parameters: [String: String]
 	let body: Body?
 
-	init(token: String, method: RequestMethod, path: String, parameters: [String: String] = [:], body: Body? = nil) {
+	static func sendActivity<ChannelData: Codable>(_ activity: Activity<ChannelData>, to conversationId: String, withToken token: String) -> Request<Activity<ChannelData>> {
+		return Request<Activity<ChannelData>>(token: token,
+		                                      method: .post,
+		                                      path: "conversations/\(conversationId)/activities",
+		                                      body: activity)
+	}
+}
+
+internal extension Request where Body == Empty {
+	static func startConversation(withToken token: String) -> Request {
+		return Request(token: token, method: .post, path: "conversations")
+	}
+
+	static func refreshToken(_ token: String) -> Request {
+		return Request(token: token, method: .post, path: "tokens/refresh")
+	}
+
+	static func reconnect(to conversationId: String, watermark: String?, withToken token: String) -> Request {
+		return Request(token: token,
+		               method: .get,
+		               path: "conversations/\(conversationId)",
+		               parameters: watermark.map { ["watermark": $0] } ?? [:])
+	}
+}
+
+private extension Request {
+	init(token: String, method: RequestMethod, path: String, parameters: [String: String] = [:], body: Body) {
 		self.token = token
 		self.method = method
 		self.path = path
@@ -29,28 +55,12 @@ internal struct Request<Body: Encodable, Response: Decodable> {
 	}
 }
 
-/// Returns a request that opens a new conversation with the bot.
-internal func startConversation(withToken token: String) -> Request<Empty, Conversation> {
-	return Request(token: token, method: .post, path: "conversations")
-}
-
-/// Returns a request that refreshes a conversation token.
-internal func refreshToken(_ token: String) -> Request<Empty, Conversation> {
-	return Request(token: token, method: .post, path: "tokens/refresh")
-}
-
-/// Returns a request that reconnects to an existing conversation.
-internal func reconnect(to conversationId: String, watermark: String?, withToken token: String) -> Request<Empty, Conversation> {
-	return Request(token: token,
-	               method: .get,
-	               path: "conversations/\(conversationId)",
-	               parameters: watermark.map { ["watermark": $0] } ?? [:])
-}
-
-/// Returns a request that sends an activity to the bot.
-internal func sendActivity<ChannelData: Codable>(_ activity: Activity<ChannelData>, to conversationId: String, withToken token: String) -> Request<Activity<ChannelData>, Resource> {
-	return Request(token: token,
-	               method: .post,
-	               path: "conversations/\(conversationId)/activities",
-	               body: activity)
+private extension Request where Body == Empty {
+	init(token: String, method: RequestMethod, path: String, parameters: [String: String] = [:]) {
+		self.token = token
+		self.method = method
+		self.path = path
+		self.parameters = parameters
+		body = nil
+	}
 }

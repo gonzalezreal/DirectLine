@@ -8,7 +8,21 @@
 import Foundation
 import RxSwift
 
-internal final class Client {
+internal protocol Client {
+	/// Open a new conversation with the bot.
+	func startConversation(withToken token: String) -> Observable<Conversation>
+
+	/// Refresh an existing conversation token.
+	func refreshToken(_ token: String) -> Observable<Conversation>
+
+	/// Reconnect to an existing conversation.
+	func reconnect(to conversationId: String, watermark: String?, withToken token: String) -> Observable<Conversation>
+
+	/// Send an activity to the bot.
+	func sendActivity<ChannelData: Codable>(_ activity: Activity<ChannelData>, to conversationId: String, withToken token: String) -> Observable<Resource>
+}
+
+internal final class ClientImpl {
 	private let session: URLSession
 	private let baseURL: URL
 	private let decoder = JSONDecoder()
@@ -21,14 +35,30 @@ internal final class Client {
 	}
 }
 
-internal extension Client {
-	func response<Body, Response>(for request: Request<Body, Response>) -> Observable<Response> where Body: Encodable, Response: Decodable {
-		let urlRequest = URLRequest(baseURL: baseURL, request: request)
-		return data(with: urlRequest).map(to: Response.self, using: decoder)
+extension ClientImpl: Client {
+	func startConversation(withToken token: String) -> Observable<Conversation> {
+		return response(Conversation.self, for: .startConversation(withToken: token))
+	}
+
+	func refreshToken(_ token: String) -> Observable<Conversation> {
+		return response(Conversation.self, for: .refreshToken(token))
+	}
+
+	func reconnect(to conversationId: String, watermark: String?, withToken token: String) -> Observable<Conversation> {
+		return response(Conversation.self, for: .reconnect(to: conversationId, watermark: watermark, withToken: token))
+	}
+
+	func sendActivity<ChannelData: Codable>(_ activity: Activity<ChannelData>, to conversationId: String, withToken token: String) -> Observable<Resource> {
+		return response(Resource.self, for: .sendActivity(activity, to: conversationId, withToken: token))
 	}
 }
 
-private extension Client {
+private extension ClientImpl {
+	func response<Response, Body>(_ type: Response.Type, for request: Request<Body>) -> Observable<Response> where Body: Encodable, Response: Decodable {
+		let urlRequest = URLRequest(baseURL: baseURL, request: request)
+		return data(with: urlRequest).map(to: Response.self, using: decoder)
+	}
+
 	func data(with request: URLRequest) -> Observable<Data> {
 		return Observable.create { [session] observer in
 			let task = session.dataTask(with: request) { data, response, error in

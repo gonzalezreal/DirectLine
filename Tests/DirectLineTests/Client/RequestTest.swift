@@ -11,7 +11,7 @@ import XCTest
 class RequestTest: XCTestCase {
 	func testStartConversation_urlRequest_isValidRequest() {
 		// given
-		let request = startConversation(withToken: "f15tr0")
+		let request = Request.startConversation(withToken: "f15tr0")
 
 		// when
 		let urlRequest = URLRequest(baseURL: .directLine, request: request)
@@ -25,7 +25,7 @@ class RequestTest: XCTestCase {
 
 	func testRefreshToken_urlRequest_isValidRequest() {
 		// given
-		let request = refreshToken("f15tr0")
+		let request = Request.refreshToken("f15tr0")
 
 		// when
 		let urlRequest = URLRequest(baseURL: .directLine, request: request)
@@ -39,7 +39,7 @@ class RequestTest: XCTestCase {
 
 	func testReconnect_urlRequest_isValidRequest() {
 		// given
-		let request = reconnect(to: "1234", watermark: nil, withToken: "f15tr0")
+		let request = Request.reconnect(to: "1234", watermark: nil, withToken: "f15tr0")
 
 		// when
 		let urlRequest = URLRequest(baseURL: .directLine, request: request)
@@ -53,7 +53,7 @@ class RequestTest: XCTestCase {
 
 	func testReconnectWithWatermark_urlRequest_isValidRequest() {
 		// given
-		let request = reconnect(to: "1234", watermark: "3", withToken: "f15tr0")
+		let request = Request.reconnect(to: "1234", watermark: "3", withToken: "f15tr0")
 		var components = URLComponents(url: URL.directLine.appendingPathComponent("conversations/1234"),
 		                               resolvingAgainstBaseURL: false)!
 		components.queryItems = [URLQueryItem(name: "watermark", value: "3")]
@@ -73,7 +73,7 @@ class RequestTest: XCTestCase {
 			"Authorization": "Bearer f15tr0",
 			"Content-Type": "application/json; charset=utf-8"
 		]
-		let request = sendActivity(activity, to: "1234", withToken: "f15tr0")
+		let request: Request<Activity<Empty>> = .sendActivity(activity, to: "1234", withToken: "f15tr0")
 
 		// when
 		let urlRequest = URLRequest(baseURL: .directLine, request: request)

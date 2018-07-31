@@ -8,7 +8,7 @@
 import Foundation
 
 internal extension URLRequest {
-	init<Body, Response>(baseURL: URL, request: Request<Body, Response>) where Body: Encodable, Response: Decodable {
+	init<Body>(baseURL: URL, request: Request<Body>) where Body: Encodable {
 		let url = baseURL.appendingPathComponent(request.path)
 		var components = URLComponents(url: url, resolvingAgainstBaseURL: false)!
 

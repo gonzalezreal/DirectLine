@@ -58,9 +58,9 @@
 		99643B1D21062D970099996F /* URL+DirectLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B1C21062D970099996F /* URL+DirectLine.swift */; };
 		99643B1E21062D970099996F /* URL+DirectLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B1C21062D970099996F /* URL+DirectLine.swift */; };
 		99643B1F21062D970099996F /* URL+DirectLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B1C21062D970099996F /* URL+DirectLine.swift */; };
-		99643B2521062EE70099996F /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B2421062EE70099996F /* ClientTest.swift */; };
-		99643B2621062EE70099996F /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B2421062EE70099996F /* ClientTest.swift */; };
-		99643B2721062EE70099996F /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B2421062EE70099996F /* ClientTest.swift */; };
+		99643B2521062EE70099996F /* ClientImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B2421062EE70099996F /* ClientImplTest.swift */; };
+		99643B2621062EE70099996F /* ClientImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B2421062EE70099996F /* ClientImplTest.swift */; };
+		99643B2721062EE70099996F /* ClientImplTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B2421062EE70099996F /* ClientImplTest.swift */; };
 		99643B2D210713600099996F /* Equatables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B2C210713600099996F /* Equatables.swift */; };
 		99643B2E210713600099996F /* Equatables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B2C210713600099996F /* Equatables.swift */; };
 		99643B2F210713600099996F /* Equatables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99643B2C210713600099996F /* Equatables.swift */; };
@@ -226,7 +226,7 @@
 		99643B0921061CB20099996F /* ObservableType+JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+JSONDecoder.swift"; sourceTree = "<group>"; };
 		99643B18210626760099996F /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		99643B1C21062D970099996F /* URL+DirectLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+DirectLine.swift"; sourceTree = "<group>"; };
-		99643B2421062EE70099996F /* ClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTest.swift; sourceTree = "<group>"; };
+		99643B2421062EE70099996F /* ClientImplTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientImplTest.swift; sourceTree = "<group>"; };
 		99643B2C210713600099996F /* Equatables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equatables.swift; sourceTree = "<group>"; };
 		99643B34210729FB0099996F /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		99643B3821075F9D0099996F /* RequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTest.swift; sourceTree = "<group>"; };
@@ -412,7 +412,7 @@
 			children = (
 				99643B18210626760099996F /* URLSessionMock.swift */,
 				99E8C160210F62AC004983CB /* WebSocketMock.swift */,
-				99643B2421062EE70099996F /* ClientTest.swift */,
+				99643B2421062EE70099996F /* ClientImplTest.swift */,
 				99643B3821075F9D0099996F /* RequestTest.swift */,
 				99E8C15C210F61BA004983CB /* WebSocketActivityStreamTest.swift */,
 			);
@@ -818,7 +818,7 @@
 			files = (
 				99DA234921077A5F00E06D0C /* AttachmentTest.swift in Sources */,
 				99E8C15D210F61BA004983CB /* WebSocketActivityStreamTest.swift in Sources */,
-				99643B2521062EE70099996F /* ClientTest.swift in Sources */,
+				99643B2521062EE70099996F /* ClientImplTest.swift in Sources */,
 				990ABE6F2108AA1E00F0EBA7 /* ActivityTest.swift in Sources */,
 				99643B3921075F9D0099996F /* RequestTest.swift in Sources */,
 				99643B2D210713600099996F /* Equatables.swift in Sources */,
@@ -901,7 +901,7 @@
 			files = (
 				99DA234A21077A5F00E06D0C /* AttachmentTest.swift in Sources */,
 				99E8C15E210F61BA004983CB /* WebSocketActivityStreamTest.swift in Sources */,
-				99643B2621062EE70099996F /* ClientTest.swift in Sources */,
+				99643B2621062EE70099996F /* ClientImplTest.swift in Sources */,
 				990ABE702108AA1E00F0EBA7 /* ActivityTest.swift in Sources */,
 				99643B3A21075F9D0099996F /* RequestTest.swift in Sources */,
 				99643B2E210713600099996F /* Equatables.swift in Sources */,
@@ -916,7 +916,7 @@
 			files = (
 				99DA234B21077A5F00E06D0C /* AttachmentTest.swift in Sources */,
 				99E8C15F210F61BA004983CB /* WebSocketActivityStreamTest.swift in Sources */,
-				99643B2721062EE70099996F /* ClientTest.swift in Sources */,
+				99643B2721062EE70099996F /* ClientImplTest.swift in Sources */,
 				990ABE712108AA1E00F0EBA7 /* ActivityTest.swift in Sources */,
 				99643B3B21075F9D0099996F /* RequestTest.swift in Sources */,
 				99643B2F210713600099996F /* Equatables.swift in Sources */,
