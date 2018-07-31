@@ -16,7 +16,7 @@ class ClientImplTest: XCTestCase {
 
 	override func setUp() {
 		super.setUp()
-		sut = ClientImpl(session: sessionMock, baseURL: .directLine)
+		sut = ClientImpl(baseURL: .directLine, session: sessionMock)
 	}
 }
 

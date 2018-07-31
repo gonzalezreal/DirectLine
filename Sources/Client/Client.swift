@@ -23,13 +23,13 @@ internal protocol Client {
 }
 
 internal final class ClientImpl {
-	private let session: URLSession
 	private let baseURL: URL
+	private let session: URLSession
 	private let decoder = JSONDecoder()
 
-	init(session: URLSession, baseURL: URL) {
-		self.session = session
+	init(baseURL: URL, session: URLSession) {
 		self.baseURL = baseURL
+		self.session = session
 
 		decoder.dateDecodingStrategy = .formatted(.iso8601WithFractionalSeconds)
 	}
