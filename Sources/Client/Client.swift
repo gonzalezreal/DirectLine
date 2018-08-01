@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os.log
 import RxSwift
 
 internal protocol Client {
@@ -63,11 +64,14 @@ private extension ClientImpl {
 		return Observable.create { [session] observer in
 			let task = session.dataTask(with: request) { data, response, error in
 				if let error = error {
+					os_log("%{public}@ '%{public}@': %{public}@", log: .http, type: .error, request.httpMethod!, request.url!.absoluteString, error.localizedDescription)
 					observer.onError(DirectLineError(error: error))
 				} else {
 					guard let httpResponse = response as? HTTPURLResponse else {
 						fatalError("Unsupported protocol")
 					}
+
+					os_log("%d '%{public}@'", log: .http, type: .debug, httpResponse.statusCode, request.url!.absoluteString)
 
 					if 200 ..< 300 ~= httpResponse.statusCode {
 						if let data = data {
@@ -80,6 +84,8 @@ private extension ClientImpl {
 				}
 			}
 
+			os_log("%{public}@ '%{public}@'", log: .http, type: .debug, request.httpMethod!, request.url!.absoluteString)
+
 			task.resume()
 
 			return Disposables.create {
@@ -87,4 +93,8 @@ private extension ClientImpl {
 			}
 		}
 	}
+}
+
+private extension OSLog {
+	static let http = OSLog(subsystem: "com.gonzalezreal.DirectLine.HTTP", category: "DirectLine.HTTP")
 }

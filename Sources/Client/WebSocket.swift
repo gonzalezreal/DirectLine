@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os.log
 import SocketRocket
 
 internal protocol WebSocket: class {
@@ -43,14 +44,22 @@ internal final class WebSocketImpl: NSObject, WebSocket {
 extension WebSocketImpl: SRWebSocketDelegate {
 	func webSocket(_ webSocket: SRWebSocket, didReceiveMessageWith string: String) {
 		guard !string.isEmpty else { return }
+
+		os_log("didReceiveMessage:\n%{public}@\n", log: .wss, type: .debug, string)
 		didReceiveMessage(string.data(using: .utf8)!)
 	}
 
 	func webSocket(_ webSocket: SRWebSocket, didFailWithError error: Error) {
+		os_log("didFailWithError: %{public}@", log: .wss, type: .error, error.localizedDescription)
 		didFail(error)
 	}
 
 	func webSocket(_ webSocket: SRWebSocket, didCloseWithCode code: Int, reason: String?, wasClean: Bool) {
+		os_log("didCloseWithCode: %d", log: .wss, type: .debug, code)
 		didClose(code)
 	}
+}
+
+private extension OSLog {
+	static let wss = OSLog(subsystem: "com.gonzalezreal.DirectLine.WS", category: "DirectLine.WS")
 }
