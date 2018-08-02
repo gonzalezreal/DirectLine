@@ -509,11 +509,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52D6D9901BEFF229002C0205 /* Build configuration list for PBXNativeTarget "DirectLine-iOS" */;
 			buildPhases = (
+				995528AE2113592100918F11 /* SwiftFormat */,
 				52D6D9771BEFF229002C0205 /* Sources */,
 				52D6D9781BEFF229002C0205 /* Frameworks */,
 				52D6D9791BEFF229002C0205 /* Headers */,
 				52D6D97A1BEFF229002C0205 /* Resources */,
-				9958C5421F3F983B00CA5F97 /* ShellScript */,
+				9958C5421F3F983B00CA5F97 /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -528,7 +529,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52D6D9931BEFF229002C0205 /* Build configuration list for PBXNativeTarget "DirectLine-iOS Tests" */;
 			buildPhases = (
-				991BD00521021BBB000F08BD /* Swift Format */,
 				52D6D9821BEFF229002C0205 /* Sources */,
 				52D6D9831BEFF229002C0205 /* Frameworks */,
 				52D6D9841BEFF229002C0205 /* Resources */,
@@ -552,7 +552,7 @@
 				52D6D9EC1BEFFFBE002C0205 /* Frameworks */,
 				52D6D9ED1BEFFFBE002C0205 /* Headers */,
 				52D6D9EE1BEFFFBE002C0205 /* Resources */,
-				9958C5481F3F9A3E00CA5F97 /* ShellScript */,
+				9958C5481F3F9A3E00CA5F97 /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -723,7 +723,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		991BD00521021BBB000F08BD /* Swift Format */ = {
+		995528AE2113592100918F11 /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -732,16 +732,16 @@
 			);
 			inputPaths = (
 			);
-			name = "Swift Format";
+			name = SwiftFormat;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Tools/run-swiftformat.sh\"\n";
+			shellScript = "\"${SRCROOT}/Tools/run-swiftformat.sh\" \"${SRCROOT}/Sources\"\n\"${SRCROOT}/Tools/run-swiftformat.sh\" \"${SRCROOT}/Tests\"\n";
 		};
-		9958C5421F3F983B00CA5F97 /* ShellScript */ = {
+		9958C5421F3F983B00CA5F97 /* Carthage Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -750,6 +750,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SocketRocket.framework",
 			);
+			name = "Carthage Copy Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Starscream.framework",
@@ -758,7 +759,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
-		9958C5481F3F9A3E00CA5F97 /* ShellScript */ = {
+		9958C5481F3F9A3E00CA5F97 /* Carthage Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -767,6 +768,7 @@
 				"$(SRCROOT)/Carthage/Build/tvOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/tvOS/SocketRocket.framework",
 			);
+			name = "Carthage Copy Frameworks";
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Starscream.framework",
