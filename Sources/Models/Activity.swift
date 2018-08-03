@@ -97,7 +97,9 @@ public extension Activity {
 	}
 }
 
-public extension Activity where ChannelData == Empty {
+public typealias NoChannelData = Empty
+
+public extension Activity where ChannelData == NoChannelData {
 	static func message(from: ChannelAccount, text: String, attachments: [Attachment] = []) -> Activity {
 		return Activity(attachments: attachments, channelData: nil, from: from, text: text, type: .message)
 	}

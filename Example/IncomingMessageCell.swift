@@ -9,7 +9,7 @@ import UIKit
 
 class IncomingMessageCell: UITableViewCell, ReusableView {
 	private enum Constants {
-		static let trailing: CGFloat = -16
+		static let leading: CGFloat = 16
 		static let top: CGFloat = 4
 		static let bottom: CGFloat = -4
 		static let widthRatio: CGFloat = 0.75
@@ -25,11 +25,11 @@ class IncomingMessageCell: UITableViewCell, ReusableView {
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-		messageView.direction = .incoming
+		messageView.style = .incoming
 
 		contentView.addSubview(messageView, constraints: [
 			messageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.top),
-			messageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: Constants.trailing),
+			messageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Constants.leading),
 			messageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: Constants.bottom),
 			messageView.widthAnchor.constraint(lessThanOrEqualTo: contentView.widthAnchor, multiplier: Constants.widthRatio)
 		])

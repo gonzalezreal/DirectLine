@@ -8,7 +8,7 @@
 import Foundation
 
 /// Defines a bot or user account on the channel.
-public struct ChannelAccount: Codable {
+public struct ChannelAccount: Codable, Equatable {
 	/// Uniquely identifies the bot or user on the channel.
 	public let id: String
 

@@ -42,6 +42,10 @@ internal final class WebSocketImpl: NSObject, WebSocket {
 }
 
 extension WebSocketImpl: SRWebSocketDelegate {
+	func webSocketDidOpen(_ webSocket: SRWebSocket) {
+		os_log("didOpen: %{public}@", log: .wss, type: .debug, webSocket.url!.absoluteString)
+	}
+
 	func webSocket(_ webSocket: SRWebSocket, didReceiveMessageWith string: String) {
 		guard !string.isEmpty else { return }
 

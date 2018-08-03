@@ -14,7 +14,8 @@ public final class DirectLine<ChannelData: Codable> {
 		.flatMap { Observable.from($0.activities) }
 		.share(replay: 1, scope: .whileConnected)
 	private lazy var conversation = client.startConversation(withToken: token)
-		.share(replay: 1, scope: .whileConnected)
+		// FIXME: temporary
+		.share(replay: 1, scope: .forever)
 
 	private let token: String
 	private let client: Client

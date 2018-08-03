@@ -8,7 +8,7 @@
 import UIKit
 
 final class MessageView: UIView {
-	enum Direction {
+	enum Style {
 		case incoming, outgoing
 	}
 
@@ -20,8 +20,8 @@ final class MessageView: UIView {
 		}
 	}
 
-	var direction: Direction = .incoming {
-		didSet { didUpdateDirection() }
+	var style: Style = .incoming {
+		didSet { didUpdateStyle() }
 	}
 
 	private let textLabel = UILabel()
@@ -62,21 +62,21 @@ private extension MessageView {
 		addSubview(textLabel, constraints: textLabel.constraintsForEdges(to: self, inset: Constants.contentInset))
 	}
 
-	private func didUpdateDirection() {
-		switch direction {
+	private func didUpdateStyle() {
+		switch style {
 		case .outgoing:
 			backgroundColor = .outgoing
-			textLabel.textColor = .black
-			layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-		case .incoming:
-			backgroundColor = .incoming
 			textLabel.textColor = .white
 			layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
+		case .incoming:
+			backgroundColor = .incoming
+			textLabel.textColor = .black
+			layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMaxXMaxYCorner]
 		}
 	}
 }
 
 private extension UIColor {
-	static let outgoing = UIColor(red: 0.9, green: 0.9, blue: 0.92, alpha: 1)
-	static let incoming = UIColor(red: 0.15, green: 0.57, blue: 0.96, alpha: 1)
+	static let outgoing = UIColor(red: 0.15, green: 0.57, blue: 0.96, alpha: 1)
+	static let incoming = UIColor(red: 0.9, green: 0.9, blue: 0.92, alpha: 1)
 }

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99264B532113734B006FB0F0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99264B522113734B006FB0F0 /* RxCocoa.framework */; };
+		99264B5421137397006FB0F0 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99264B522113734B006FB0F0 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		99264B5621143E4F006FB0F0 /* ConversationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99264B5521143E4F006FB0F0 /* ConversationDataSource.swift */; };
+		9929459A21149377004218E8 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9929459921149377004218E8 /* AppConstants.swift */; };
+		995528B221135D5B00918F11 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995528B021135D5B00918F11 /* ConversationViewController.swift */; };
+		995528B321135D5B00918F11 /* ConversationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 995528B121135D5B00918F11 /* ConversationViewController.xib */; };
+		995528B52113679E00918F11 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995528B42113679E00918F11 /* Message.swift */; };
+		995528B92113693100918F11 /* ConversationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995528B82113693100918F11 /* ConversationPresenter.swift */; };
 		996BF83A211193FD0019490F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996BF839211193FD0019490F /* AppDelegate.swift */; };
 		996BF841211193FE0019490F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 996BF840211193FE0019490F /* Assets.xcassets */; };
 		996BF844211193FE0019490F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 996BF842211193FE0019490F /* LaunchScreen.storyboard */; };
@@ -15,10 +23,11 @@
 		996BF851211195E40019490F /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 996BF84E211195B20019490F /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		99EA5CE72111F96400D197E7 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA5CE62111F96400D197E7 /* MessageView.swift */; };
 		99EA5CE92111F9E800D197E7 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA5CE82111F9E800D197E7 /* UIView+Autolayout.swift */; };
-		99EA5CEB2111FB0100D197E7 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA5CEA2111FB0100D197E7 /* ConversationViewController.swift */; };
 		99EA5CED2111FBEA00D197E7 /* OutgoingMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA5CEC2111FBEA00D197E7 /* OutgoingMessageCell.swift */; };
 		99EA5CEF2112068000D197E7 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA5CEE2112068000D197E7 /* UITableView+Reusable.swift */; };
 		99EA5CF12112077300D197E7 /* IncomingMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EA5CF02112077300D197E7 /* IncomingMessageCell.swift */; };
+		99ED18A521145B2C007D33D7 /* KeyboardInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ED18A421145B2C007D33D7 /* KeyboardInfo.swift */; };
+		99ED18A721145FED007D33D7 /* InputPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ED18A621145FED007D33D7 /* InputPosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				99264B5421137397006FB0F0 /* RxCocoa.framework in CopyFiles */,
 				996BF851211195E40019490F /* RxSwift.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -35,6 +45,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		99264B522113734B006FB0F0 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		99264B5521143E4F006FB0F0 /* ConversationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationDataSource.swift; sourceTree = "<group>"; };
+		9929459921149377004218E8 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		995528B021135D5B00918F11 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		995528B121135D5B00918F11 /* ConversationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversationViewController.xib; sourceTree = "<group>"; };
+		995528B42113679E00918F11 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		995528B82113693100918F11 /* ConversationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationPresenter.swift; sourceTree = "<group>"; };
 		996BF836211193FD0019490F /* DirectLineExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectLineExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		996BF839211193FD0019490F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		996BF840211193FE0019490F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,10 +61,11 @@
 		996BF84E211195B20019490F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		99EA5CE62111F96400D197E7 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		99EA5CE82111F9E800D197E7 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
-		99EA5CEA2111FB0100D197E7 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		99EA5CEC2111FBEA00D197E7 /* OutgoingMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingMessageCell.swift; sourceTree = "<group>"; };
 		99EA5CEE2112068000D197E7 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		99EA5CF02112077300D197E7 /* IncomingMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessageCell.swift; sourceTree = "<group>"; };
+		99ED18A421145B2C007D33D7 /* KeyboardInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInfo.swift; sourceTree = "<group>"; };
+		99ED18A621145FED007D33D7 /* InputPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPosition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99264B532113734B006FB0F0 /* RxCocoa.framework in Frameworks */,
 				996BF84F211195B20019490F /* RxSwift.framework in Frameworks */,
 				996BF84D211195790019490F /* DirectLine.framework in Frameworks */,
 			);
@@ -83,13 +102,20 @@
 		996BF838211193FD0019490F /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				9929459921149377004218E8 /* AppConstants.swift */,
 				996BF839211193FD0019490F /* AppDelegate.swift */,
 				99EA5CE82111F9E800D197E7 /* UIView+Autolayout.swift */,
 				99EA5CEE2112068000D197E7 /* UITableView+Reusable.swift */,
 				99EA5CE62111F96400D197E7 /* MessageView.swift */,
 				99EA5CF02112077300D197E7 /* IncomingMessageCell.swift */,
 				99EA5CEC2111FBEA00D197E7 /* OutgoingMessageCell.swift */,
-				99EA5CEA2111FB0100D197E7 /* ConversationViewController.swift */,
+				995528B021135D5B00918F11 /* ConversationViewController.swift */,
+				995528B121135D5B00918F11 /* ConversationViewController.xib */,
+				99264B5521143E4F006FB0F0 /* ConversationDataSource.swift */,
+				995528B42113679E00918F11 /* Message.swift */,
+				99ED18A421145B2C007D33D7 /* KeyboardInfo.swift */,
+				99ED18A621145FED007D33D7 /* InputPosition.swift */,
+				995528B82113693100918F11 /* ConversationPresenter.swift */,
 				996BF840211193FE0019490F /* Assets.xcassets */,
 				996BF842211193FE0019490F /* LaunchScreen.storyboard */,
 				996BF845211193FE0019490F /* Info.plist */,
@@ -100,6 +126,7 @@
 		996BF84B211195790019490F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				99264B522113734B006FB0F0 /* RxCocoa.framework */,
 				996BF84E211195B20019490F /* RxSwift.framework */,
 				996BF84C211195790019490F /* DirectLine.framework */,
 			);
@@ -166,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995528B321135D5B00918F11 /* ConversationViewController.xib in Resources */,
 				996BF844211193FE0019490F /* LaunchScreen.storyboard in Resources */,
 				996BF841211193FE0019490F /* Assets.xcassets in Resources */,
 			);
@@ -199,13 +227,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				995528B221135D5B00918F11 /* ConversationViewController.swift in Sources */,
 				99EA5CED2111FBEA00D197E7 /* OutgoingMessageCell.swift in Sources */,
 				99EA5CE72111F96400D197E7 /* MessageView.swift in Sources */,
+				99ED18A721145FED007D33D7 /* InputPosition.swift in Sources */,
+				9929459A21149377004218E8 /* AppConstants.swift in Sources */,
 				99EA5CF12112077300D197E7 /* IncomingMessageCell.swift in Sources */,
 				99EA5CE92111F9E800D197E7 /* UIView+Autolayout.swift in Sources */,
-				99EA5CEB2111FB0100D197E7 /* ConversationViewController.swift in Sources */,
+				995528B52113679E00918F11 /* Message.swift in Sources */,
 				99EA5CEF2112068000D197E7 /* UITableView+Reusable.swift in Sources */,
+				995528B92113693100918F11 /* ConversationPresenter.swift in Sources */,
 				996BF83A211193FD0019490F /* AppDelegate.swift in Sources */,
+				99ED18A521145B2C007D33D7 /* KeyboardInfo.swift in Sources */,
+				99264B5621143E4F006FB0F0 /* ConversationDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
