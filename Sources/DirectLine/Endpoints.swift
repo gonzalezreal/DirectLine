@@ -67,4 +67,16 @@ public extension Endpoint where Output == Conversation {
                  headers: [.authorization: "Bearer \(secret)"],
                  body: tokenParameters)
     }
+
+    /// Gets information about an existing conversation and also generates a new WebSocket stream URL that a client may use to reconnect to a conversation.
+    /// - Parameters:
+    ///   - auth: The secret in your Direct Line channel configuration or a token obtained via the `generateToken` endpoint.
+    ///   - conversationId: A conversation identifier.
+    ///   - watermark: Indicates the most recent message seen by the client.
+    static func conversation(_ auth: Auth, conversationId: String, watermark: String? = nil) -> Endpoint {
+        Endpoint(method: .get,
+                 path: "conversations/\(conversationId)",
+                 headers: [.authorization: "Bearer \(auth.value)"],
+                 queryParameters: watermark.map { ["watermark": $0] } ?? [:])
+    }
 }

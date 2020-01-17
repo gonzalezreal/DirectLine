@@ -89,11 +89,45 @@ final class EndpointTests: XCTestCase {
         XCTAssertEqual(try JSONEncoder().encode(tokenParameters), request.httpBody)
     }
 
+    func testConversationEndpoint() {
+        // given
+        let expectedHeaders = [
+            "Authorization": "Bearer 3xpo",
+            "Accept": "application/json",
+        ]
+
+        // when
+        let request = URLRequest(baseURL: .directLine, endpoint: .conversation(.secret("3xpo"), conversationId: "any-conversation"))
+
+        // then
+        XCTAssertEqual("GET", request.httpMethod)
+        XCTAssertEqual(Fixtures.directLineURLWithPath("conversations/any-conversation"), request.url)
+        XCTAssertEqual(expectedHeaders, request.allHTTPHeaderFields)
+    }
+
+    func testConversationEndpointWithWatermark() {
+        // given
+        let expectedHeaders = [
+            "Authorization": "Bearer 3xpo",
+            "Accept": "application/json",
+        ]
+
+        // when
+        let request = URLRequest(baseURL: .directLine, endpoint: .conversation(.secret("3xpo"), conversationId: "any-conversation", watermark: "any-watermark"))
+
+        // then
+        XCTAssertEqual("GET", request.httpMethod)
+        XCTAssertEqual(Fixtures.directLineURLWithPath("conversations/any-conversation", query: "watermark=any-watermark"), request.url)
+        XCTAssertEqual(expectedHeaders, request.allHTTPHeaderFields)
+    }
+
     static var allTests = [
         ("testGenerateTokenEndpoint", testGenerateTokenEndpoint),
         ("testGenerateTokenWithParametersEndpoint", testGenerateTokenWithParametersEndpoint),
         ("testRefreshTokenEndpoint", testRefreshTokenEndpoint),
         ("testStartConversationEndpoint", testStartConversationEndpoint),
         ("testStartConversationEndpointWithParameters", testStartConversationEndpointWithParameters),
+        ("testConversationEndpoint", testConversationEndpoint),
+        ("testConversationEndpointWithWatermark", testConversationEndpointWithWatermark),
     ]
 }
