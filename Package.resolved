@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SimpleNetworking",
+        "repositoryURL": "https://github.com/gonzalezreal/SimpleNetworking",
+        "state": {
+          "branch": null,
+          "revision": "530feca06c68b342f0e269c91942cf658ee9d815",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log",
+        "state": {
+          "branch": null,
+          "revision": "74d7b91ceebc85daf387ebb206003f78813f71aa",
+          "version": "1.2.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

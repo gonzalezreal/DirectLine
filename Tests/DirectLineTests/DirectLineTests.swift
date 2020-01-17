@@ -1,5 +1,5 @@
-import XCTest
 @testable import DirectLine
+import XCTest
 
 final class DirectLineTests: XCTestCase {
     func testExample() {
