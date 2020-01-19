@@ -7,4 +7,9 @@ public struct EndOfConversationActivity: Codable, Equatable {
 
     /// Describes why or how the conversation was ended.
     public let code: String?
+
+    public init(text: String? = nil, code: String? = nil) {
+        self.text = text
+        self.code = code
+    }
 }

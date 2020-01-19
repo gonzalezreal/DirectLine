@@ -29,6 +29,18 @@ public struct MessageActivity: Codable, Equatable {
     /// Open-ended value.
     public let value: AnyValue?
 
+    public init(text: String? = nil, textFormat: TextFormat? = nil, value: AnyValue? = nil) {
+        self.text = text
+        self.textFormat = textFormat
+        locale = nil
+        speak = nil
+        inputHint = nil
+        attachments = []
+        attachmentLayout = nil
+        suggestedActions = nil
+        self.value = value
+    }
+
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
 

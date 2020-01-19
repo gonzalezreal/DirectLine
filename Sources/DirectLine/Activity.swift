@@ -24,6 +24,30 @@ public struct Activity<ChannelData> {
     public let channelData: ChannelData?
 }
 
+extension Activity {
+    public init(type: ActivityType, from: ChannelAccount, channelData: ChannelData?) {
+        self.type = type
+        id = nil
+        timestamp = nil
+        self.from = from
+        conversation = nil
+        replyToId = nil
+        self.channelData = channelData
+    }
+}
+
+extension Activity where ChannelData == Empty {
+    public init(type: ActivityType, from: ChannelAccount) {
+        self.type = type
+        id = nil
+        timestamp = nil
+        self.from = from
+        conversation = nil
+        replyToId = nil
+        channelData = nil
+    }
+}
+
 extension Activity: Codable where ChannelData: Codable {
     private enum CodingKeys: String, CodingKey {
         case id, timestamp, from, conversation, replyToId, channelData
