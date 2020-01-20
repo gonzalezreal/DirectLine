@@ -3,6 +3,7 @@ import Foundation
 /// Represents a clickable or interactive button for use within cards or as suggested actions.
 public enum CardAction: Equatable {
     case messageBack(MessageBackAction)
+    case imBack(IMBackAction)
     case unknown
 }
 
@@ -18,6 +19,8 @@ extension CardAction: Codable {
         switch type {
         case "messageBack":
             self = try .messageBack(MessageBackAction(from: decoder))
+        case "imBack":
+            self = try .imBack(IMBackAction(from: decoder))
         default:
             self = .unknown
         }
@@ -29,6 +32,9 @@ extension CardAction: Codable {
         switch self {
         case let .messageBack(action):
             try container.encode("messageBack", forKey: .type)
+            try action.encode(to: encoder)
+        case let .imBack(action):
+            try container.encode("imBack", forKey: .type)
             try action.encode(to: encoder)
         case .unknown:
             fatalError("Invalid CardAction.")
