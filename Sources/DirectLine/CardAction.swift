@@ -4,6 +4,7 @@ import Foundation
 public enum CardAction: Equatable {
     case messageBack(MessageBackAction)
     case imBack(IMBackAction)
+    case postBack(PostBackAction)
     case unknown
 }
 
@@ -21,6 +22,8 @@ extension CardAction: Codable {
             self = try .messageBack(MessageBackAction(from: decoder))
         case "imBack":
             self = try .imBack(IMBackAction(from: decoder))
+        case "postBack":
+            self = try .postBack(PostBackAction(from: decoder))
         default:
             self = .unknown
         }
@@ -35,6 +38,9 @@ extension CardAction: Codable {
             try action.encode(to: encoder)
         case let .imBack(action):
             try container.encode("imBack", forKey: .type)
+            try action.encode(to: encoder)
+        case let .postBack(action):
+            try container.encode("postBack", forKey: .type)
             try action.encode(to: encoder)
         case .unknown:
             fatalError("Invalid CardAction.")
