@@ -19,4 +19,13 @@ public struct ConversationAccount: Codable, Equatable {
 
     /// Role of the entity behind the account.
     public let role: Role?
+
+    public init(id: String, name: String? = nil, aadObjectId: String? = nil, isGroup: Bool? = nil, conversationType: String? = nil, role: Role? = nil) {
+        self.id = id
+        self.name = name
+        self.aadObjectId = aadObjectId
+        self.isGroup = isGroup
+        self.conversationType = conversationType
+        self.role = role
+    }
 }

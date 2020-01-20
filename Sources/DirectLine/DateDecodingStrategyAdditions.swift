@@ -20,7 +20,7 @@ public extension JSONEncoder.DateEncodingStrategy {
     }
 }
 
-private extension ISO8601DateFormatter {
+internal extension ISO8601DateFormatter {
     static let withFractionalSeconds: ISO8601DateFormatter = {
         let formatter = ISO8601DateFormatter()
         formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
