@@ -5,6 +5,7 @@ public enum CardAction: Equatable {
     case messageBack(MessageBackAction)
     case imBack(IMBackAction)
     case postBack(PostBackAction)
+    case openURL(OpenURLAction)
     case unknown
 }
 
@@ -24,6 +25,8 @@ extension CardAction: Codable {
             self = try .imBack(IMBackAction(from: decoder))
         case "postBack":
             self = try .postBack(PostBackAction(from: decoder))
+        case "openUrl":
+            self = try .openURL(OpenURLAction(from: decoder))
         default:
             self = .unknown
         }
@@ -41,6 +44,9 @@ extension CardAction: Codable {
             try action.encode(to: encoder)
         case let .postBack(action):
             try container.encode("postBack", forKey: .type)
+            try action.encode(to: encoder)
+        case let .openURL(action):
+            try container.encode("openUrl", forKey: .type)
             try action.encode(to: encoder)
         case .unknown:
             fatalError("Invalid CardAction.")
