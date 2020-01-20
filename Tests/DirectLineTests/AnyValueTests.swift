@@ -186,7 +186,6 @@ final class AnyValueTests: XCTestCase {
 
         // when
         let result = try encoder.encode(value)
-        print(String(data: result, encoding: .utf8)!)
 
         // then
         XCTAssertEqual(expected, result)
@@ -233,7 +232,6 @@ final class AnyValueTests: XCTestCase {
 
         // when
         let result = try encoder.encode(value)
-        print(String(data: result, encoding: .utf8)!)
 
         // then
         XCTAssertEqual(expected, result)
