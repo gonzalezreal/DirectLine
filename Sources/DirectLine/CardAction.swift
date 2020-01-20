@@ -1,5 +1,37 @@
 import Foundation
 
-public struct CardAction: Codable, Equatable {
-    // TODO: implement
+/// Represents a clickable or interactive button for use within cards or as suggested actions.
+public enum CardAction: Equatable {
+    case messageBack(MessageBackAction)
+    case unknown
+}
+
+extension CardAction: Codable {
+    private enum CodingKeys: String, CodingKey {
+        case type
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let type = try container.decode(String.self, forKey: .type)
+
+        switch type {
+        case "messageBack":
+            self = try .messageBack(MessageBackAction(from: decoder))
+        default:
+            self = .unknown
+        }
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        switch self {
+        case let .messageBack(action):
+            try container.encode("messageBack", forKey: .type)
+            try action.encode(to: encoder)
+        case .unknown:
+            fatalError("Invalid CardAction.")
+        }
+    }
 }
