@@ -1,7 +1,6 @@
 import Foundation
 
-/// Represents a hyperlink to be handled by the client.
-public struct OpenURLAction: Codable, Equatable {
+public struct URLAction: Codable, Equatable {
     private enum CodingKeys: String, CodingKey {
         case title, image
         case url = "value"
@@ -13,6 +12,6 @@ public struct OpenURLAction: Codable, Equatable {
     /// Image to be displayed on the button's face.
     public let image: URL?
 
-    /// The URL to be opened in the built-in browser.
+    /// The url for this action.
     public let url: URL
 }

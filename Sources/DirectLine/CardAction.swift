@@ -5,7 +5,13 @@ public enum CardAction: Equatable {
     case messageBack(MessageBackAction)
     case imBack(IMBackAction)
     case postBack(PostBackAction)
-    case openURL(OpenURLAction)
+    case openURL(URLAction)
+    case downloadFile(URLAction)
+    case showImage(URLAction)
+    case signIn(URLAction)
+    case playAudio(URLAction)
+    case playVideo(URLAction)
+    case call(URLAction)
     case unknown
 }
 
@@ -26,7 +32,19 @@ extension CardAction: Codable {
         case "postBack":
             self = try .postBack(PostBackAction(from: decoder))
         case "openUrl":
-            self = try .openURL(OpenURLAction(from: decoder))
+            self = try .openURL(URLAction(from: decoder))
+        case "downloadFile":
+            self = try .downloadFile(URLAction(from: decoder))
+        case "showImage":
+            self = try .showImage(URLAction(from: decoder))
+        case "signin":
+            self = try .signIn(URLAction(from: decoder))
+        case "playAudio":
+            self = try .playAudio(URLAction(from: decoder))
+        case "playVideo":
+            self = try .playVideo(URLAction(from: decoder))
+        case "call":
+            self = try .call(URLAction(from: decoder))
         default:
             self = .unknown
         }
@@ -47,6 +65,24 @@ extension CardAction: Codable {
             try action.encode(to: encoder)
         case let .openURL(action):
             try container.encode("openUrl", forKey: .type)
+            try action.encode(to: encoder)
+        case let .downloadFile(action):
+            try container.encode("downloadFile", forKey: .type)
+            try action.encode(to: encoder)
+        case let .showImage(action):
+            try container.encode("showImage", forKey: .type)
+            try action.encode(to: encoder)
+        case let .signIn(action):
+            try container.encode("signin", forKey: .type)
+            try action.encode(to: encoder)
+        case let .playAudio(action):
+            try container.encode("playAudio", forKey: .type)
+            try action.encode(to: encoder)
+        case let .playVideo(action):
+            try container.encode("playVideo", forKey: .type)
+            try action.encode(to: encoder)
+        case let .call(action):
+            try container.encode("call", forKey: .type)
             try action.encode(to: encoder)
         case .unknown:
             fatalError("Invalid CardAction.")
