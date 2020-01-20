@@ -40,18 +40,4 @@ public struct MessageActivity: Codable, Equatable {
         suggestedActions = nil
         self.value = value
     }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-
-        try container.encodeIfPresent(text, forKey: .text)
-        try container.encodeIfPresent(textFormat, forKey: .textFormat)
-        try container.encodeIfPresent(locale, forKey: .locale)
-
-        if !attachments.isEmpty {
-            try container.encode(attachments, forKey: .attachments)
-        }
-
-        try container.encodeIfPresent(value, forKey: .value)
-    }
 }
