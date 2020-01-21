@@ -7,6 +7,7 @@ import XCTest
             testCase(AnyValueTests.allTests),
             testCase(ActivityTests.allTests),
             testCase(ActivityTypeTests.allTests),
+            testCase(AttachmentTests.allTests),
         ]
     }
 #endif

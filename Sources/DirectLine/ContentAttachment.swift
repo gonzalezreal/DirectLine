@@ -78,6 +78,13 @@ extension ContentAttachment: Codable {
             return lhs == rhs
         }
     }
+
+    // Used for testing purposes
+    internal static func unregister(contentType: String) {
+        decoders.removeValue(forKey: contentType)
+        encoders.removeValue(forKey: contentType)
+        equalityComparers.removeValue(forKey: contentType)
+    }
 }
 
 extension ContentAttachment: Equatable {
