@@ -6,6 +6,7 @@ import XCTest
             testCase(EndpointTests.allTests),
             testCase(AnyValueTests.allTests),
             testCase(ActivityTests.allTests),
+            testCase(ActivityTypeTests.allTests),
         ]
     }
 #endif
