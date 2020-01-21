@@ -92,7 +92,10 @@ extension ContentAttachment: Equatable {
         guard lhs.contentType == rhs.contentType else { return false }
         guard lhs.name == rhs.name else { return false }
         guard lhs.thumbnailURL == rhs.thumbnailURL else { return false }
-        guard let equalityComparer = Self.equalityComparers[lhs.contentType] else { return false }
+        guard let equalityComparer = Self.equalityComparers[lhs.contentType] else {
+            // Consider them equal if both payloads are nil
+            return lhs.content == nil && rhs.content == nil
+        }
 
         return equalityComparer(lhs.content, rhs.content)
     }
