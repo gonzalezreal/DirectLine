@@ -105,6 +105,20 @@ public extension Endpoint where Output == ActivityCollection<Empty> {
     ///   - conversationId: A conversation identifier.
     ///   - watermark: Only returns activities newer than this watermark.
     static func activities(token: String, conversationId: String, watermark: String? = nil) -> Endpoint {
-        return activities(Empty.self, token: token, conversationId: conversationId, watermark: watermark)
+        activities(Empty.self, token: token, conversationId: conversationId, watermark: watermark)
+    }
+}
+
+public extension Endpoint where Output == ResourceResponse {
+    /// Send an activity.
+    /// - Parameters:
+    ///   - token: A token obtained via the `generateToken` or `startConversation` endpoints.
+    ///   - conversationId: A conversation identifier.
+    ///   - activity: Activity to send.
+    static func postActivity<ChannelData>(token: String, conversationId: String, activity: Activity<ChannelData>) -> Endpoint where ChannelData: Codable {
+        Endpoint(method: .post,
+                 path: "conversations/\(conversationId)/activities",
+                 headers: [.authorization: "Bearer \(token)"],
+                 body: activity)
     }
 }

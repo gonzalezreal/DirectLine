@@ -153,6 +153,25 @@ final class EndpointTests: XCTestCase {
         XCTAssertEqual(expectedHeaders, request.allHTTPHeaderFields)
     }
 
+    func testPostActivityEndpoint() {
+        // given
+        let activity = Activity(type: .message(MessageActivity(text: "Hello")), from: ChannelAccount(name: "guille"))
+        let expectedHeaders = [
+            "Authorization": "Bearer 3xpo",
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+        ]
+
+        // when
+        let request = URLRequest(baseURL: .directLine, endpoint: .postActivity(token: "3xpo", conversationId: "any-conversation", activity: activity))
+
+        // then
+        XCTAssertEqual("POST", request.httpMethod)
+        XCTAssertEqual(Fixtures.directLineURLWithPath("conversations/any-conversation/activities"), request.url)
+        XCTAssertEqual(expectedHeaders, request.allHTTPHeaderFields)
+        XCTAssertEqual(try JSONEncoder().encode(activity), request.httpBody)
+    }
+
     static var allTests = [
         ("testGenerateTokenEndpoint", testGenerateTokenEndpoint),
         ("testGenerateTokenWithParametersEndpoint", testGenerateTokenWithParametersEndpoint),
@@ -163,5 +182,6 @@ final class EndpointTests: XCTestCase {
         ("testConversationEndpointWithWatermark", testConversationEndpointWithWatermark),
         ("testActivitiesEndpoint", testActivitiesEndpoint),
         ("testActivitiesEndpointWithWatermark", testActivitiesEndpointWithWatermark),
+        ("testPostActivityEndpoint", testPostActivityEndpoint),
     ]
 }
