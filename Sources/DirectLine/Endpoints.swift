@@ -80,3 +80,31 @@ public extension Endpoint where Output == Conversation {
                  queryParameters: watermark.map { ["watermark": $0] } ?? [:])
     }
 }
+
+// MARK: - Activities
+
+public extension Endpoint {
+    /// Get activities in a conversation.
+    /// - Parameters:
+    ///   - type: Channel data type.
+    ///   - token: A token obtained via the `generateToken` or `startConversation` endpoints.
+    ///   - conversationId: A conversation identifier.
+    ///   - watermark: Only returns activities newer than this watermark.
+    static func activities<ChannelData>(_: ChannelData.Type, token: String, conversationId: String, watermark: String? = nil) -> Endpoint<Output> where Output == ActivityCollection<ChannelData> {
+        Endpoint(method: .get,
+                 path: "conversations/\(conversationId)/activities",
+                 headers: [.authorization: "Bearer \(token)"],
+                 queryParameters: watermark.map { ["watermark": $0] } ?? [:])
+    }
+}
+
+public extension Endpoint where Output == ActivityCollection<Empty> {
+    /// Get activities in a conversation.
+    /// - Parameters:
+    ///   - token: A token obtained via the `generateToken` or `startConversation` endpoints.
+    ///   - conversationId: A conversation identifier.
+    ///   - watermark: Only returns activities newer than this watermark.
+    static func activities(token: String, conversationId: String, watermark: String? = nil) -> Endpoint {
+        return activities(Empty.self, token: token, conversationId: conversationId, watermark: watermark)
+    }
+}

@@ -121,6 +121,38 @@ final class EndpointTests: XCTestCase {
         XCTAssertEqual(expectedHeaders, request.allHTTPHeaderFields)
     }
 
+    func testActivitiesEndpoint() {
+        // given
+        let expectedHeaders = [
+            "Authorization": "Bearer 3xpo",
+            "Accept": "application/json",
+        ]
+
+        // when
+        let request = URLRequest(baseURL: .directLine, endpoint: .activities(token: "3xpo", conversationId: "any-conversation"))
+
+        // then
+        XCTAssertEqual("GET", request.httpMethod)
+        XCTAssertEqual(Fixtures.directLineURLWithPath("conversations/any-conversation/activities"), request.url)
+        XCTAssertEqual(expectedHeaders, request.allHTTPHeaderFields)
+    }
+
+    func testActivitiesEndpointWithWatermark() {
+        // given
+        let expectedHeaders = [
+            "Authorization": "Bearer 3xpo",
+            "Accept": "application/json",
+        ]
+
+        // when
+        let request = URLRequest(baseURL: .directLine, endpoint: .activities(token: "3xpo", conversationId: "any-conversation", watermark: "any-watermark"))
+
+        // then
+        XCTAssertEqual("GET", request.httpMethod)
+        XCTAssertEqual(Fixtures.directLineURLWithPath("conversations/any-conversation/activities", query: "watermark=any-watermark"), request.url)
+        XCTAssertEqual(expectedHeaders, request.allHTTPHeaderFields)
+    }
+
     static var allTests = [
         ("testGenerateTokenEndpoint", testGenerateTokenEndpoint),
         ("testGenerateTokenWithParametersEndpoint", testGenerateTokenWithParametersEndpoint),
@@ -129,5 +161,7 @@ final class EndpointTests: XCTestCase {
         ("testStartConversationEndpointWithParameters", testStartConversationEndpointWithParameters),
         ("testConversationEndpoint", testConversationEndpoint),
         ("testConversationEndpointWithWatermark", testConversationEndpointWithWatermark),
+        ("testActivitiesEndpoint", testActivitiesEndpoint),
+        ("testActivitiesEndpointWithWatermark", testActivitiesEndpointWithWatermark),
     ]
 }
