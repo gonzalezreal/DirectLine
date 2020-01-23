@@ -1,5 +1,5 @@
-import SimpleNetworking
 import Foundation
+import SimpleNetworking
 
 public struct ErrorResponse: Codable, Equatable {
     public struct ErrorCode: Codable, Equatable, Hashable, RawRepresentable {
@@ -8,20 +8,20 @@ public struct ErrorResponse: Codable, Equatable {
         public init?(rawValue: String) {
             self.rawValue = rawValue
         }
-        
+
         public static let tokenExpired = ErrorCode(rawValue: "TokenExpired")!
         public static let badArgument = ErrorCode(rawValue: "BadArgument")!
     }
-    
+
     /// Error information.
     public struct Error: Codable, Equatable {
         /// Error code.
         public let code: ErrorCode
-        
+
         /// A description of the error.
         public let message: String?
     }
-    
+
     /// An `Error` value that contains information about the error.
     public let error: Error
 }
