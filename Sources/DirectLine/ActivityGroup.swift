@@ -1,7 +1,7 @@
 import Foundation
 
 /// A collection of activities.
-public struct ActivityCollection<ChannelData>: Codable, Equatable where ChannelData: Codable, ChannelData: Equatable {
+public struct ActivityGroup<ChannelData>: Codable, Equatable where ChannelData: Codable, ChannelData: Equatable {
     /// Activities.
     public let activities: [Activity<ChannelData>]
 

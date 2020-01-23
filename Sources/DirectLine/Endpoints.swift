@@ -90,7 +90,7 @@ public extension Endpoint {
     ///   - token: A token obtained via the `generateToken` or `startConversation` endpoints.
     ///   - conversationId: A conversation identifier.
     ///   - watermark: Only returns activities newer than this watermark.
-    static func activities<ChannelData>(_: ChannelData.Type, token: String, conversationId: String, watermark: String? = nil) -> Endpoint<Output> where Output == ActivityCollection<ChannelData> {
+    static func activities<ChannelData>(_: ChannelData.Type, token: String, conversationId: String, watermark: String? = nil) -> Endpoint<Output> where Output == ActivityGroup<ChannelData> {
         Endpoint(method: .get,
                  path: "conversations/\(conversationId)/activities",
                  headers: [.authorization: "Bearer \(token)"],
@@ -98,7 +98,7 @@ public extension Endpoint {
     }
 }
 
-public extension Endpoint where Output == ActivityCollection<Empty> {
+public extension Endpoint where Output == ActivityGroup<Empty> {
     /// Get activities in a conversation.
     /// - Parameters:
     ///   - token: A token obtained via the `generateToken` or `startConversation` endpoints.
