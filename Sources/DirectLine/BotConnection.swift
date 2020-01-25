@@ -43,7 +43,7 @@ public class BotConnection<ChannelData> where ChannelData: Codable {
 private extension BotConnection {
     /// Return the current conversation or start one if necessary.
     func conversation() -> AnyPublisher<Conversation, BotConnectionError> {
-        return stateSubject
+        stateSubject
             .setFailureType(to: BotConnectionError.self)
             .receive(on: syncQueue)
             .flatMap { [weak self] connectionState -> AnyPublisher<BotConnectionState, BotConnectionError> in
