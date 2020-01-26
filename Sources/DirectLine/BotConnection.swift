@@ -3,19 +3,20 @@ import Foundation
 import Logging
 import SimpleNetworking
 
-public class BotConnection<ChannelData> where ChannelData: Codable {
+public class BotConnection<ChannelData> where ChannelData: Codable, ChannelData: Equatable {
     public var state: AnyPublisher<BotConnectionState, Never> {
         stateSubject.eraseToAnyPublisher()
     }
 
-    public var activities: AnyPublisher<Activity<ChannelData>, Never> {
-        activitiesSubject.eraseToAnyPublisher()
-    }
+    public private(set) lazy var activities = conversation()
+        .activityStream(ChannelData.self, logLevel: logger.logLevel)
+        .flatMap { Publishers.Sequence(sequence: $0.activities) }
+        .share()
+        .eraseToAnyPublisher()
 
     private let auth: Auth
     private let apiClient: APIClient
     private let stateSubject = CurrentValueSubject<BotConnectionState, Never>(.uninitialized)
-    private let activitiesSubject = PassthroughSubject<Activity<ChannelData>, Never>()
     private let syncQueue = DispatchQueue(label: "com.gonzalezreal.DirectLine.BotConnection")
     private var logger = Logger(label: "BotConnection")
 

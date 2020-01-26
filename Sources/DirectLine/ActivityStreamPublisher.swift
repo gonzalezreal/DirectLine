@@ -103,3 +103,12 @@ private final class ActivityStreamSubscription<S, ChannelData>: Subscription whe
         return result
     }
 }
+
+public extension Publisher {
+    func activityStream<C>(_: C.Type, logLevel: Logger.Level = .info) -> AnyPublisher<ActivityGroup<C>, Error> where C: Codable, C: Equatable, Output == Conversation {
+        compactMap { $0.streamURL }
+            .mapError { $0 as Error }
+            .flatMap { ActivityStreamPublisher(streamURL: $0, logLevel: logLevel) }
+            .eraseToAnyPublisher()
+    }
+}
