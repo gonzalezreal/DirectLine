@@ -6,5 +6,5 @@ public struct ActivityGroup<ChannelData>: Codable, Equatable where ChannelData: 
     public let activities: [Activity<ChannelData>]
 
     /// Maximum watermark of activities within this collection.
-    public let watermark: String
+    public let watermark: String?
 }
