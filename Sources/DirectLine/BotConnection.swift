@@ -12,7 +12,6 @@ public class BotConnection<ChannelData> where ChannelData: Codable, ChannelData:
         .activityStream(ChannelData.self, logLevel: logger.logLevel)
         .flatMap { Publishers.Sequence(sequence: $0.activities) }
         .share()
-        .eraseToAnyPublisher()
 
     private let auth: Auth
     private let apiClient: APIClient
