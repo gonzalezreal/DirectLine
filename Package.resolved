@@ -5,9 +5,9 @@
         "package": "SimpleNetworking",
         "repositoryURL": "https://github.com/gonzalezreal/SimpleNetworking",
         "state": {
-          "branch": "direct-line",
-          "revision": "0ae26a208c6c54c7c754c38b2b62f75966c881c6",
-          "version": null
+          "branch": null,
+          "revision": "44c66c8bc86c005af9ca58cc781acf5975b1979c",
+          "version": "1.2.0"
         }
       },
       {

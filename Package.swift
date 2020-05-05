@@ -16,7 +16,7 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/gonzalezreal/SimpleNetworking", .branch("direct-line")),
+        .package(url: "https://github.com/gonzalezreal/SimpleNetworking", from: "1.2.0"),
     ],
     targets: [
         .target(name: "DirectLine", dependencies: ["SimpleNetworking"]),
